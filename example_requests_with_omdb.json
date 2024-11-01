@@ -1,0 +1,114 @@
+[
+    {
+        "Title": "Ghosts of Mars",
+        "Year": "2001",
+        "Rated": "R",
+        "Released": "24 Aug 2001",
+        "Runtime": "98 min",
+        "Genre": "Action, Horror, Sci-Fi",
+        "Director": "John Carpenter",
+        "Writer": "Larry Sulkis, John Carpenter",
+        "Actors": "Natasha Henstridge, Ice Cube, Pam Grier",
+        "Plot": "In 2176, a Martian police unit is sent to pick up a highly dangerous criminal at a remote mining post. Upon arrival, the cops find that the post has become a charnel house.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "2 nominations",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNTY5MWQ2YzUtNGM4YS00ZTYxLWJkMGUtMTg2ODlkNDUwMzY1XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "4.9/10"
+            },
+            {
+                "Source": "Rotten Tomatoes",
+                "Value": "23%"
+            },
+            {
+                "Source": "Metacritic",
+                "Value": "35/100"
+            }
+        ],
+        "Metascore": "35",
+        "imdbRating": "4.9",
+        "imdbVotes": "58,451",
+        "imdbID": "tt0228333",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$8,709,640",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+    },
+    {
+        "Title": "Karate Kid",
+        "Year": "1967",
+        "Rated": "N/A",
+        "Released": "06 May 1967",
+        "Runtime": "N/A",
+        "Genre": "Action, Sport",
+        "Director": "Abraham Cruz",
+        "Writer": "Felipe Baron",
+        "Actors": "Tony Ferrer, Bernard Belleza, Vilma Valera",
+        "Plot": "N/A",
+        "Language": "Tagalog, Filipino",
+        "Country": "Philippines",
+        "Awards": "N/A",
+        "Poster": "N/A",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "6.4/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "6.4",
+        "imdbVotes": "61",
+        "imdbID": "tt0426060",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+    },
+    {
+        "Title": "Kill Bill: Vol. 1",
+        "Year": "2003",
+        "Rated": "R",
+        "Released": "10 Oct 2003",
+        "Runtime": "111 min",
+        "Genre": "Action, Crime, Thriller",
+        "Director": "Quentin Tarantino",
+        "Writer": "Quentin Tarantino, Uma Thurman",
+        "Actors": "Uma Thurman, David Carradine, Daryl Hannah",
+        "Plot": "After waking from a 4-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.",
+        "Language": "English, Japanese, French",
+        "Country": "United States, China",
+        "Awards": "Nominated for 5 BAFTA 30 wins & 103 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZmMyYzJlZmYtY2I3NC00NjAyLTkyZWItZjdjZDI1YTYyYTEwXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "8.2/10"
+            },
+            {
+                "Source": "Rotten Tomatoes",
+                "Value": "85%"
+            },
+            {
+                "Source": "Metacritic",
+                "Value": "69/100"
+            }
+        ],
+        "Metascore": "69",
+        "imdbRating": "8.2",
+        "imdbVotes": "1,218,988",
+        "imdbID": "tt0266697",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$70,099,045",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+    }
+]
