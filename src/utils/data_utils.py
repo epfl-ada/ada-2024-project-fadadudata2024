@@ -2,6 +2,7 @@ from collections import Counter
 
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 from nltk import word_tokenize, ngrams
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
@@ -303,3 +304,152 @@ def simplify_continent(continent_list):
         return 'America'
     else:
         return 'Other'
+
+
+
+def plot_frequencie_proportion(data, title, xlabel, color="skyblue", figsize=(8, 6)):
+    """
+    Plot a bar chart for distribution with proportion labels.
+
+    Parameters:
+    - data: pd.Series - A pandas Series
+    - title: str - Title of the plot.
+    - color: str - Color of the bars (default: "skyblue").
+    - figsize: tuple - Size of the plot (default: (8, 4)).
+    """
+    # Calculate counts and proportions
+    total_count = data.sum()
+    proportions = (data / total_count).values  # Proportions as percentages
+
+    # Create the figure
+    plt.figure(figsize=figsize)
+    ax = data.plot(kind="bar", color=color)
+    ax.set_title(title, fontsize=16, fontweight="bold")
+    ax.set_xlabel(xlabel, fontsize=14, fontweight="bold")
+    ax.set_ylabel("Frequency", fontsize=14, fontweight="bold")
+    ax.tick_params(axis='x', rotation=45)
+
+    # Add proportion labels
+    rects = ax.patches
+    for rect, label in zip(rects, proportions):
+        ax.text(
+            rect.get_x() + rect.get_width() / 2,  # X position
+            rect.get_height(),  # Y position (center of the bar)
+            f"{label:.2%}",  # Format as a percentage
+            ha="center",  # Horizontally center-aligned
+            va="bottom",  # Vertically center-aligned
+            fontsize=10  # Font size
+        )
+
+    plt.tight_layout()
+    plt.show()
+
+#Bar Plot of Frequency of Ethnicities
+def plot_frequencie(data, title, xlabel, color="skyblue", figsize=(8, 6)):
+    """
+    Plot a bar chart for distribution
+
+    Parameters:
+    - data: pd.Series - A pandas Series
+    - title: str - Title of the plot.
+    - color: str - Color of the bars (default: "skyblue").
+    - figsize: tuple - Size of the plot (default: (8, 4)).
+    """
+    plt.figure(figsize=figsize)
+    bars = plt.bar(data.index, data.values, color=color)
+    
+    # Add value labels to each bar
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(
+            bar.get_x() + bar.get_width() / 2,  # X position
+            height,  # Y position (slightly above the bar)
+            f'{height}',  # Text label (rounded to 1 decimal place)
+            ha='center',  # Center align text
+            va='bottom',  # Align text at the bottom
+            fontsize=10  # Font size
+        )
+    plt.bar(data.index, data.values, color=color)
+    plt.title(title, fontsize=16, fontweight='bold')
+    plt.xlabel(xlabel, fontsize=14, fontweight='bold')
+    plt.ylabel('Frequency', fontsize=14, fontweight='bold')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.show()
+
+#Bar Plot of Percentage of Ethnicities
+def plot_proportion(data, title, xlabel, color="skyblue", figsize=(8, 6)):
+    proportion= (data / data.sum())*100
+    plt.figure(figsize=figsize)
+    bars = plt.bar(data.index, proportion.values, color=color)
+    
+    # Add value labels to each bar
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(
+            bar.get_x() + bar.get_width() / 2,  # X position
+            height,  # Y position (slightly above the bar)
+            f'{height:.2f}%',  # Text label (rounded to 1 decimal place)
+            ha='center',  # Center align text
+            va='bottom',  # Align text at the bottom
+            fontsize=10  # Font size
+        )
+
+    # Add title and labels
+    plt.title(title, fontsize=16, fontweight='bold')
+    plt.xlabel(xlabel, fontsize=14, fontweight='bold')
+    plt.ylabel('Percentage (%)', fontsize=14, fontweight='bold')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.show()
+
+def plot_gender_distribution_regions(data, title, bar_width=0.25, figsize=(10, 6)):
+    """
+    Plots gender distribution across America, Europe, and Both regions with percentages.
+
+    Parameters:
+    - data: pd.DataFrame - DataFrame containing the data.
+    - title: str - Title of the plot.
+    - bar_width: float - Width of the bars (default: 0.25).
+    - figsize: tuple - Size of the plot (default: (10, 6)).
+    """
+    # Define fixed regions, their filtering logic, and colors
+    regions = {
+        "America": {"filter": lambda x: 'America' in x, "color": "skyblue"},
+        "Europe": {"filter": lambda x: 'Europe' in x, "color": "lightgreen"},
+        "Both": {"filter": lambda x: 'Both' in x, "color": "salmon"}
+    }
+
+    # Dynamically infer categories from the data
+    all_categories = ['M', 'F']  # Explicitly define the order
+    x_positions = np.arange(len(all_categories))
+    positions = {region: x_positions + i * bar_width for i, region in enumerate(regions.keys())}
+
+    plt.figure(figsize=figsize)
+
+    # Process each region and plot
+    for region, config in regions.items():
+        # Filter the data for the region
+        region_data = data[data['Continents'].apply(config["filter"])]
+        gender_counts = region_data['Actor_Gender'].value_counts()
+        total_count = region_data['Actor_Gender'].count()
+
+        # Calculate percentages for all categories
+        percentages = [(gender_counts.get(cat, 0) / total_count) * 100 for cat in all_categories]
+
+        # Plot bars for the region
+        plt.bar(positions[region], percentages, width=bar_width, label=region, color=config["color"])
+
+        # Add percentage labels
+        for x, y, cat in zip(positions[region], percentages, all_categories):
+            plt.text(x, y, f"{y:.1f}%", ha="center", va="bottom", fontsize=10)
+
+    # Customize the plot
+    plt.title(title, fontsize=16, fontweight="bold")
+    plt.xlabel("Gender", fontsize=14)
+    plt.ylabel("Percentage (%)", fontsize=14)
+    plt.xticks(x_positions + (len(regions) - 1) * bar_width / 2, all_categories)  # Center group labels
+    plt.legend(title="Region")
+    plt.tight_layout()
+
+    plt.show()
