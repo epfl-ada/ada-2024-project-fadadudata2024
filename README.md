@@ -19,7 +19,7 @@ This project takes a dive into the comedic rivalry between American and European
 ### 3. Gender and Ethnic Representation
 - What are the gender and ethnic compositions in American and European comedies?
 - How has the representation of these groups evolved over time, and what cultural insights can be drawn from these changes?
-- How do leading roles vary by gender and ethnicity across American and European comedies, and how have these trends shifted over the years?
+- Explore correlations between movie recognition (box office, rankings, ratings, awards) and gender representation.
 
 ## Supplementary Dataset
 
