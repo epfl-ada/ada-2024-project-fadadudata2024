@@ -31,6 +31,25 @@ This project takes a dive into the comedic rivalry between American and European
    For missing plot summaries, we ran the Stanford CoreNLP pipeline locally on the remaining movies in our dataset. If a processed output was unavailable, we used the OMDB plot summary as input for the pipeline. This step augmented our dataset significantly, increasing the number of fully processed comedy-related movies from approximately 7,300 to 12,000.
 
 ## Methods
+### 1. Data Collection and Preparation
+   - **Data Wrangling**: Cleaning and organizing data from the CMU Movie Summary Corpus and OMDB to create a structured, unified dataset.
+   - **Data Integration**: Merging datasets based on common identifiers to facilitate thematic analysis, character representation analysis, and success metrics.
+
+### 2. Analysis Process
+   - Patterns were identified across themes, gender and ethnicity representation, ratings, and commercial success. To highlight these different data structures, various statistical tests were conducted, including:
+- **T-test**: Comparing the means of two groups to detect significant differences; often accompanied by confidence intervals (CIs) to estimate the mean difference.
+- **Kolmogorov-Smirnov (KS)**: Checking if a distribution follows a normal distribution.
+- **Mann-Whitney U**: Comparing ranks between two groups for non-normal distributions.
+- **Spearman**: Measuring the monotonic correlation between two variables, without assuming linearity.
+This variety of comparison tools ensures robust conclusions by accounting for potential initial hypothesis violations. It also provides objective means to assess the presence or absence of significant differences between two groups.
+
+-  For thematic analysis, NLP tools like Stanford CoreNLP to extract recurring narrative themes.
+For this part, we are going to make a frequency analysis on the plots summaries by leveraging the CoreNLP pipeline results. However, since some of our comedy movies do not have the associated summary, we first retrieved the OMDB summaries and processed them through the pipeline before adding them to our local dataset.
+This allows us to make wordclouds visualization on the summaries of the dataset.
+We also added ngrams analysis as a core part of the wordcloud generation. Ngrams are groups of successive n-words in sentences. For example, we can look at the 2-grams of the form “<verb> <any other word>” to extract recurrent topics in the scenarios.
+   - **Representation Metrics**: Quantifying gender and ethnic diversity in lead roles and examining trends over time.
+   - **Success Evaluation**: Measuring success in terms of revenue, critical reception, runtime, and audience rating.
+
 
 ## Proposed timeline
 
