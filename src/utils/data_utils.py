@@ -9,6 +9,7 @@ import gzip
 import xml.etree.ElementTree as ET
 import re
 import json
+import ast
 
 def get_word_count(tokenized_plots):
     """Returns a Counter of words in tokenized plots.
