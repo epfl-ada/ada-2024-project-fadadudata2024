@@ -75,4 +75,4 @@ Given our preliminary exploration of Latent Dirichlet Allocation (LDA) for uncov
 
 ## Acknowledgements
 
-ChatGPT has been used to rephrase and translate to english some parts of this document.
+ChatGPT has been used to rephrase and translate to english some parts of this document as well as some comments in the code.
