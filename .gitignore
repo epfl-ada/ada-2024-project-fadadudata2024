@@ -1,4 +1,7 @@
 venv
 *.psd
 *.svg
+*.pyc
+**/__pycache__/**
 data/MovieSummaries.nosync
+data/wikidata_pages
