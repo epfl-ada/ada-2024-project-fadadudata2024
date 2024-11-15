@@ -58,22 +58,10 @@ This project takes a dive into the comedic rivalry between American and European
 Finally, we aim at showing our findings as a webpage datastory, following the guidelines of the course.
 
 ## Proposed timeline and Organization within the team
-### Week 1
-Analyze comedy subgenres in relation to review sites to determine which continent produces the best genres according to users and critics.
 
-### Week 2
-Create a word cloud with different types of words (adjectives, verbs, and nouns) to highlight significant thematic differences between the two continents.
+The following figure presents the provisionned timeline :
 
-### Week 3
-Link genre and ethnicity to examine whether certain groups are overrepresented, overrated, or disproportionately favored in reviews.
-
-### Week 4
-Analyze the relationship between box office performance and comedy subgenres over time to identify success trends based on their continent of production.
-
-### Week 5
-Create a data story by selecting the most relevant plots to construct a coherent webpage.
-
-
+![Timeline](src/ressource/timeline.jpeg)
 
 ## Questions for TA's
 
