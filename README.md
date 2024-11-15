@@ -1,49 +1,44 @@
-# ada-2024-project-fadadudata2024
+# The Cold War of Laughter: Western Humor vs. Eastern Wit 😂🌍🧊
 
-## Instruction
-In Milestone P2, together with your team members, you will agree on and refine your project proposal. Your first task is to select a project. Even though we provide the datasets for you to use, at this juncture, it is your responsibility to perform initial analyses and verify that what you propose is feasible given the data (including any additional data you might bring in yourself), which is crucial for the success of the project.
+## Abstract
+This project takes a dive into the comedic rivalry between American and European films, uncovering the cultural quirks that make each side laugh. Using data from the CMU Movie Summary Corpus and OMDB, we analyze recurring themes, linguistic styles, and narrative structures to decode the essence of humor on both sides of the Atlantic. Do Americans favor slapstick and sarcasm, while Europeans lean toward dry wit and intellectual wordplay? Are certain jokes universal, or do some fall flat across cultural divides? We also explore representation dynamics—examining how gender and ethnicity shape the humor landscape—and investigate box office trends to see if Hollywood's blockbuster comedies outshine Europe's subtler charm. Through text analysis, visualizations, and linguistic modeling, this project aims to answer whether humor truly transcends borders or remains firmly rooted in cultural context. Laugh, learn, and decide which side of the Atlantic rules the comedy game!
 
-The goal of this milestone is to intimately acquaint yourself with the data, preprocess it, and complete all the necessary descriptive statistics tasks. We expect you to have a pipeline in place, fully documented in a notebook, and show us that you have clear project goals.
 
-When describing the relevant aspects of the data, and any other datasets you may intend to use, you should in particular show (non-exhaustive list):
+## Research Questions
 
-That you can handle the data in its size.
-That you understand what’s in the data (formats, distributions, missing values, correlations, etc.).
-That you considered ways to enrich, filter, transform the data according to your needs.
-That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook.
-That your plan for analysis and communication is reasonable and sound, potentially discussing alternatives to your choices that you considered but dropped.
-We will evaluate this milestone according to how well these steps have been done and documented, the quality of the code and its documentation, the feasibility and critical awareness of the project. We will also evaluate this milestone according to how clear, reasonable, and well thought-through the project idea is. Please use the second milestone to really check with us that everything is in order with your project (idea, feasibility, etc.) before you advance too much with the final Milestone P3! There will be project office hours dedicated to helping you.
+### 1. Narrative and Thematic Analysis
+- What recurring themes and narrative patterns define comedies from America and Europe?
+- How do cultural differences shape the humor and storytelling styles of these films?
+- In what ways do American and European comedies align in their themes, and where do they diverge?
 
-You will work in a public GitHub repository dedicated to your project, which can be created by following this link. The repository will automatically be named ada-2023-project-. By the Milestone P2 deadline, each team should have a single public GitHub repo under the [epfl-ada GitHub organization](https://github.com/epfl-ada), containing the project proposal and initial analysis code.
+### 2. Gender and Ethnic Representation
+- What are the gender and ethnic compositions in American and European comedies?
+- How has the representation of these groups evolved over time, and what cultural insights can be drawn from these changes?
+- How do leading roles vary by gender and ethnicity across American and European comedies, and how have these trends shifted over the years?
 
-P2 deliverable (done as a team): GitHub repository with the following:
+### 3. Commercial and Critical Success
+- What factors—such as themes, casting, runtime, and distribution—drive the success of comedies in these regions?
+- Is there a correlation between commercial success (box office) and critical or audience recognition (ratings), and does this vary by continent or audience type?
+- Are European comedies rated more favorably than American ones, and do they receive similar evaluations from critics and audiences across different subgenres?
 
-Readme.md file containing the detailed project proposal (up to 1000 words). Your README.md should contain:
-Title
-Abstract: A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?
-Research Questions: A list of research questions you would like to address during the project.
-Proposed additional datasets (if any): List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
-Methods
-Proposed timeline
-Organization within the team: A list of internal milestones up until project Milestone P3.
-Questions for TAs (optional): Add here any questions you have for us related to the proposed project.
-GitHub repository should be well structured and contain all the code for the initial analyses and data handling pipelines. For structure, please use this repository as a template
-Notebook presenting the initial results to us. We will grade the correctness, quality of code, and quality of textual descriptions. There should be a single Jupyter notebook containing the main results. The implementation of the main logic should be contained in external scripts/modules that will be called from the notebook.
 
-## Project structure
-The directory structure of new project looks like this:
-├── data                        <- Project data files
-│
-├── src                         <- Source code
-│   ├── data                            <- Data directory
-│   ├── models                          <- Model directory
-│   ├── utils                           <- Utility directory
-│   ├── scripts                         <- Shell scripts
-│
-├── tests                       <- Tests of any kind
-│
-├── results.ipynb               <- a well-structured notebook showing the results
-│
-├── .gitignore                  <- List of files ignored by git
-├── pip_requirements.txt        <- File for installing python dependencies
-└── README.md
+## Supplementary Dataset
+
+1. **The Open Movie Database (OMDB)**:  
+   OMDB provided valuable supplementary information, such as box office revenue, runtime, audience ratings, awards, and additional plot summaries. We used this dataset to fill missing values in our original dataset and enrich it with new variables. Merging the datasets was straightforward by aligning on movie titles, with careful handling of movies that share the same name.
+
+2. **Stanford CoreNLP Pipeline**:  
+   For missing plot summaries, we ran the Stanford CoreNLP pipeline locally on the remaining movies in our dataset. If a processed output was unavailable, we used the OMDB plot summary as input for the pipeline. This step augmented our dataset significantly, increasing the number of fully processed comedy-related movies from approximately 7,300 to 12,000.
+
+## Methods
+
+## Proposed timeline
+
+## Organization within the team
+
+## Questions for TA's
+
+Given our preliminary exploration of Latent Dirichlet Allocation (LDA) for uncovering thematic structures, do you think it is worthwhile to invest more time refining the LDA process (e.g., optimizing preprocessing, tuning parameters, or increasing topic granularity)? Or would you recommend focusing on alternative methods to achieve deeper insights into narrative trends?
+
+## References
+
