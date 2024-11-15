@@ -94,7 +94,8 @@ def get_sentence_word_metadata(folder_path, id, print_output=False):
                     attribs = {c.tag: c.text for c in token}
                     if print_output:
                         print(f"{attribs['word']} ({attribs['lemma']}) => {attribs['POS']}")
-                    summary_word_metadata.append(attribs)
+                    if attribs['word'].isalpha(): # to not include commas, etc...
+                        summary_word_metadata.append(attribs)
         return summary_word_metadata
     except Exception as e:
         print(f"Error processing {gz_file_path}: {e}")
