@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: C🤣MEDY WAR
+title: COMEDY WAR
 email: 12345@epfl.ch
 description: >- # this means to ignore newlines until "baseurl:"
-  An EPFL students data story.
+  Some text here
   
 show_download: false
 

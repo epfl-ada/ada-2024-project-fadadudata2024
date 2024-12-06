@@ -15,32 +15,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> {% include head-custom.html %}
   </head>
   <body>
+
+    <div class="background"></div>
+    <div class="top-banner">
+      <img src="/assets/img/banner.jpg" alt="[background]" class="banner-custom">
+    </div>
+    <div class="top-banner"><h1 class="display-1 text-white comedy-war-txt">C🤡MEDY WAR</h1></div>
     <div class="wrapper">
-      <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+      <!-- <header>
+      <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
-        {% endif %}
+      {% if site.logo %}
+        <img src="{{site.logo | relative_url}}" alt="Logo" />
+      {% endif %}
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+      <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
+      {% if site.github.is_project_page %}
+      <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
+      {% endif %}
 
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
-
-      </header>
+    </header> -->
       <section>
 
       {{ content }}
 
       </section>
       <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>An EPFL students data story.</small></p>
+        <a href="https://epfl-ada.github.io/teaching/fall2024/cs401/" class="fs-6">COM-401 | Applied Data Analysis</a>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
