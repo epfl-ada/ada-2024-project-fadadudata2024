@@ -21,7 +21,7 @@ Here is how to add a plot :
 Here is how to add simple tabs :
 
 <div class="container mt-2 mb-2">
-  <ul class="nav nav-tabs" id="sampleTabs" role="tablist">
+  <ul class="nav nav-underline" id="sampleTabs" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="europe-wordcloud-tab" data-bs-toggle="tab" data-bs-target="#europe-wordcloud" type="button" role="tab" aria-controls="europe-wordcloud" aria-selected="true">
         Europe
@@ -29,20 +29,43 @@ Here is how to add simple tabs :
     </li>
     <li class="nav-item" role="presentation">
       <button class="nav-link" id="america-wordcloud-tab" data-bs-toggle="tab" data-bs-target="#america-wordcloud" type="button" role="tab" aria-controls="america-wordcloud" aria-selected="false">
-        Norht America
+        North America
       </button>
     </li>
   </ul>
 
   <div class="tab-content mt-3" id="sampleTabsContent">
     <div class="tab-pane fade show active" id="europe-wordcloud" role="tabpanel" aria-labelledby="europe-wordcloud-tab">
-      <img src="{{ '/assets/img/test1.jpg' | relative_url }}" alt="Image 1" class="img-fluid">
+      <div class="card w-25">
+        <img src="{{ '/assets/img/test1.jpg' | relative_url }}" alt="Image 1" class="card-img-top">
+        <div class="card-body">
+          <h4 class="card-title">Some more text here </h4>
+          <p class="card-text">Description</p>
+        </div>
+      </div>
     </div>
     <div class="tab-pane fade" id="america-wordcloud" role="tabpanel" aria-labelledby="america-wordcloud-tab">
-      <img src="{{ '/assets/img/test2.jpg' | relative_url }}" alt="Image 2" class="img-fluid">
+      <div class="card w-25">
+      <img src="{{ '/assets/img/test2.jpg' | relative_url }}" alt="Image 2" class="card-img-top">
+        <div class="card-body">
+          <h4 class="card-title">Some more text here </h4>
+          <p class="card-text">Description</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 ## Conclusion
 
+Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la banner mais il suffit de changer src)
+
+<div class="big-image-wrapper">
+  <img src="/assets/img/banner.jpg" alt="Alternative text" class="big-image">
+</div>
+<div class="big-image-spacer"></div>
+
+
+
+
+Another one some text

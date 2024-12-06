@@ -2,4 +2,72 @@
 ---
 
 @import "{{ site.theme }}";
-@import "main.scss"
+@import "main.scss";
+
+
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/img/background.svg");
+  background-position: center;
+  z-index: -1;
+}
+
+
+section {
+    width: calc(100% - 310px);
+}
+
+header {
+    width: 310px;
+    position: sticky;
+    height: 400px;
+}
+
+.wrapper {
+    width: 85vw;
+    padding-top: 350px;
+}
+
+.big-image-wrapper {
+  width: 100vw;
+  margin: 0;
+  position: absolute;
+  left: 0;
+}
+
+.big-image-spacer {
+    height: 320px;
+}
+
+.big-image {
+    width: 100vw;
+    height: 300px;
+}
+
+.top-banner {
+    height: 350px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.banner-custom {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.comedy-war-txt {
+    width: fit-content;
+    margin: auto;
+    padding-top: 90px;
+    font-size: 140px !important;
+    font-weight: bold !important;
+    text-shadow: 5px 5px #000;
+}
