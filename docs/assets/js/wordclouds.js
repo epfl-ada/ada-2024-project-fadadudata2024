@@ -6,6 +6,8 @@ var filters = {
     ngram: 1
 }
 
+const baseurl = document.querySelector('meta[name="baseurl"]').getAttribute('content');
+
 var filename = `${baseurl}/assets/img/wordclouds/${filters.region}__${filters.subset}__${filters.pos_tag}__${filters.ngram}.jpg`
 
 function on_wordcloud_filter_change(new_filter) {

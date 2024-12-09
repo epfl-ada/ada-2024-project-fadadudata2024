@@ -131,7 +131,7 @@ Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la ban
   </div>
   <div class="row justify-content-center">
     <div class="col-5 border border-secondary rounded">
-      <img src="/assets/img/wordclouds/America__None__VB__1.jpg" class="wordcloud-image" alt="Wordcloud" id="wordcloud"
+      <img src="{{ site.baseurl }}/assets/img/wordclouds/America__None__VB__1.jpg" class="wordcloud-image" alt="Wordcloud" id="wordcloud"
       onload="this.classList.remove('wordcloud-image-hidden')"/>
     </div>
   </div>
