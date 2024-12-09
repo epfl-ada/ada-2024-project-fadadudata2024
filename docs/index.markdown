@@ -56,8 +56,6 @@ Here is how to add simple tabs :
   </div>
 </div>
 
-## Conclusion
-
 Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la banner mais il suffit de changer src)
 
 <div class="big-image-wrapper">
@@ -66,6 +64,63 @@ Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la ban
 <div class="big-image-spacer"></div>
 
 
+## Wordclouds
 
+<script src="{{ '/assets/js/wordclouds.js' | relative_url }}"></script>
+<div class="container-fluid">
+  <div class="row" id="wordclouds">
+    <div class="col align-content-center">
+      <div class="btn-group  w-100">
+        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Region
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'region', value: 'Europe'})">Europe</a></li>
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'region', value: 'America'})">America</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'region', value: 'Both'})">Both</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col align-content-center">
+      <div class="btn-group  w-100">
+        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Subsets
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'Biggest_America'})">Biggest_America</a></li>
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'Biggest_Both'})">Biggest_Both</a></li>
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'Biggest_Europe'})">Biggest_Europe</a></li>
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'Biggest_Gap_diff_Eu_Am'})">Biggest_Gap_diff_Eu_Am</a></li>
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'Smallest_Gap_diff_Eu_Am'})">Smallest_Gap_diff_Eu_Am</a></li>
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'None'})">No subset</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col align-content-center">
+      <div class="btn-group  w-100">
+        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Part-Of-Speech
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'pos_tag', value: 'NN'})">Nouns</a></li>
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'pos_tag', value: 'VB'})">Verbs</a></li>
+          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'pos_tag', value: 'JJ'})">Adjectives</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col align-content-center">
+      <label for="ngram-range" class="form-label text-center">N-gram size</label>
+      <input type="range" class="form-range" style="height: 12px" min="1" max="3" step="1" 
+      value="1" id="ngram-range" onchange="on_wordcloud_filter_change({key: 'ngram', value: this.value})">
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col border border-secondary rounded">
+      <img src="/assets/img/wordclouds/America__None__VB__1.jpg" class="wordcloud-image" alt="Wordcloud" id="wordcloud"
+      onload="this.classList.remove('wordcloud-image-hidden')"/>
+    </div>
+  </div>
+</div>
 
 Another one some text

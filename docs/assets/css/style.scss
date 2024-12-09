@@ -27,6 +27,17 @@ header {
     height: 400px;
 }
 
+.wordcloud-image {
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.wordcloud-image-hidden {
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+
 .wrapper {
     width: 85vw;
     padding-top: 350px;
