@@ -61,7 +61,7 @@ Here is how to add simple tabs :
 Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la banner mais il suffit de changer src)
 
 <div class="big-image-wrapper">
-  <img src="'/assets/img/banner.jpg' | relative_url " alt="Alternative text" class="big-image">
+  <img src="{{ '/assets/img/banner.jpg' | relative_url }}" alt="Alternative text" class="big-image">
 </div>
 <div class="big-image-spacer"></div>
 
