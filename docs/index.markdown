@@ -18,6 +18,20 @@ Here is how to add a plot :
 <div id="basic-plot" style="width: 620px; height: 420px;"></div>
 <script src="{{ '/assets/js/basic_plot.js' | relative_url }}"></script>
 
+
+## Movie carousel
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <p>Some text here</p>
+    </div>
+    <div class="col-4">
+      {% include carousel.html %}
+    </div>
+  </div>
+</div>
+
 Here is how to add simple tabs :
 
 <div class="container mt-2 mb-2">
@@ -116,7 +130,7 @@ Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la ban
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="col border border-secondary rounded">
+    <div class="col-5 border border-secondary rounded">
       <img src="/assets/img/wordclouds/America__None__VB__1.jpg" class="wordcloud-image" alt="Wordcloud" id="wordcloud"
       onload="this.classList.remove('wordcloud-image-hidden')"/>
     </div>

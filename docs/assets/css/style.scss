@@ -82,3 +82,12 @@ header {
     font-weight: bold !important;
     text-shadow: 5px 5px #000;
 }
+
+.movie-poster {
+    height: 430px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
