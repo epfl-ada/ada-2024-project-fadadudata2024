@@ -6,9 +6,12 @@ layout: default
 ---
 # Comparative analysis between USA and European comedy 
 
+# START COMMAND : bundle exec jekyll serve --l
+
+
 Some base text in here
 
-## Part x
+## Part xghfhgcfhgfhgf
 
 Some other text here.
 

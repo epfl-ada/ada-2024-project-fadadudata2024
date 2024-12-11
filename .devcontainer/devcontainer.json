@@ -22,14 +22,14 @@
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 
-	"mounts": [{
-		"source": "/home/mach/Documents/epfl/3-M3/COM-401_ADA/MovieSummaries",
-		"target": "/workspaces/ada-2024-project-fadadudata2024/src_data/MovieSummaries",
-		"type": "bind"
-	},
-	{
-		"source": "/home/mach/Documents/epfl/3-M3/COM-401_ADA/corenlp_plot_summaries",
-		"target": "/workspaces/ada-2024-project-fadadudata2024/src_data/corenlp_plot_summaries",
-		"type": "bind"
-	}]
+	// "mounts": [{
+	// 	"source": "/home/mach/Documents/epfl/3-M3/COM-401_ADA/MovieSummaries",
+	// 	"target": "/workspaces/ada-2024-project-fadadudata2024/src_data/MovieSummaries",
+	// 	"type": "bind"
+	// },
+	// {
+	// 	"source": "/home/mach/Documents/epfl/3-M3/COM-401_ADA/corenlp_plot_summaries",
+	// 	"target": "/workspaces/ada-2024-project-fadadudata2024/src_data/corenlp_plot_summaries",
+	// 	"type": "bind"
+	// }]
 }
