@@ -83,6 +83,34 @@ Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la ban
 
 ## Wordclouds
 
+### Now, presenting a star of the comedy data scene… give it up for the one, the only… WORDCLOUD! 🎭
+
+This interactive tool is here to help us dive into the humor-filled rivalry between American and European comedies by analyzing the words that make each side laugh. Packed with a ton of features, Wordcloud is your go-to act for cracking the linguistic code of comedy. Let’s break down its impressive setlist:
+
+1. **Regional Filters**  
+   *“Are you into the loud, slapstick humor of Hollywood or the subtle, dry wit of Europe? No worries—this tool lets you toggle between regions faster than a comedian switching accents mid-joke!”*
+
+2. **Subsets**  
+   *“Whether you want a deep dive into the 5 specific subsets we created or to look at the whole genre, you’re in control. Pick your niche, and let the tool do the rest!”*
+
+3. **Part-of-Speech Magic**  
+   *“From dynamic verbs to clever nouns and everything in between, Wordcloud unveils the grammatical building blocks of comedy. Curious about which verbs dominate American punchlines or which nouns give European humor its sophistication? It’s all just a click away!”*
+
+4. **N-grams**  
+   *“Love the power of words working together? Whether it’s single-word jokes or multi-word punchlines, the n-grams feature highlights the patterns that make comedy memorable. One-liners or elaborate setups—this tool has it covered!”*
+
+---
+
+Wordcloud isn’t just a tool; it’s your backstage pass to the comedy world’s linguistic secrets. Ready to uncover what makes American and European humor tick? Let Wordcloud take the stage and show you the words that bring the laughs!
+
+---
+
+#### 🤫 Pssst… There’s a Secret Button! 🕵️‍♀️
+
+Hidden in plain sight, there’s a **secret button** on the Wordcloud interface. What does it do? Click it to discover! 😉
+
+(après il faudrait faire un peu mieux le bouton et faire un easter egg marrant mais je vous avoue je galère mdr)
+
 <script src="{{ '/assets/js/wordclouds.js' | relative_url }}"></script>
 <div class="container-fluid">
   <div class="row" id="wordclouds">
@@ -134,10 +162,15 @@ Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la ban
   </div>
   <div class="row justify-content-center">
     <div class="col-5 border border-secondary rounded">
-      <img src="{{ site.baseurl }}/assets/img/wordclouds/America__None__VB__1.jpg" class="wordcloud-image" alt="Wordcloud" id="wordcloud"
-      onload="this.classList.remove('wordcloud-image-hidden')"/>
+        <img src="{{ site.baseurl }}/assets/img/wordclouds/America__None__VB__1.jpg" class="wordcloud-image" alt="Wordcloud" id="wordcloud"
+        onload="this.classList.remove('wordcloud-image-hidden')"/>
     </div>
-  </div>
+    <!-- Secret Button Below the Wordcloud -->
+    <div class="col-5 text-center mt-2">
+        <button type="button" class="btn btn-secondary secret-button" onclick="void(0);">
+            🕵️‍♀️ Secret Button
+        </button>
+    </div>
 </div>
 
 Another one some text
