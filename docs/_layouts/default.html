@@ -1,51 +1,88 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="baseurl" content="{{ site.baseurl }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="baseurl" content="{{ site.baseurl }}">
 {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> {% include head-custom.html %}
-  </head>
-  <body>
+  <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  {% include head-custom.html %}
+  <style>
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+    .laugh-text {
+      display: inline-block;
+      animation: shake 0.5s; /* Change duration of shake as you like */
+      animation-iteration-count: infinite;
+    }
+  </style>
+</head>
+<body>
+  <div id="fakeError" onclick="revealContent()" style="position: fixed; width: 100%; height: 100%; background: url('{{ '/assets/img/error-background.jpg' | relative_url }}') no-repeat center center / cover; display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 1000;">
+    <h1 style="color: white; font-size: 4rem; text-shadow: 2px 2px 4px #000;">Error 404</h1>
+    <p class="laugh-text" style="color: white; font-size: 2rem; text-shadow: 1px 1px 2px #000;">HAHAHAHAHAHAH</p>
+  </div>
 
-    <div class="background"></div>
-    <div class="top-banner">
-      <img src="{{ '/assets/img/banner.jpg' | relative_url }}" alt="[background]" class="banner-custom">
-    </div>
-    <div class="top-banner"><h1 class="display-1 text-white comedy-war-txt">C🤡MEDY WAR</h1></div>
-    <div class="wrapper">
-      <!-- <header>
-      <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-
-      {% if site.logo %}
-        <img src="{{site.logo | relative_url}}" alt="Logo" />
-      {% endif %}
-
-      <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-      {% if site.github.is_project_page %}
-      <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-      {% endif %}
-
-    </header> -->
-      <section>
-
-      {{ content }}
-
-      </section>
-      <footer>
-        <p><small>An EPFL students data story.</small></p>
-        <a href="https://epfl-ada.github.io/teaching/fall2024/cs401/" class="fs-6">COM-401 | Applied Data Analysis</a>
-      </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
+  <div class="background"></div>
+  <div class="top-banner">
+    <img src="{{ '/assets/img/banner.jpg' | relative_url }}" alt="[background]" class="banner-custom">
+  </div>
+  <div class="top-banner"><h1 class="display-1 text-white comedy-war-txt">C🤡MEDY WAR</h1></div>
+  <div class="wrapper" style="display: none;" id="mainContent">
+    <section>
+    {{ content }}
+    </section>
+    <footer>
+      <p><small>An EPFL students data story.</small></p>
+      <a href="https://epfl-ada.github.io/teaching/fall2024/cs401/" class="fs-6">COM-401 | Applied Data Analysis</a>
+    </footer>
+  </div>
+  <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  <script>
+    function revealContent() {
+      document.getElementById('fakeError').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+    }
+  </script>
+</body>
 </html>
+<script>
+  const emojis = ['🤡', '😂', '🤣', '😭'];
+  const laughText = document.querySelector('.laugh-text');
+
+  function addRandomEmoji() {
+    const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+    const span = document.createElement('span');
+    span.textContent = emoji;
+    span.style.position = 'absolute';
+    span.style.left = Math.random() * 100 + 'vw';
+    span.style.top = Math.random() * 100 + 'vh';
+    span.style.fontSize = '4rem';
+    span.style.animation = 'shake 0.5s infinite';
+    document.body.appendChild(span);
+
+    setTimeout(() => {
+      span.remove();
+    }, 2000);
+  }
+
+  setInterval(addRandomEmoji, 500);
+</script>

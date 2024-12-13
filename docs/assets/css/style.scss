@@ -91,3 +91,40 @@ header {
 .carousel-control-next-icon {
     filter: invert(100%);
 }
+
+
+
+.team .member {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.team img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #f76c6c;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team .emoji {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+    font-size: 14rem;
+    user-select: none;
+    pointer-events: none;
+}
+
+.team .member:hover img {
+    transform: scale(1.2);
+}
+
+.team .member:hover .emoji {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+}
+
+
