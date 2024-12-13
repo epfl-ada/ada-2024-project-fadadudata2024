@@ -124,7 +124,7 @@ Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la ban
       </div>
     </div>
     <div class="col align-content-center">
-      <label for="ngram-range" class="form-label text-center">N-gram size</label>
+      <label for="ngram-range" class="form-label text-center">N-gram size : <span class="badge text-bg-info" id="ngram-value">1</span></label>
       <input type="range" class="form-range" style="height: 12px" min="1" max="3" step="1" 
       value="1" id="ngram-range" onchange="on_wordcloud_filter_change({key: 'ngram', value: this.value})">
     </div>
@@ -138,3 +138,45 @@ Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la ban
 </div>
 
 Another one some text
+
+
+Table examples :
+
+| Simple table in markdown | col1 | col2 | col3 |
+|-|-|-|-|
+|Value1|1|2|3.55|
+|Value1|1|2|3.55|
+|Value1|1|2|3.55|
+|Value1|1|2|3.55|
+
+Example table from Bootstrap
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
