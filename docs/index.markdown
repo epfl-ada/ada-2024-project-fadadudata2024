@@ -10,7 +10,163 @@ layout: default
 # The Nuances of Humor Across America and Europe
 ## Part 1 : Introduction
 
-Some other text here.
+## Part 2 : Presentation
+
+In our database, we noticed that the "Genres" column contained many descriptions that were not particularly relevant to our subject, such as "World Cinema," "Short Film," or "Indie." These categories did not provide meaningful information about the type of comedy, making the analysis more confusing. As enthusiasts of humorous films, we decided to restructure this classification to create our own subcategories, allowing for a deeper exploration of the different types of comedies available.
+
+To achieve this, we developed a dictionary that groups specific keywords associated with various comedy subgenres. These keywords enable us to automatically reorganize and identify films into categories such as "Comedy_Romance," "Comedy_Action," "Comedy_Animation," and many others. For instance, films containing words like "romantic" or "romance" are categorized under "Comedy_Romance," while those with terms like "animated" or "anime" are classified under "Comedy_Animation."
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/style_momo.scss' | relative_url }}">
+</head>
+<body class="bg-light">
+    <!-- Main Container -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Left Panel with Buttons -->
+            <div class="col-md-3 p-3 rounded text-white" style="background: linear-gradient(to bottom,rgb(0, 108, 99), #f7e0c3);">
+                <div class="button-panel d-flex flex-column gap-2">
+                    <button class="btn btn-light text-dark fw-bold" 
+                        data-image="{{ '/assets/img/Types/comedy_animation.jpg' | relative_url }}"
+                        data-text="Animated comedy movies are loved by all ages for their visual creativity and humor.">
+                        Comedy_Animation
+                    </button>
+                    <button class="btn btn-light text-dark fw-bold" 
+                        data-image="{{ '/assets/img/Types/comedy_holiday.jpg' | relative_url }}"
+                        data-text="Holiday comedies bring joy and laughter, often revolving around festive themes like Christmas or Thanksgiving.">
+                        Comedy_Holiday
+                    </button>
+                    <button class="btn btn-light text-dark fw-bold" 
+                        data-title="Comedy Other" 
+                        data-image="{{ '/assets/img/Types/comedy_other.jpg' | relative_url }}"
+                        data-text="These are miscellaneous comedies that don't fit into other categories but still deliver humor.">
+                        Comedy_Other
+                    </button>
+                    <button class="btn btn-light text-dark fw-bold" 
+                        data-image="{{ '/assets/img/Types/comedy_political.jpg' | relative_url }}"
+                        data-text="Political comedies satirize political situations, leaders, and events with a humorous twist.">
+                        Comedy_Political
+                    </button>
+                    <button class="btn btn-light text-dark fw-bold" 
+                        data-title="Comedy Screwball" 
+                        data-image="{{ '/assets/img/Types/comedy_screwball.jpg' | relative_url }}"
+                        data-text="Screwball comedies involve eccentric characters and absurd situations, often romantic and light-hearted.">
+                        Comedy_Screwball
+                    </button>
+                    <button class="btn btn-light text-dark fw-bold" 
+                        data-title="Comedy Superhero" 
+                        data-image="{{ '/assets/img/Types/comedy_superhero.jpg' | relative_url }}"
+                        data-text="Superhero comedies parody the traditional superhero genre, mixing action with humor.">
+                        Comedy_Superhero
+                    </button>
+                    <button class="btn btn-light text-dark fw-bold" 
+                        data-title="Comedy Teen" 
+                        data-image="{{ '/assets/img/Types/comedy_teen.jpg' | relative_url }}"
+                        data-text="Teen comedies focus on humorous stories about adolescence, school life, and friendships.">
+                        Comedy_Teen
+                    </button>
+                    <button class="btn btn-light text-dark fw-bold" 
+                        data-title="Comedy War" 
+                        data-image="{{ '/assets/img/Types/comedy_war.jpg' | relative_url }}"
+                        data-text="War comedies use humor to depict military life, often highlighting the absurdity of conflict.">
+                        Comedy_War
+                    </button>
+                    <button class="btn btn-light text-dark fw-bold" 
+                        data-title="Comedy Western" 
+                        data-image="{{ '/assets/img/Types/comedy_western.jpg' | relative_url }}"
+                        data-text="Western comedies parody the Wild West, blending classic cowboy tropes with humorous storytelling.">
+                        Comedy_Western
+                    </button>
+                </div>
+            
+  <!-- Right Panel with Dynamic Content -->
+  </div>
+            <div class="col-md-9 p-4 bg-white rounded shadow-sm" id="content-box">
+                <img id="content-image" src="{{ '/assets/img/comedy_animation.jpg' | relative_url }}" 
+                     alt="Comedy Animation" class="img-fluid rounded mb-3">
+                <h2 id="content-title">Comedy Animation</h2>
+                <p id="content-text">
+                    Animated comedy movies are loved by all ages for their visual creativity and humor.
+                </p>
+            </div>
+        </div>
+    </div>
+
+<!-- Script to Change Content Dynamically -->
+  <script>
+        const buttonPanel = document.querySelector('.button-panel'); // Conteneur des boutons
+        let currentIndex = 0;
+
+        // Fonction pour mettre à jour le contenu dynamiquement
+        function updateContent(index) {
+            const buttons = document.querySelectorAll('.button-panel .btn'); // Liste des boutons
+            const button = buttons[index];
+
+            const title = button.getAttribute('data-title') || button.textContent;
+            const image = button.getAttribute('data-image');
+            const text = button.getAttribute('data-text');
+
+            // Référence aux éléments dynamiques
+            const contentImage = document.getElementById('content-image');
+            const contentTitle = document.getElementById('content-title');
+            const contentText = document.getElementById('content-text');
+
+            // Ajouter la classe fade-out pour l'animation
+            contentImage.classList.add('fade-out');
+            contentTitle.classList.add('fade-out');
+            contentText.classList.add('fade-out');
+
+            // Mettre à jour le contenu après l'animation
+            setTimeout(() => {
+                contentTitle.textContent = title;
+                contentImage.src = image;
+                contentText.textContent = text;
+
+                // Retirer les animations
+                contentImage.classList.remove('fade-out');
+                contentTitle.classList.remove('fade-out');
+                contentText.classList.remove('fade-out');
+            }, 500);
+
+            // Mettre à jour les classes actives
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        }
+
+        // Event delegation pour gérer les clics sur les boutons
+        buttonPanel.addEventListener('click', (event) => {
+            const clickedButton = event.target.closest('.btn'); // Vérifie si un bouton a été cliqué
+            if (clickedButton) {
+                const buttons = Array.from(buttonPanel.querySelectorAll('.btn'));
+                currentIndex = buttons.indexOf(clickedButton);
+                updateContent(currentIndex);
+            }
+        });
+
+        // Fonction pour faire défiler automatiquement les boutons
+        function autoCycleButtons() {
+            setInterval(() => {
+                const buttons = document.querySelectorAll('.button-panel .btn');
+                currentIndex = (currentIndex + 1) % buttons.length; // Passer au bouton suivant
+                updateContent(currentIndex);
+            }, 10000); // Change toutes les 10secondes
+        }
+
+        // Initialisation
+        updateContent(currentIndex);
+        autoCycleButtons();
+
+    </script>
+
+
+
 
 Here is how to add a plot :
 
