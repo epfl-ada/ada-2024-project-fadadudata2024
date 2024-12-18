@@ -8,6 +8,7 @@ layout: default
 ---
 
 # The Nuances of Humor Across America and Europe
+
 ## Part 1 : Introduction
 
 ## Part 2 : Presentation
@@ -16,228 +17,17 @@ In our database, we noticed that the "Genres" column contained many descriptions
 
 To achieve this, we developed a dictionary that groups specific keywords associated with various comedy subgenres. These keywords enable us to automatically reorganize and identify films into categories such as "Comedy_Romance," "Comedy_Action," "Comedy_Animation," and many others. For instance, films containing words like "romantic" or "romance" are categorized under "Comedy_Romance," while those with terms like "animated" or "anime" are classified under "Comedy_Animation."
 
-
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/style_momo.scss' | relative_url }}">
-</head>
-<body class="bg-light">
-    <!-- Main Container -->
-    <div class="container mt-4">
-        <div class="row">
-            <!-- Left Panel with Buttons -->
-            <div class="col-md-3 p-3 rounded text-white" style="background: linear-gradient(to bottom,rgb(0, 108, 99), #f7e0c3);">
-                <div class="button-panel d-flex flex-column gap-2">
-                    <button class="btn btn-light text-dark fw-bold" 
-                        data-image="{{ '/assets/img/Types/comedy_animation.jpg' | relative_url }}"
-                        data-text="Animated comedy movies are loved by all ages for their visual creativity and humor.">
-                        Comedy_Animation
-                    </button>
-                    <button class="btn btn-light text-dark fw-bold" 
-                        data-image="{{ '/assets/img/Types/comedy_holiday.jpg' | relative_url }}"
-                        data-text="Holiday comedies bring joy and laughter, often revolving around festive themes like Christmas or Thanksgiving.">
-                        Comedy_Holiday
-                    </button>
-                    <button class="btn btn-light text-dark fw-bold" 
-                        data-title="Comedy Other" 
-                        data-image="{{ '/assets/img/Types/comedy_other.jpg' | relative_url }}"
-                        data-text="These are miscellaneous comedies that don't fit into other categories but still deliver humor.">
-                        Comedy_Other
-                    </button>
-                    <button class="btn btn-light text-dark fw-bold" 
-                        data-image="{{ '/assets/img/Types/comedy_political.jpg' | relative_url }}"
-                        data-text="Political comedies satirize political situations, leaders, and events with a humorous twist.">
-                        Comedy_Political
-                    </button>
-                    <button class="btn btn-light text-dark fw-bold" 
-                        data-title="Comedy Screwball" 
-                        data-image="{{ '/assets/img/Types/comedy_screwball.jpg' | relative_url }}"
-                        data-text="Screwball comedies involve eccentric characters and absurd situations, often romantic and light-hearted.">
-                        Comedy_Screwball
-                    </button>
-                    <button class="btn btn-light text-dark fw-bold" 
-                        data-title="Comedy Superhero" 
-                        data-image="{{ '/assets/img/Types/comedy_superhero.jpg' | relative_url }}"
-                        data-text="Superhero comedies parody the traditional superhero genre, mixing action with humor.">
-                        Comedy_Superhero
-                    </button>
-                    <button class="btn btn-light text-dark fw-bold" 
-                        data-title="Comedy Teen" 
-                        data-image="{{ '/assets/img/Types/comedy_teen.jpg' | relative_url }}"
-                        data-text="Teen comedies focus on humorous stories about adolescence, school life, and friendships.">
-                        Comedy_Teen
-                    </button>
-                    <button class="btn btn-light text-dark fw-bold" 
-                        data-title="Comedy War" 
-                        data-image="{{ '/assets/img/Types/comedy_war.jpg' | relative_url }}"
-                        data-text="War comedies use humor to depict military life, often highlighting the absurdity of conflict.">
-                        Comedy_War
-                    </button>
-                    <button class="btn btn-light text-dark fw-bold" 
-                        data-title="Comedy Western" 
-                        data-image="{{ '/assets/img/Types/comedy_western.jpg' | relative_url }}"
-                        data-text="Western comedies parody the Wild West, blending classic cowboy tropes with humorous storytelling.">
-                        Comedy_Western
-                    </button>
-                </div>
-            
-  <!-- Right Panel with Dynamic Content -->
-  </div>
-            <div class="col-md-9 p-4 bg-white rounded shadow-sm" id="content-box">
-                <img id="content-image" src="{{ '/assets/img/comedy_animation.jpg' | relative_url }}" 
-                     alt="Comedy Animation" class="img-fluid rounded mb-3">
-                <h2 id="content-title">Comedy Animation</h2>
-                <p id="content-text">
-                    Animated comedy movies are loved by all ages for their visual creativity and humor.
-                </p>
-            </div>
-        </div>
-    </div>
-
-<!-- Script to Change Content Dynamically -->
-  <script>
-        const buttonPanel = document.querySelector('.button-panel'); // Conteneur des boutons
-        let currentIndex = 0;
-
-        // Fonction pour mettre à jour le contenu dynamiquement
-        function updateContent(index) {
-            const buttons = document.querySelectorAll('.button-panel .btn'); // Liste des boutons
-            const button = buttons[index];
-
-            const title = button.getAttribute('data-title') || button.textContent;
-            const image = button.getAttribute('data-image');
-            const text = button.getAttribute('data-text');
-
-            // Référence aux éléments dynamiques
-            const contentImage = document.getElementById('content-image');
-            const contentTitle = document.getElementById('content-title');
-            const contentText = document.getElementById('content-text');
-
-            // Ajouter la classe fade-out pour l'animation
-            contentImage.classList.add('fade-out');
-            contentTitle.classList.add('fade-out');
-            contentText.classList.add('fade-out');
-
-            // Mettre à jour le contenu après l'animation
-            setTimeout(() => {
-                contentTitle.textContent = title;
-                contentImage.src = image;
-                contentText.textContent = text;
-
-                // Retirer les animations
-                contentImage.classList.remove('fade-out');
-                contentTitle.classList.remove('fade-out');
-                contentText.classList.remove('fade-out');
-            }, 500);
-
-            // Mettre à jour les classes actives
-            buttons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-        }
-
-        // Event delegation pour gérer les clics sur les boutons
-        buttonPanel.addEventListener('click', (event) => {
-            const clickedButton = event.target.closest('.btn'); // Vérifie si un bouton a été cliqué
-            if (clickedButton) {
-                const buttons = Array.from(buttonPanel.querySelectorAll('.btn'));
-                currentIndex = buttons.indexOf(clickedButton);
-                updateContent(currentIndex);
-            }
-        });
-
-        // Fonction pour faire défiler automatiquement les boutons
-        function autoCycleButtons() {
-            setInterval(() => {
-                const buttons = document.querySelectorAll('.button-panel .btn');
-                currentIndex = (currentIndex + 1) % buttons.length; // Passer au bouton suivant
-                updateContent(currentIndex);
-            }, 10000); // Change toutes les 10secondes
-        }
-
-        // Initialisation
-        updateContent(currentIndex);
-        autoCycleButtons();
-
-    </script>
-
-
-
-
-Here is how to add a plot :
-
-<!-- ATTENTION il faut que 'basic-plot' corresponde à l'argument de newPlot() dans basic_plot.js !! -->
-<div id="basic-plot" style="width: 620px; height: 420px;"></div>
-<script src="{{ '/assets/js/basic_plot.js' | relative_url }}"></script>
-
-
-## Movie carousel
-
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-8">
-      <p>Some text here</p>
-    </div>
-    <div class="col-4">
-      {% include carousel.html %}
-    </div>
-  </div>
-</div>
-
-
-Here is how to add simple tabs :
-
-<div class="container mt-2 mb-2">
-  <ul class="nav nav-underline" id="sampleTabs" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="europe-wordcloud-tab" data-bs-toggle="tab" data-bs-target="#europe-wordcloud" type="button" role="tab" aria-controls="europe-wordcloud" aria-selected="true">
-        Europe
-      </button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="america-wordcloud-tab" data-bs-toggle="tab" data-bs-target="#america-wordcloud" type="button" role="tab" aria-controls="america-wordcloud" aria-selected="false">
-        North America
-      </button>
-    </li>
-  </ul>
-
-  <div class="tab-content mt-3" id="sampleTabsContent">
-    <div class="tab-pane fade show active" id="europe-wordcloud" role="tabpanel" aria-labelledby="europe-wordcloud-tab">
-      <div class="card w-25">
-        <img src="{{ '/assets/img/test1.jpg' | relative_url }}" alt="Image 1" class="card-img-top">
-        <div class="card-body">
-          <h4 class="card-title">Some more text here </h4>
-          <p class="card-text">Description</p>
-        </div>
-      </div>
-    </div>
-    <div class="tab-pane fade" id="america-wordcloud" role="tabpanel" aria-labelledby="america-wordcloud-tab">
-      <div class="card w-25">
-      <img src="{{ '/assets/img/test2.jpg' | relative_url }}" alt="Image 2" class="card-img-top">
-        <div class="card-body">
-          <h4 class="card-title">Some more text here </h4>
-          <p class="card-text">Description</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la banner mais il suffit de changer src)
-
-<div class="big-image-wrapper">
-  <img src="{{ '/assets/img/banner.jpg' | relative_url }}" alt="Alternative text" class="big-image">
-</div>
-<div class="big-image-spacer"></div>
+<!-- 1. Load the html template -->
+{% include movies_genres.html %}
+<!-- 2. Load the associated javascript -->
+<script src="{{ '/assets/js/movies_genres.js' | relative_url }}"></script>
 
 
 ## Wordclouds
 
 ### Now, presenting a star of the comedy data scene… give it up for the one, the only… WORDCLOUD! 🎭
+
+![Wordcloud example on the whole dataset](assets/img/wordclouds/globale_wordcloud.png)
 
 This interactive tool is here to help us dive into the humor-filled rivalry between American and European comedies by analyzing the words that make each side laugh. Packed with a ton of features, Wordcloud is your go-to act for cracking the linguistic code of comedy. Let’s break down its impressive setlist:
 
@@ -266,79 +56,7 @@ Hidden in plain sight, there’s a **secret button** on the Wordcloud interface.
 (après il faudrait faire un peu mieux le bouton et faire un easter egg marrant mais je vous avoue je galère mdr)
 
 <script src="{{ '/assets/js/wordclouds.js' | relative_url }}"></script>
-<div class="container-fluid">
-  <div class="row" id="wordclouds">
-    <div class="col align-content-center">
-      <div class="btn-group  w-100">
-        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Region
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'region', value: 'Europe'})">Europe</a></li>
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'region', value: 'America'})">America</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'region', value: 'Both'})">Both</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="col align-content-center">
-      <div class="btn-group  w-100">
-        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Subsets
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'Biggest_America'})">Biggest_America</a></li>
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'Biggest_Both'})">Biggest_Both</a></li>
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'Biggest_Europe'})">Biggest_Europe</a></li>
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'Biggest_Gap_diff_Eu_Am'})">Biggest_Gap_diff_Eu_Am</a></li>
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'Smallest_Gap_diff_Eu_Am'})">Smallest_Gap_diff_Eu_Am</a></li>
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'subset', value: 'None'})">No subset</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="col align-content-center">
-      <div class="btn-group  w-100">
-        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Part-Of-Speech
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'pos_tag', value: 'NN'})">Nouns</a></li>
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'pos_tag', value: 'VB'})">Verbs</a></li>
-          <li><a class="dropdown-item" href="#wordclouds" onclick="on_wordcloud_filter_change({key: 'pos_tag', value: 'JJ'})">Adjectives</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="col align-content-center">
-      <label for="ngram-range" class="form-label text-center">N-gram size : <span class="badge text-bg-info" id="ngram-value">1</span></label>
-      <input type="range" class="form-range" style="height: 12px" min="1" max="3" step="1" 
-      value="1" id="ngram-range" onchange="on_wordcloud_filter_change({key: 'ngram', value: this.value})">
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-5 border border-secondary rounded">
-        <img src="{{ site.baseurl }}/assets/img/wordclouds/America__None__VB__1.jpg" class="wordcloud-image" alt="Wordcloud" id="wordcloud"
-        onload="this.classList.remove('wordcloud-image-hidden')"/>
-    </div>
-    <!-- Secret Button Below the Wordcloud -->
-    <div class="col-5 text-center mt-2">
-        <button type="button" class="btn btn-secondary secret-button" onclick="void(0);">
-            🕵️‍♀️ Secret Button
-        </button>
-    </div>
-</div>
-
-Another one some text
-
-
-Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la banner mais il suffit de changer src)
- 
-<div class="big-image-wrapper">
-  <img src="{{ '/assets/img/banner.jpg' | relative_url }}" alt="Alternative text" class="big-image">
-</div>
-<div class="big-image-spacer"></div>
-
-
-
+{% include wordclouds.html %}
 
 
 # LOLO TEST 
@@ -357,34 +75,8 @@ Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la ban
 </style>
 
 ## <span class="hover-title">Very strudent group</span>
+{% include team_members.html %}
 
-<div class="team">
-  <div class="member">
-    <img src="/assets/img/loris1.png" alt="Membre 1">
-    <span class="emoji">😂</span>
-    <p style="text-align: center; font-weight: bold;">loris Fabbro</p>
-  </div>
-  <div class="member">
-    <img src="/assets/img/Unknown.jpeg" alt="Membre 2">
-    <span class="emoji">😅</span>
-    <p style="text-align: center; font-weight: bold;">Nom 2</p>
-  </div>
-  <div class="member">
-    <img src="/assets/img/Unknown.jpeg" alt="Membre 3">
-    <span class="emoji">😏</span>
-    <p style="text-align: center; font-weight: bold;">Nom 3</p>
-  </div>
-  <div class="member">
-    <img src="/assets/img/Unknown.jpeg" alt="Membre 4">
-    <span class="emoji">🥳</span>
-    <p style="text-align: center; font-weight: bold;">Nom 4</p>
-  </div>
-  <div class="member">
-    <img src="/assets/img/Unknown.jpeg" alt="Membre 5">
-    <span class="emoji">🫢</span>
-    <p style="text-align: center; font-weight: bold;">Nom 5</p>
-  </div>
-</div>
 
 
 <div style="font-family: 'COPPERPLATE', sans-serif; text-align: center; font-size: 1rem;">
@@ -479,46 +171,6 @@ Exemple : pour réajouter une "IMPACT IMAGE" (toute la largeur, ici c'est la ban
 Another one some text
 
 
-Table examples :
-
-| Simple table in markdown | col1 | col2 | col3 |
-|-|-|-|-|
-|Value1|1|2|3.55|
-|Value1|1|2|3.55|
-|Value1|1|2|3.55|
-|Value1|1|2|3.55|
-
-Example table from Bootstrap
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
 <script>
   let isOriginal = true;
   document.getElementById('burger-button').addEventListener('click', function() {
@@ -538,3 +190,6 @@ Example table from Bootstrap
     isOriginal = !isOriginal;
   });
 </script>
+
+<!-- These are example components, inspire from them to add new content -->
+{% include examples.md %}

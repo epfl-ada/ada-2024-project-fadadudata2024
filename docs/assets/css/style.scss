@@ -2,8 +2,7 @@
 ---
 
 @import "{{ site.theme }}";
-@import "main.scss";
-
+@import "style_momo.scss";
 
 .background {
   position: fixed;
@@ -37,6 +36,10 @@ header {
     transition: all 0.2s;
 }
 
+.dropdown-item:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
 
 .wrapper {
     width: 85vw;
