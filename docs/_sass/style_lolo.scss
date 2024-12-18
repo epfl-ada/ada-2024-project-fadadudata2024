@@ -1,0 +1,59 @@
+.hover-title {
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.hover-title:hover::after {
+    content: "➜ NOP";
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.text {
+    width: 35%;
+    padding-left: 20px;
+    padding: 10px;
+    font-family: 'Copperplate', sans-serif;
+    font-size: 7pt;
+    margin-left: 20px;
+}
+
+button#burger-button {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 2rem;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.highlight {
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -3,6 +3,7 @@
 
 @import "{{ site.theme }}";
 @import "style_momo.scss";
+@import "style_lolo.scss";
 
 .background {
   position: fixed;
@@ -17,7 +18,8 @@
 
 
 section {
-    width: calc(100% - 310px);
+    width: 100%;
+    float: left;
 }
 
 header {
