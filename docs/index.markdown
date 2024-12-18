@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-# START COMMAND : bundle exec jekyll serve --l
+# START COMMAND : bundle exec jekyll serve -l
 # START COMMAND Pour loris: bundle exec jekyll serve --livereload
 ---
 
@@ -27,7 +27,13 @@ To achieve this, we developed a dictionary that groups specific keywords associa
 
 ### Now, presenting a star of the comedy data scene… give it up for the one, the only… WORDCLOUD! 🎭
 
-![Wordcloud example on the whole dataset](assets/img/wordclouds/globale_wordcloud.png)
+<div class="container-fluid mt-2 mb-2">
+  <div class="row justify-content-center">
+    <div class="col-6 rounded shadow-sm">
+      <img src="{{ '/assets/img/wordclouds/globale_wordcloud.png' | relative_url }}" alt="General word cloud" class="img-fluid">
+    </div>
+  </div>
+</div>
 
 This interactive tool is here to help us dive into the humor-filled rivalry between American and European comedies by analyzing the words that make each side laugh. Packed with a ton of features, Wordcloud is your go-to act for cracking the linguistic code of comedy. Let’s break down its impressive setlist:
 

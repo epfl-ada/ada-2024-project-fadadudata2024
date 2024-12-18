@@ -2,13 +2,14 @@
 /* Réduction des images */
 /* Transition pour l'image */
 #content-image {
-    max-width: auto;
-    height: 600px;
-    margin: 0 auto;
+    width: auto;
+    height: 370px;
     display: block;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* Transition fluide pour l'image */
-}
+    transition: opacity 0.5s ease-in-out;
+    margin: auto;
+    margin-top: 13px;
+  }
 
 /* Transition pour le texte et le titre */
 #content-title, #content-text {
