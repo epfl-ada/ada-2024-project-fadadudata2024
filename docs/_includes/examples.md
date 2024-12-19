@@ -95,3 +95,17 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+<div style="text-align: center; position: relative; left: 15%; transform: scale(0.6);">
+  <img src="/assets/img/Bouche_fermée.png" alt="Bouche fermée" style="position: absolute; top: -40%; left: -20%; width: 700%; height: 200%; z-index: 1; transition: opacity 0.3s ease-in-out;" onmouseover="this.style.display='none';">
+  <img src="/assets/img/Bouche_ouverte.png" alt="Bouche ouverte" style="position: absolute; top: -40%; left: -20%; width: 700%; height: 170%; z-index: -1 ; opacity: 0; transition: opacity 0.3s ease-in-out;" onmouseover="this.style.opacity=1;">
+  <!-- 1. Load the html template -->
+  {% include movies_genres.html %}
+  <!-- 2. Load the associated javascript -->
+  <script src="{{ '/assets/js/movies_genres.js' | relative_url }}"></script>
+</div>

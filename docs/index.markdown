@@ -132,15 +132,6 @@ To make it happen, we developed a magical dictionary 🪄📖 (sadly, it doesn�
 For example, any film that dares to drop words like "romantic" or "romance" gets whisked straight into "Comedy_Romance." 💘😂 Meanwhile, those whispering terms like "animated" or "anime" are promptly filed under "Comedy_Animation." 🎨🤪 In short, we’ve turned a big ol’ mess into a well-organized laugh factory. And guess what? We’re having a blast doing it! 🎉🤣
 
 
-<div style="text-align: center; position: relative; left: 15%; transform: scale(0.6);">
-  <img src="/assets/img/Bouche_fermée.png" alt="Bouche fermée" style="position: absolute; top: -40%; left: -20%; width: 700%; height: 200%; z-index: 1; transition: opacity 0.3s ease-in-out;" onmouseover="this.style.display='none';">
-  <img src="/assets/img/Bouche_ouverte.png" alt="Bouche ouverte" style="position: absolute; top: -40%; left: -20%; width: 700%; height: 170%; z-index: -1 ; opacity: 0; transition: opacity 0.3s ease-in-out;" onmouseover="this.style.opacity=1;">
-  <!-- 1. Load the html template -->
-  {% include movies_genres.html %}
-  <!-- 2. Load the associated javascript -->
-  <script src="{{ '/assets/js/movies_genres.js' | relative_url }}"></script>
-</div>
-
 ## Part 2 : Presentation
 
 In our database, we noticed that the "Genres" column contained many descriptions that were not particularly relevant to our subject, such as "World Cinema," "Short Film," or "Indie." These categories did not provide meaningful information about the type of comedy, making the analysis more confusing. As enthusiasts of humorous films, we decided to restructure this classification to create our own subcategories, allowing for a deeper exploration of the different types of comedies available.
@@ -153,19 +144,266 @@ To achieve this, we developed a dictionary that groups specific keywords associa
 <script src="{{ '/assets/js/movies_genres.js' | relative_url }}"></script>
 
 
-## Wordclouds
 
-### Now, presenting a star of the comedy data scene… give it up for the one, the only… WORDCLOUD! 🎭
+## The rating of the comedies : critics vs users
+
+
+### Source of Ratings: Critics vs. Public
+
+This table shows whether each rating source displays ratings from critics or the public.
+
+| Rating Source                  | Type of Rating     | Description                                                                                       |
+|--------------------------------|--------------------|---------------------------------------------------------------------------------------------------|
+| **imdbRating**                 | Public             | Rating provided by IMDb users.                                                                    |
+| **Rotten_Tomatoes_Rating**     | Critics            | Represents the **Tomatometer** score, an aggregated rating from professional critics.             |
+| **Metacritic_Rating**          | Critics            | Aggregated rating from professional critics, provided by Metacritic.                              |
+
+### Summary
+- **Critics’ Ratings**: Rotten_Tomatoes_Rating (Tomatometer) and Metacritic_Rating.
+- **Public Ratings**: imdbRating.
+
+
+### Kolmogorov-Smirnov Test for Normality on Movie Ratings
+
+### How the KS Test Works
+
+1. **Define Hypotheses**:
+   - **Null Hypothesis (H0)**: The data follows the specified distribution (e.g., normal distribution).
+   - **Alternative Hypothesis (H1)**: The data does not follow the specified distribution.
+
+2. **Calculate the KS Statistic**:
+   - The KS statistic measures the maximum difference between the cumulative distribution of the sample data and the cumulative distribution of the normal distribution.
+   - A larger KS statistic indicates a greater deviation between the sample data and the specified distribution.
+
+3. **P-Value**:
+   - The p-value tells us if the observed difference (measured by the KS statistic) is statistically significant.
+   - A low p-value (typically < 0.05) means we can reject the null hypothesis and conclude that the data does not follow a normal distribution.
+   - A high p-value (typically ≥ 0.05) means we fail to reject the null hypothesis, suggesting the data may follow a normal distribution.
+  
+<div class="container-fluid">
+  <div class="row justify-content-center bokeh-plot">
+   <iframe src="/assets/htmlplot/interactive_plotly_imdbRating.html"></iframe>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row justify-content-center bokeh-plot">
+   <iframe src="/assets/htmlplot/interactive_plotly_Metacritic_Rating.html"></iframe>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row justify-content-center bokeh-plot">
+   <iframe src="/assets/htmlplot/interactive_plotly_Rotten_Tomatoes_Rating.html"></iframe>
+  </div>
+</div>
+
+
+### Results for Each Rating Source
+
+| Rating Source                  | KS Statistic | P-Value | Interpretation                                                                                      |
+|--------------------------------|--------------|---------|-----------------------------------------------------------------------------------------------------|
+| **imdbRating**                 | 0.0648       | 0.0010  | The p-value of 0.001 suggests a significant deviation from normality, indicating this rating is not normally distributed. |
+| **Rotten_Tomatoes_Rating**     | 0.0834       | 0.0010  | The highest KS statistic among all ratings, with a p-value of 0.001, suggesting a pronounced deviation from normality. |
+| **Metacritic_Rating**          | 0.0350       | 0.0010  | Significant deviation from normality as indicated by the low p-value.                               |
+
+### Summary
+
+All ratings show p-values of 0.001, indicating that none of these datasets follow a normal distribution at a 0.05 significance level. The KS statistics for each rating source reinforce this conclusion, with **Rotten_Tomatoes_Rating** showing the highest deviation from normality. These results imply that assumptions of normality may not hold for analyses on these rating distributions.
+
+
+## Analysis of Ratings: Do Critics Rate European Films More Severely Than Users? And the Same for American Films?
+
+This analysis compares IMDb ratings (from users) with Rotten Tomatoes and Metacritic ratings (from critics) to determine if critics rate European and American films more severely than users.
+
+### Methodology
+- **Separate by Continent of Production**: The analysis is conducted separately for European and American films.
+- **Combined Critic Ratings**: For each continent, Rotten Tomatoes and Metacritic ratings are combined into a single "Critics" group for analysis.
+- **Statistical Tests**:
+  - **Independent T-Test**: Used if both IMDb (user) and combined critics' ratings are normally distributed for each continent.
+  - **Mann-Whitney U Test**: Used if the data is not normally distributed for each continent.
+  
+### Hypotheses
+
+- **Null Hypothesis (H0)**: There is no difference between the ratings given by critics and users for films from each continent.
+- **Alternative Hypothesis (H1)**: Critics rate films more severely than users for each continent, meaning critic ratings are lower than user ratings.
+
+### Statistical Tests in Detail
+
+#### Independent T-Test
+
+The **Independent T-Test** compares the means of two independent groups (in this case, user ratings vs. critic ratings) to determine if there is a statistically significant difference between them.
+
+- **Formula**:
+  $
+  t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
+  $
+  Where:
+  - $\bar{X}_1$ and $\bar{X}_2$ are the sample means for the two groups (users and critics).
+  - $s_1^2$ and $s_2^2$ are the variances of the two groups.
+  - $n_1$ and $n_2$ are the sample sizes of the two groups.
+
+- **Assumptions**:
+  - The data for each group should be normally distributed.
+  - Variances of the two groups should be equal (if not, an adjusted version of the T-Test, known as Welch's T-Test, is used).
+
+- **Interpretation of Results**:
+  - If the p-value < 0.05, we reject the null hypothesis, suggesting a significant difference in mean ratings between critics and users.
+  - If the p-value ≥ 0.05, we fail to reject the null hypothesis, indicating no significant difference in mean ratings.
+
+#### Mann-Whitney U Test
+
+If the data is not normally distributed, the **Mann-Whitney U Test** is a non-parametric alternative that compares the distributions of the two independent groups.
+
+- **Formula**:
+  $
+  U = n_1 n_2 + \frac{n_1 (n_1 + 1)}{2} - R_1
+  $
+  Where:
+  - $U$ is the test statistic.
+  - $n_1$ and $n_2$ are the sample sizes of the two groups.
+  - $R_1$ is the sum of ranks for the first group (users).
+
+- **Interpretation of Results**:
+  - If the p-value < 0.05, we reject the null hypothesis, indicating a significant difference in the distributions of ratings between critics and users.
+  - If the p-value ≥ 0.05, we fail to reject the null hypothesis, suggesting no significant difference in distributions.
+
+### Interpretation of Results
+- **If p-value < 0.05**: Reject the null hypothesis, suggesting that critics rate films from that continent more severely than users.
+- **If p-value ≥ 0.05**: Fail to reject the null hypothesis, indicating no significant difference between user and critic ratings for films from that continent.
+
+### Summary
+
+- **Independent T-Test** is used if ratings for each group (user and critic) are normally distributed.
+- **Mann-Whitney U Test** is used as an alternative if data is not normally distributed.
+
+
+### Summary of Mann-Whitney U Test Results: Do Critics Rate Films More Severely Than Users?
+
+This table summarizes the results of the Mann-Whitney U Test comparing user and critic ratings for European and American films.
+
+| Continent        | Test Statistic  | P-Value                   | Interpretation                                                                                           |
+|------------------|-----------------|---------------------------|----------------------------------------------------------------------------------------------------------|
+| **European Films** | Mann-Whitney U | 0.9999999999998804        | No significant difference between critics' and users' ratings; critics and users rate European films similarly. |
+| **American Films** | Mann-Whitney U | 6.65e-192                 | Significant difference; critics rate American films more severely than users.                             |
+
+### Additional Notes
+- **Warning**: The large sample size (N > 5000) may impact the accuracy of the p-values, as indicated by a warning from the test. However, the results remain interpretable, especially for indicating significant differences.
+
+
+# Are European comedies juged better than american comedies
+
+
+
+### Mann-Whitney U Test Analysis of Ratings by Continent of Production
+
+This analysis compares the distributions of ratings for comedies produced in Europe and America using the Mann-Whitney U test. This non-parametric test is chosen because it does not assume normality, making it suitable for datasets with deviations from normal distribution or large sample sizes.
+
+<div class="container-fluid">
+  <div class="row justify-content-center bokeh-plot">
+   <iframe src="/assets/htmlplot/average_ratings_by_continent_collapsed.html"></iframe>
+  </div>
+</div>
+
+#### Results
+
+| Rating Source                  | U-Statistic      | P-Value               | Interpretation                                                                                      |
+|--------------------------------|------------------|-----------------------|-----------------------------------------------------------------------------------------------------|
+| **imdbRating**                 | 10,555,812.5     | 3.81e-21              | Statistically significant difference in IMDb ratings between European and American-produced comedies, indicating differing rating distributions. |
+| **Rotten_Tomatoes_Rating**     | 1,634,734.0      | 1.68e-39              | The most significant difference observed, showing pronounced variation in Rotten Tomatoes ratings between the two continents. |
+| **Metacritic_Rating**          | 624,487.5        | 6.17e-24              | Clear statistical difference in Metacritic ratings, further supporting the hypothesis of differing rating patterns. |
+
+#### Summary
+
+All three rating sources show statistically significant differences between comedies produced in Europe and America, as evidenced by the very low p-values (all below 0.05). These findings suggest that the continent of production has a notable influence on how movies are rated across different platforms.
+
+The Rotten Tomatoes ratings exhibit the most pronounced differences, followed by Metacritic and IMDb. These variations could reflect cultural differences in audience perceptions, critical standards, or other region-specific factors influencing movie ratings.
+
+## More specific analysis
+
+Après des analyses plus générales sur les comédies, nous avons décidé de se concentrer plus en détails sur certains sous genres de comédies pour voir en profondeur ce qui fait qu'une comédie est plus aimé qu'une autre. Pour voir cela, nous nous sommes concentrés sur l'analyse de mots et de topics pour voir si il y a une différence de sujets traités en Europe en Amérique.
+
+Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres le plus aimé en Europe, en Amérique et en Both. Nous avons également sélectionner ceux qui ont la plus petite différence de note entre eux et la plus grande.
+
+<div class="container-fluid">
+  <div class="row justify-content-center bokeh-plot">
+    <iframe src="/assets/htmlplot/Heatmap_imdbRating.html"></iframe>
+  </div>
+</div>
+
+## Semantic analysis
+
+Now let’s try to analyze the semantic aspect of our comedies. Let’s first examine the most frequently occurring nouns in movie plots from each continent. The wordclouds below offer a visual representation of these prominent terms, giving us an idea of what are the most used words in plots for each continent.
 
 <div class="container-fluid mt-2 mb-2">
   <div class="row justify-content-center">
     <div class="col-6 rounded shadow-sm">
-      <img src="{{ '/assets/img/wordclouds/globale_wordcloud.png' | relative_url }}" alt="General word cloud" class="img-fluid">
+      <img src="{{ '/assets/img/wordclouds/America__None__NN__1.jpg' | relative_url }}" alt="General word cloud" class="img-fluid">
+    </div>
+    <div class="col-6 rounded shadow-sm">
+      <img src="{{ '/assets/img/wordclouds/Europe__None__NN__1.jpg' | relative_url }}" alt="General word cloud" class="img-fluid">
     </div>
   </div>
 </div>
 
-This interactive tool is here to help us dive into the humor-filled rivalry between American and European comedies by analyzing the words that make each side laugh. Packed with a ton of features, Wordcloud is your go-to act for cracking the linguistic code of comedy. Let’s break down its impressive setlist:
+
+Shared Themes Across Continents
+Both wordclouds reveal a universal focus on family, love, and life. This shows that these themes are timeless and they resonate with audiences worldwide. Despite regional differences, the foundation of cinema in both Europe and America seems to be built on human relationships.
+
+These wordclouds set the stage for a deeper analysis now. Even though these 2 themes are the same across continents, do they represent the same type of humor?
+Using singular value decomposition (SVD), a dimension reduction technique, we can break down the underlying topics in movie plots to uncover what truly defines the narratives in each continent and how they diverge or align thematically.
+Looking at the following figure, we can see the two main topics we found for each continent:
+
+
+
+<div class="container-fluid mt-2 mb-2">
+  <div class="row justify-content-center">
+    <div class="col-10 rounded shadow-sm">
+      <img src="{{ '/assets/img/wordclouds/topic_modeling.jpeg' | relative_url }}" alt="General word cloud" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+### Topic 1: Relationships & Family
+
+This theme seems to be a shared priority across both American and European films, reflecting the universality of human experiences. As we saw with the wordclouds, terms like *life, **love, **family, **friend, and **man* dominate, pointing to narratives that emphasize human connections, personal struggles, and the importance of familial bonds. 
+
+This topic shows that both continents value storytelling that resonates emotionally, whether through romantic comedies, family dramas, or coming-of-age tales.
+
+So *Topic 1 transcends cultural boundaries* and highlights how both regions use movies to address universal emotions and relationships. 
+
+Now let’s try to go deeper. *Do these shared themes truly represent the same topics in the same way across both continents?*
+
+### Topic 2: Cartoon (America) vs. War & Conflict (Europe)
+
+The second most represented topics diverges sharply between the two regions:
+
+#### American Films:
+Focus heavily on animated slapstick comedies, with characters like *Tom and Jerry*, capturing humor through physical and exaggerated action.  
+Keywords such as *tom, **jerry, **dog, **cat, and **chase* emphasize light-hearted and family-friendly cartoons that appeals to a global audience.  
+This might reflect America’s preference for escapism and universally accessible humor.  
+*Example film: *Tom and Jerry: The Movie (1992)
+
+#### European Films:
+Emphasize historical narratives and intellectual satire, often set in the context of war and conflict.  
+Keywords like *war, **soldier, **nazi, and **village* highlight humor derived from historical and cultural reflections, showing Europe’s tendency to intertwine comedy with societal critique.  
+The darker and more cerebral tone of this humor reflects Europe’s unique storytelling style, grounded in its history.  
+*Example film: *Train of Life (1998)
+
+### Comparison
+
+American films often portray themes through light-hearted comedies, uplifting stories, or hero-centric narratives. In contrast, European films tend to explore the same themes with nuanced, introspective perspectives, often incorporating social or historical commentary.
+
+### Conclusion
+
+While America leans toward escapism and visual comedy, Europe’s humor often explores the deeper, more serious aspects of life, blending satire with history. This divergence in comedic styles can, in part, be attributed to Europe’s deep historical scars, particularly the profound impact of World War II. The aftermath of the war left a lasting imprint on European storytelling, where humor often serves as a coping mechanism to reflect on and critique the societal and political consequences of conflict.
+
+These differences underline the broader cultural role of cinema: for Europe, a mirror to history and social critique; for America, a stage for universal entertainment and relief.
+
+
+### Now, presenting a star of the comedy data scene… give it up for the one, the only… WORDCLOUD! 🎭
+
+We did our analysis, but you can make it too! This interactive tool is here to help us dive into the humor-filled rivalry between American and European comedies by analyzing the words that make each side laugh. Packed with a ton of features, Wordcloud is your go-to act for cracking the linguistic code of comedy. Let’s break down its impressive setlist:
 
 1. **Regional Filters**  
    *“Are you into the loud, slapstick humor of Hollywood or the subtle, dry wit of Europe? No worries—this tool lets you toggle between regions faster than a comedian switching accents mid-joke!”*
@@ -217,7 +455,3 @@ Hidden in plain sight, there’s a **secret button** on the Wordcloud interface.
   </div>
 </div>
 
-<!-- --- -->
-
-<!-- These are example components, inspire from them to add new content -->
-<!-- {% include examples.md %} -->
