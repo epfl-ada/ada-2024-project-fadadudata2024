@@ -20,9 +20,14 @@ Add a bokeh plot :
 </div>
 
 <!-- team member  -->
-  <div style="background-color:rgb(193, 178, 185); padding: 20px; border-radius: 10px; text-align: center;">
-  <h1 style="text-align: center;">The circus squad</h1>
+
+<div class="container-fluid">
+  <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185)">
+    <div class="col">
+      <span class="display-1">The circus squad</span>
+    </div>
   </div>
+</div>
 
 <div style="position: relative; text-align: center; color: white;">
   <img src="/assets/img/bandrole.png" alt="Bandrole" style="width: 100%; height: auto; border-radius: 0px;">
@@ -31,7 +36,7 @@ Add a bokeh plot :
       {% include team_members.html %}
     </div>
   </div>
-  </div>
+</div>
 
 
 

@@ -6,6 +6,15 @@
 @import "style_lolo.scss";
 
 
+@font-face {
+    font-family: "CopperplateCC-Bold";
+    src: url('../fonts/CopperplateCC-Bold.ttf') format('truetype');
+}
+
+section {
+    font-family: 'CopperplateCC-Bold', sans-serif;
+}
+
 @keyframes shake {
     0% {
         transform: translate(1px, 1px) rotate(0deg);
