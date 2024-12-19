@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: default2
+layout: default
 
 # START COMMAND : bundle exec jekyll serve -l
 # START COMMAND Pour loris: bundle exec jekyll serve --livereload
@@ -10,6 +10,14 @@ layout: default2
 <!-- titre image  -->
 ![Titre](assets/img/Titre.png)
 
+Add a bokeh plot :
+
+
+<div class="container-fluid">
+  <div class="row justify-content-center bokeh-plot">
+   <iframe src="/assets/htmlplot/heatmap.html"></iframe>
+  </div>
+</div>
 
 <!-- team member  -->
   <div style="background-color:rgb(193, 178, 185); padding: 20px; border-radius: 10px; text-align: center;">
