@@ -28,6 +28,32 @@
     margin-left: 20px;
 }
 
+.image-container {
+    position: relative;
+    width: 300px;
+    height: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container img.second-image {
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.image-container:hover img.first-image {
+    display: none;
+}
+
+.image-container:hover img.second-image {
+    display: block;
+}
+
 button#burger-button {
     font-size: 2rem;
     border: none;
