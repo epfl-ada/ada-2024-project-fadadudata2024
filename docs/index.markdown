@@ -379,7 +379,6 @@ Stay tuned for more dazzling data insights, and don’t forget to grab your popc
 
 
 
-## More specific analysis
 
 
 
@@ -693,6 +692,7 @@ The second most represented topics diverges sharply between the two regions:
         <tr>
             <td>
                 <h3>Biggest America</h3>
+                <body><strong>Comedy Genres with the highest ratings in America</strong></body>
                 <ul>
                     <li>Comedy_Animation</li>
                     <li>Comedy_War</li>
@@ -701,6 +701,7 @@ The second most represented topics diverges sharply between the two regions:
             </td>
             <td>
                 <h3>Biggest Europe</h3>
+                <body><strong>Comedy Genres with the highest ratings in Europe</strong></body>
                 <ul>
                     <li>Comedy_War</li>
                     <li>Comedy_Political</li>
@@ -709,6 +710,7 @@ The second most represented topics diverges sharply between the two regions:
             </td>
             <td>
                 <h3>Biggest Both</h3>
+                <body><strong>Comedy Genres with the highest ratings in Coproductions</strong></body>
                 <ul>
                     <li>Comedy_War</li>
                     <li>Comedy_Political</li>
@@ -718,7 +720,8 @@ The second most represented topics diverges sharply between the two regions:
         </tr>
         <tr>
             <td>
-                <h3>Biggest Gap (rating difference absolute value)</h3>
+                <h3>Biggest Gap </h3>
+                <body><strong>Comedy Genres with the biggest rating difference in absolute value</strong></body>
                 <ul>
                     <li>Comedy_Superhero</li>
                     <li>Comedy_Teen</li>
@@ -726,7 +729,8 @@ The second most represented topics diverges sharply between the two regions:
                 </ul>
             </td>
             <td>
-                <h3>Smallest Gap (EU ≈ AM)</h3>
+                <h3>Smallest Gap</h3>
+                <body><strong>Comedy Genres with the smallest rating difference in absolute value</strong></body>
                 <ul>
                     <li>Comedy_Holiday</li>
                     <li>Comedy_Other</li>
