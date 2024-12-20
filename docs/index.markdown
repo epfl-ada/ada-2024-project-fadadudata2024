@@ -9,11 +9,16 @@ layout: default
 ---
 <!-- titre image  -->
 
+<div class="big-image-wrapper">
+  <img src="{{ '/assets/img/circus_lion.png' | relative_url }}" alt="Alternative text" class="big-image shadow shadow-lg">
+</div>
+<div class="big-image-spacer"></div>
+<!-- 
 <div class="container-fluid mb-5">
   <div class="row justify-content-center">
-   <img src="/assets/img/Titre.png">
+   <img src="/assets/img/circus_lion.png">
   </div>
-</div>
+</div> -->
 
 <!-- 
 <div class="container-fluid">
@@ -26,17 +31,18 @@ layout: default
 
 <div class="container-fluid">
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185)">
-    <div class="col">
+    <div class="col-md-12">
       <span class="display-1 copper">The circus squad</span>
     </div>
   </div>
-</div>
-
-<div style="position: relative; text-align: center; color: white; width: 995px">
-  <img src="/assets/img/bandrole.png" alt="Bandrole" style="width: 900px; height: auto; border-radius: 0px;">
-  <div style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); padding: 10px; border-radius: 5px; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
-    <div style="display: flex; flex-direction: row;">
-      {% include team_members.html %}
+  <div class="row justify-content-center">  
+    <div style="position: relative; text-align: center; color: white; width: 1100px">
+      <img src="/assets/img/circus_banner.png" alt="Bandrole" style="width: 1100px; height: auto; border-radius: 0px;">
+      <div style="position: absolute; bottom: 17%; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; left: 103px;">
+        <div style="display: flex; flex-direction: row;">
+          {% include team_members.html %}
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -66,8 +72,15 @@ layout: default
   </div>
 </div>
 
-
 ## Part 2 : Presentation
+
+<div class="container-fluid mt-5 mb-2">
+  <div class="row justify-content-center text-center" >
+    <div class="col-8 border border-dark-subtle rounded" style="background-color:rgb(218, 112, 174);">
+      <span class="display-1 copper">Opening act</span>
+    </div>
+  </div>
+</div>
 
 <div class="container-fluid">
   <div class="row">
@@ -111,12 +124,6 @@ layout: default
       <p style="text-align: justify;">They help us validate hypotheses, identify significant relationships between variables, and compare groups or distributions. By using these tools, we can determine whether the patterns observed in the data are due to chance or reflect real differences. They are, therefore, key to making informed decisions and interpreting results with rigor.</p>
   </div>
 </div>
-</div>
-
-
-
-
-
 
 ## The rating of the comedies : critics vs users
 
@@ -389,14 +396,6 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
 <!-- 2. Import burger javascript code -->
 <script src="{{ '/assets/js/burgers.js' | relative_url }}"></script>
 
-<div class="container-fluid">
-  <div class="row justify-content-center text-center" >
-    <div class="col-8 border border-dark-subtle rounded" style="background-color:rgb(218, 112, 174);">
-      <span class="display-1 copper">Opening act</span>
-    </div>
-  </div>
-</div>
-
 ## Semantic analysis
 
 Now let’s try to analyze the semantic aspect of our comedies. Let’s first examine the most frequently occurring nouns in movie plots from each continent. The wordclouds below offer a visual representation of these prominent terms, giving us an idea of what are the most used words in plots for each continent.
@@ -498,5 +497,40 @@ Hidden in plain sight, there’s a **secret button** on the Wordcloud interface.
 <script src="{{ '/assets/js/wordclouds.js' | relative_url }}"></script>
 {% include wordclouds.html %}
 
+<div class="container-fluid mt-5 mb-2">
+  <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(98, 176, 170)">
+    <div class="row justify-content-center">
+      <div class="col">
+        <span class="display-1 copper">Ticket Booth - Adults and Kids for the Circus</span>
+      </div>
+    </div>
+  </div>
 
+  <div class="row mt-1 mb-2 justify-content-center">
+    <div class="col-5 align-self-end">
+      <img src="/assets/img/Guichet.jpeg" alt="Guichet" class="img-fluid rounded shadow">
+    </div>
+    <div class="col-7">
+      <div class="image-container-tikets">
+        <iframe src="/assets/htmlplot/mean_imdb_rating.html" class="plot-frame"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
+Step right up, ladies and gentlemen, to the great comedy showdown of the continents! 🎪 On my left, the United States, a land of comedies filled with visual humor, absurd situations, and accessible jokes that appeal to wide audiences. 🐶🐱 On my right, Europe, home to more adult comedies, Rated 16+, where humor often comes with satire, historical reflections, or deep social critiques. 🎭✨
+But here’s the twist: we might have expected American films to dominate the Rated 13+ category... yet that’s not the case! Both continents seem to share a focus on broad, accessible humor aimed at families or younger audiences. The real difference emerges in the Rated 16+ category.
+In this space, Europe clearly stands out. European comedies dive into darker, more subtle, or intellectual themes, often requiring more life experience or reflection to fully appreciate.
+But let’s not forget, this is just a trend! 🧂 IMDb ratings can be subjective, influenced by different types of viewers, and should be taken with a grain of salt. Still, one thing is evident: European comedies tend to be more appreciated overall.
+So, which ticket will you choose? The universal, accessible humor of the United States or Europe’s more refined and thought-provoking style? Either way, laughs are guaranteed... but the data suggests Europe often wins the audience’s favor. ❤️
+And just below, you’ll find a plot breaking down the different sub-genres of comedy to confirm these observations, with data to back it up! 📊🎥"
+<div class="container-fluid mt-3 mb-2">
+  <div class="row justify-content-center" style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+    <div class="col-6">
+      <iframe src="/assets/htmlplot/interactive_heatmap_europe.html" class="w-100" style="height: 500px;"></iframe>
+    </div>
+    <div class="col-6">
+      <iframe src="/assets/htmlplot/interactive_heatmap_america.html" class="w-100" style="height: 500px;"></iframe>
+    </div>
+  </div>
+</div>
