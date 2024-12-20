@@ -208,19 +208,28 @@ img.bombeGif {
     top: 0;
 }
 
-.fig-image {
-    max-width: 100%; /* Ensures the image scales within its container */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Ensures no inline space around the image */
-  }
-
 .fig-image-frapper {
     width: 100vw;
     margin: 0;
     position: relative;
     left: 0;
     top: 0;
-  }
+}
+
+.fig-frapper {
+    width: 75vw;
+    padding-top: 350px;
+}
+
+.fig-image-spacer {
+    height: 680px;
+}
+
+.fig-image {
+    width: 100vw;
+    height: auto;
+}
+
 
 .big-image-spacer {
     height: 680px;

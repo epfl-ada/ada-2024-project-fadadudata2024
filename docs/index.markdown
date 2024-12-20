@@ -741,18 +741,24 @@ In this space, Europe clearly stands out. European comedies dive into darker, mo
 But let’s not forget, this is just a trend! 🧂 IMDb ratings can be subjective, influenced by different types of viewers, and should be taken with a grain of salt. Still, one thing is evident: European comedies tend to be more appreciated overall.
 So, which ticket will you choose? The universal, accessible humor of the United States or Europe’s more refined and thought-provoking style? Either way, laughs are guaranteed... but the data suggests Europe often wins the audience’s favor. ❤️
 And just below, you’ll find a plot breaking down the different sub-genres of comedy to confirm these observations, with data to back it up! 📊🎥"
-<div class="container-fluid mt-3 mb-2">
-  <div class="row g-0 justify-content-center" style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
-    <div class="col-6">
-      <iframe src="assets/htmlplot/interactive_heatmap_europe.html" style="width: 550px; height: 500px;"></iframe>
-    </div>
-    <div class="col-6">
-      <iframe src="assets/htmlplot/interactive_heatmap_america.html" style="width: 550px; height: 500px;"></iframe>
-    </div>
+
+</div>
+<div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185); margin-top: 20px;">
+  <div class="col-md-12">
+    <span class="display-1 abang">Conclusion</span>
   </div>
 </div>
 
+After juggling data, performing analytical pirouettes, and executing a few statistical acrobatics, one thing is clear: humor knows no borders… or almost! Its forms and expressions are profoundly influenced by cultural contexts. American comedies, often associated with widespread media coverage and box-office success, captivate audiences with their accessibility and ability to appeal to all ages, particularly in the "Rated 13+" categories. In many ways, American films are loved for their slapstick and "cartoon-like" spirit, relying on visual gags and straightforward humor.  
 
-<div class="fig-image-frapper">
-  <img src="{{ '/assets/img/end.jpg' | relative_url }}" alt="The End" class="fig-image">
-</div>
+European comedies, on the other hand, focus on narratives rooted in more nuanced themes, often tied to social criticism or historical events. This introspective approach, coupled with a greater prevalence of "Rated 16+" films, reflects an audience drawn to stories blending humor with reflection. These comedies are shaped, in part, by deep historical scars, particularly the consequences of the Second World War.  
+
+While the two continents adopt different approaches, they continue to share universal themes such as love, family, and human relationships, which transcend borders and resonate with all audiences.  
+
+As for ethnic diversity, it remains surprisingly underrepresented in current comedies on both continents. However, this could evolve in the coming years, reflecting societal changes. As Jean-Luc Godard once said: "Every film is the reflection of the society that produces it." In Europe, this diversity is sometimes less visible, reflecting a more conservative cultural context, while in the United States, ethnic diversity is significantly more apparent. It reflects the American melting pot ideal, embracing the multiculturalism that defines the nation's identity..  
+
+The verdict? It’s impossible to declare an absolute winner. Humor is a subjective art, but Europe seems to have a slight yet significant edge in ratings and nominations. These differences, however, mutually enrich the art of comedy, offering varied and complementary perspectives.  
+
+So, dear reader, the choice is yours: a dazzling blockbuster or a subtle satire? No matter your preference, one thing is certain: laughter remains the most universal of pleasures. And with that, curtain! 🍿✨
+
+
