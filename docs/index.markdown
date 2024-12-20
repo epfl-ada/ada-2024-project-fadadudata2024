@@ -102,7 +102,7 @@ layout: default
 </div>
 
 
-## Part 3 : Test's Caroussel
+## Part 3 : Test's Carousel
 
 <div class="container-fluid">
   <div class="row">
@@ -119,22 +119,29 @@ layout: default
         <img src="/assets/img/Bas carousel.png" alt="Haut carousel" style="width: 420px; height: auto;">
       </div>
     </div>
-    <div class="col-5">
-      <p style="text-align: justify;">Here we are at the test carousel, an interactive tool that brings together essential statistical methods for exploring and analyzing our dataset. These tests are indispensable for turning raw data into meaningful and actionable insights.</p>
-      <p style="text-align: justify;">They help us validate hypotheses, identify significant relationships between variables, and compare groups or distributions. By using these tools, we can determine whether the patterns observed in the data are due to chance or reflect real differences. They are, therefore, key to making informed decisions and interpreting results with rigor.</p>
+    <div class="col-5 align-content-center">
+      <p style="text-align: justify;">Welcome to the test carousel, an interactive space designed to guide you through the core statistical tools used to analyze and understand datasets. This carousel is not just a collection of definitions but a roadmap for tackling complex data questions systematically and effectively.</p>
+      <p style="text-align: justify;">The carousel introduces statistical concepts tailored for different aspects of analysis. The KS Test helps determine whether a dataset follows a specific distribution, such as the normal distribution. The Independent T-Test compares the means of two independent groups to assess whether the differences are statistically significant or due to random variation. For data that doesn’t meet the assumption of normality, the Mann-Whitney U Test offers a non-parametric alternative by comparing distributions between two independent groups. Lastly, Confidence Intervals go beyond hypothesis testing, providing an estimated range where the true population parameter is likely to fall, helping quantify the reliability and precision of your estimates.</p>
+      <p style="text-align: justify;">Each section of the carousel follows a consistent structure, making it easier to understand and apply the concepts. It provides an explanation, defines the hypotheses, lists the assumptions, guides interpretation of the results, and includes the mathematical formula for deeper exploration.</p>
+    </div>
   </div>
 </div>
+
 
 ## The rating of the comedies : critics vs users
 
 <div class="container-fluid">
-  <div class="row justify-content-end">
-    <div class="col-7">
-      <h3>Source of Ratings: Critics vs. Public</h3>
-      <p>This table shows whether each rating source displays ratings from critics or the public.</p>
+  <div class="row">
+    <div class="col-6">
+    <p style="text-align: justify;">To better analyze comedies and understand humor from different perspectives, we categorized ratings into three main groups of viewers: general spectators, professional critics, and evaluation experts. Each group offers a unique perspective, allowing us to explore differences in humor appreciation based on their roles and experiences.</p>
+    <p style="text-align: justify;">- <strong>The Spectators</strong>: Represented by public ratings on IMDb, these reviews reflect a broad and popular perception of humor, offering direct insights from the general audience.</p>
+    <p style="text-align: justify;">- <strong>The Critics' Panel</strong>: Ratings from Rotten Tomatoes (Tomatometer) aggregate opinions from professional critics. These bring a more technical and structured analysis of humorous content.</p>
+    <p style="text-align: justify;">- <strong>The Evaluation Experts</strong>: Aggregated scores from Metacritic provide another professional perspective, combining various critical viewpoints to form a balanced and synthesized evaluation.</p>
+    </div>
+    <div class="col-6">
       <table style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
-          <tr style="background-color:rgb(180, 74, 58); color: white;">
+          <tr style="background-color: rgb(180, 74, 58); color: white;">
             <th style="border: 1px solid #ddd; padding: 8px;">Role in the Circus</th>
             <th style="border: 1px solid #ddd; padding: 8px;">Rating Source</th>
             <th style="border: 1px solid #ddd; padding: 8px;">Type of Rating</th>
@@ -152,11 +159,11 @@ layout: default
             <td style="border: 1px solid #ddd; padding: 8px;">The Critics Panel</td>
             <td style="border: 1px solid #ddd; padding: 8px;">Rotten Tomatoes Rating</td>
             <td style="border: 1px solid #ddd; padding: 8px;">Critics</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">Represents the Tomatometer score, an aggregated rating from professional critics.</td>
+            <td style="border: 1px solid #ddd; padding: 8px">Represents the Tomatometer score, an aggregated rating from professional critics.</td>
           </tr>
           <tr>
             <td style="border: 1px solid #ddd; padding: 8px;">The Master of Ceremony</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">Metacritic_Rating</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Metacritic Rating</td>
             <td style="border: 1px solid #ddd; padding: 8px;">Critics</td>
             <td style="border: 1px solid #ddd; padding: 8px;">Aggregated rating from professional critics, provided by Metacritic.</td>
           </tr>
@@ -166,69 +173,48 @@ layout: default
   </div>
 </div>
 
-
-### Source of Ratings: Critics vs. Public
-
-This table shows whether each rating source displays ratings from critics or the public.
-
-| Rating Source                  | Type of Rating     | Description                                                                                       |
-|--------------------------------|--------------------|---------------------------------------------------------------------------------------------------|
-| **imdbRating**                 | Public             | Rating provided by IMDb users.                                                                    |
-| **Rotten_Tomatoes_Rating**     | Critics            | Represents the **Tomatometer** score, an aggregated rating from professional critics.             |
-| **Metacritic_Rating**          | Critics            | Aggregated rating from professional critics, provided by Metacritic.                              |
-
-### Summary
-- **Critics’ Ratings**: Rotten_Tomatoes_Rating (Tomatometer) and Metacritic_Rating.
-- **Public Ratings**: imdbRating.
-
-
-### Kolmogorov-Smirnov Test for Normality on Movie Ratings
-
-### How the KS Test Works
-
-1. **Define Hypotheses**:
-   - **Null Hypothesis (H0)**: The data follows the specified distribution (e.g., normal distribution).
-   - **Alternative Hypothesis (H1)**: The data does not follow the specified distribution.
-
-2. **Calculate the KS Statistic**:
-   - The KS statistic measures the maximum difference between the cumulative distribution of the sample data and the cumulative distribution of the normal distribution.
-   - A larger KS statistic indicates a greater deviation between the sample data and the specified distribution.
-
-3. **P-Value**:
-   - The p-value tells us if the observed difference (measured by the KS statistic) is statistically significant.
-   - A low p-value (typically < 0.05) means we can reject the null hypothesis and conclude that the data does not follow a normal distribution.
-   - A high p-value (typically ≥ 0.05) means we fail to reject the null hypothesis, suggesting the data may follow a normal distribution.
-  
-<div class="container-fluid">
-  <div class="row justify-content-center bokeh-plot">
-   <iframe src="/assets/htmlplot/interactive_plotly_imdbRating.html"></iframe>
-  </div>
-</div>
-
-<div class="container-fluid">
-  <div class="row justify-content-center bokeh-plot">
-   <iframe src="/assets/htmlplot/interactive_plotly_Metacritic_Rating.html"></iframe>
-  </div>
-</div>
-
-<div class="container-fluid">
-  <div class="row justify-content-center bokeh-plot">
-   <iframe src="/assets/htmlplot/interactive_plotly_Rotten_Tomatoes_Rating.html"></iframe>
-  </div>
-</div>
-
-
 ### Results for Each Rating Source
 
-| Rating Source                  | KS Statistic | P-Value | Interpretation                                                                                      |
-|--------------------------------|--------------|---------|-----------------------------------------------------------------------------------------------------|
-| **imdbRating**                 | 0.0648       | 0.0010  | The p-value of 0.001 suggests a significant deviation from normality, indicating this rating is not normally distributed. |
-| **Rotten_Tomatoes_Rating**     | 0.0834       | 0.0010  | The highest KS statistic among all ratings, with a p-value of 0.001, suggesting a pronounced deviation from normality. |
-| **Metacritic_Rating**          | 0.0350       | 0.0010  | Significant deviation from normality as indicated by the low p-value.                               |
-
-### Summary
-
-All ratings show p-values of 0.001, indicating that none of these datasets follow a normal distribution at a 0.05 significance level. The KS statistics for each rating source reinforce this conclusion, with **Rotten_Tomatoes_Rating** showing the highest deviation from normality. These results imply that assumptions of normality may not hold for analyses on these rating distributions.
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <table style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr style="background-color: rgb(180, 74, 58); color: white;">
+            <th style="border: 1px solid #ddd; padding: 8px;">Rating Source</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">KS Statistic</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">P-Value</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Imdb Rating</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">0.0648</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">0.0010</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">The p-value of 0.001 suggests a significant deviation from normality, indicating this rating is not normally distributed.</td>
+          </tr>
+          <tr style="background-color: #f2f2f2;">
+            <td style="border: 1px solid #ddd; padding: 8px;">Rotten Tomatoes Rating</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">0.0834</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">0.0010</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">The highest KS statistic among all ratings, with a p-value of 0.001, suggesting a pronounced deviation from normality.</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Metacritic Rating</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">0.0350</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">0.0010</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Significant deviation from normality as indicated by the low p-value.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-6">
+      <p style="text-align: justify;">To better analyze comedies and understand humor from different perspectives, we categorized ratings into three main groups of viewers: general spectators, professional critics, and evaluation experts. Each group offers a unique perspective, allowing us to explore differences in humor appreciation based on their roles and experiences.</p>
+      <p style="text-align: justify;">All ratings show p-values of 0.001, indicating that none of these datasets follow a normal distribution at a 0.05 significance level. The KS statistics for each rating source reinforce this conclusion, with Rotten Tomatoes Rating showing the highest deviation from normality. These results imply that assumptions of normality may not hold for analyses on these rating distributions.</p>
+    </div>
+  </div>
+</div>
 
 
 ## Analysis of Ratings: Do Critics Rate European Films More Severely Than Users? And the Same for American Films?
