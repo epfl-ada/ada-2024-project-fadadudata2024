@@ -15,7 +15,7 @@
 </head>
 <body>
   <div id="rideau"></div>
-  <img id="bombeImg" src="/assets/img/BOMBE.png" alt="Bombe">
+  <img id="bombeImg" src="assets/img/BOMBE.png" alt="Bombe">
   <!-- <nav class="navbar the-navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -58,12 +58,12 @@
       {{ content }}
     </section>
     <footer>
-      <!-- Footer content removed as per request -->
     </footer>
 </div>
 
 <script>
   let explosionStarted = false;
+  const baseurl2 = document.querySelector('meta[name="baseurl"]').getAttribute('content');
 
   setTimeout(() => {
     if (explosionStarted) return;
@@ -71,7 +71,7 @@
 
     const bombeGif = document.createElement('img');
     const bombeImg = document.getElementById('bombeImg');
-    bombeGif.src = '/assets/img/BOMBE.gif';
+    bombeGif.src = baseurl2 + '/assets/img/BOMBE.gif';
     bombeGif.className = 'bombeGif';
 
     document.body.appendChild(bombeGif);
