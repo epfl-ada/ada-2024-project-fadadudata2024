@@ -6,6 +6,10 @@ This project tackles global humor like a foodie facing an all-you-can-eat desser
 ## Datastory
 Our project's data story is available at the following link: [Data Story](https://epfl-ada.github.io/ada-2024-project-fadadudata2024/)
 
+## Required Python Packages
+
+This project requires the Python packages in `pip_requirements.txt` to run properly.
+
 ## Repository Architecture
 
 - **data**: Contains multiple CSV files created and utilized using datasets provided by the CMU Movie Summary Corpus and OMDB.
@@ -56,7 +60,7 @@ Our project's data story is available at the following link: [Data Story](https:
    - **Data Integration**: Merging datasets based on common identifiers to facilitate thematic analysis, character representation analysis, and success metrics.
 
 ### 2. Analysis Process
- - Patterns were identified across themes, gender and ethnicity representation, ratings, and commercial success. To highlight these different data structures, various statistical tests were conducted, including:
+ - Patterns were identified across themes and ethnicity representation, ratings, and commercial success. To highlight these different data structures, various statistical tests were conducted, including:
    - **T-test**: Comparing the means of two groups to detect significant differences; often accompanied by confidence intervals (CIs) to estimate the mean difference.
    - **Kolmogorov-Smirnov (KS)**: Checking if a distribution follows a normal distribution.
    - **Mann-Whitney U**: Comparing ranks between two groups for non-normal distributions.
@@ -79,7 +83,7 @@ Our project's data story is available at the following link: [Data Story](https:
 Finally, our findings are presented as an interactive data story on the following webpage: [Data Story](https://epfl-ada.github.io/ada-2024-project-fadadudata2024/)
 
 
-## Proposed timeline and Organization within the team
+## Timeline and Organization within the team
 
 The following figure presents the provisionned timeline :
 
