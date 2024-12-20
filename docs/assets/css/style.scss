@@ -272,23 +272,12 @@ img.bombeGif {
 }
 
 .banner-circus-image {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 1100px;
     background-image: url({{ "/assets/img/circus_banner.png" | relative_url }});
-    background-size: 100% auto;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 350px;
 }
 
-.team .member {
-    position: relative;
-    display: inline-block;
-    margin: 10px;
-}
-
-.team img {
+.member img {
     width: 125px;
     height: 125px;
     border-radius: 50%;
@@ -296,21 +285,22 @@ img.bombeGif {
     transition: transform 0.3s ease-in-out;
 }
 
-.team .emoji {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.3s ease-in-out;
-    font-size: 14rem;
-    user-select: none;
-    pointer-events: none;
-}
 
-.team .member:hover img {
-    transform: scale(1.2);
-}
+// .team .emoji {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) scale(0);
+//     transition: transform 0.3s ease-in-out;
+//     font-size: 14rem;
+//     user-select: none;
+//     pointer-events: none;
+// }
 
-.team .member:hover .emoji {
-    transform: translate(-50%, -50%) scale(1) rotate(360deg);
-}
+// .team .member:hover img {
+//     transform: scale(1.2);
+// }
+
+// .team .member:hover .emoji {
+//     transform: translate(-50%, -50%) scale(1) rotate(360deg);
+// }
