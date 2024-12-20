@@ -34,8 +34,8 @@ layout: default
     </div>
   </div>
   <div class="row justify-content-center">  
-    <div style="position: relative; text-align: center; color: white; width: 1100px">
-      <img src="/assets/img/circus_banner.png" alt="Bandrole" style="width: 1100px; height: auto; border-radius: 0px;">
+    <div class="banner-circus-image" style="position: relative; text-align: center; color: white; width: 1100px">
+      <!-- <img src="/assets/img/circus_banner.png" alt="Bandrole" style="width: 1100px; height: auto; border-radius: 0px;"> -->
       <div style="position: absolute; bottom: 17%; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; left: 103px;">
         <div style="display: flex; flex-direction: row;">
           {% include team_members.html %}
@@ -385,6 +385,37 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
 </div>
 <!-- 2. Import burger javascript code -->
 <script src="{{ '/assets/js/burgers.js' | relative_url }}"></script>
+
+<div class="container-fluid mt-5">
+<!-- Burger -->
+  <div class="row mb-3 justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(223, 162, 78)">
+    <div class="col">
+      <span class="display-3 copper">Ethnicity part</span>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-6 text-center copper">
+      America
+    </div>
+    <div class="col-6 text-center copper">
+      Europe
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <img src="/assets/img/tim_plot1.png" alt="Tim plot 1" class="img-fluid" style="height: 500px;">
+    </div>
+    <div class="col-6">
+      <img src="/assets/img/tim_plot2.png" alt="Tim plot 1" class="img-fluid" style="height: 500px;">
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-10">
+      Tim ton text ici à remplir
+    </div>
+  </div>
+</div>
+
 
 ## Semantic analysis
 
