@@ -9,11 +9,16 @@ layout: default
 ---
 <!-- titre image  -->
 
+<div class="big-image-wrapper">
+  <img src="{{ '/assets/img/circus_lion.png' | relative_url }}" alt="Alternative text" class="big-image shadow shadow-lg">
+</div>
+<div class="big-image-spacer"></div>
+<!-- 
 <div class="container-fluid mb-5">
   <div class="row justify-content-center">
-   <img src="/assets/img/Titre.png">
+   <img src="/assets/img/circus_lion.png">
   </div>
-</div>
+</div> -->
 
 <!-- 
 <div class="container-fluid">
@@ -26,17 +31,18 @@ layout: default
 
 <div class="container-fluid">
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185)">
-    <div class="col">
+    <div class="col-md-12">
       <span class="display-1 copper">The circus squad</span>
     </div>
   </div>
-</div>
-
-<div style="position: relative; text-align: center; color: white; width: 995px">
-  <img src="/assets/img/bandrole.png" alt="Bandrole" style="width: 900px; height: auto; border-radius: 0px;">
-  <div style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); padding: 10px; border-radius: 5px; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
-    <div style="display: flex; flex-direction: row;">
-      {% include team_members.html %}
+  <div class="row justify-content-center">  
+    <div style="position: relative; text-align: center; color: white; width: 1100px">
+      <img src="/assets/img/circus_banner.png" alt="Bandrole" style="width: 1100px; height: auto; border-radius: 0px;">
+      <div style="position: absolute; bottom: 17%; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; left: 103px;">
+        <div style="display: flex; flex-direction: row;">
+          {% include team_members.html %}
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -83,7 +89,7 @@ layout: default
   <!-- Box office -->
   <div class="row justify-content-center">
     <div class="col-7">
-      <iframe src="{{ '/assets/htmlplot/box_office_revenue_distribution.html' | relative_url }}" style="height: 497px;" class="border border-secondary mt-1 p-2 rounded w-100"></iframe>
+      <iframe src="{{ '/assets/htmlplot/box_office_revenue_distribution.html' | relative_url }}" style="height: 557px;" class="border border-secondary mt-1 p-2 rounded w-100"></iframe>
     </div>
     <div class="col-5 justify-content-center align-items-center mt-1">
       <div class="d-flex justify-content-center align-items-center">
@@ -91,16 +97,16 @@ layout: default
         <h2 style="margin: 0 10px;">OR</h2>
         <img src="/assets/img/Europeen burger.avif" alt="Europeen burger.avif" class="img-fluid rounded shadow" id="burger2" style="width: 45%;">
       </div>
-      <p class="border border-secondary fs-6 mt-1 p-2 rounded">
+      <p class="border border-secondary fs-5 mt-1 p-2 rounded">
         Comparing American to European humor is like contrasting a burger that looks perfect in an ad with a subtly crafted gourmet dish. American jokes hit you with all the flash of a well-marketed blockbuster, designed to grab your attention immediately. Meanwhile, European humor is more like a delicately seasoned meal that reveals its depth over time. Perhaps one day, we’ll blend these styles to cook up the ultimate comedic dish! But let's not forget, the burger is just as delicious.
       </p>
     </div>
   </div>
   <div class="row justify-content-center">
-    <div id="text-container" class="col-4 m-1 border border-warning rounded" style="border 2px solid orange; background-color: rgba(255, 165, 0, 0.5); transition: all 0.5s ease;">
+    <div id="text-container" class="col-6 m-1 border border-warning rounded fs-5" style="border 2px solid orange; background-color: rgba(255, 165, 0, 0.5); transition: all 0.5s ease;">
       <p class="p-2">Looking at the average nominations for comedy films by continent, we find that Europe leads with the finesse of a gourmet dish, accumulating nominations like a chef garners Michelin stars. On the other hand, America, with its fast-food style cinema, snags fewer nods. Perhaps the European secret lies in their subtle, critical recipe, effective in charming juries. Meanwhile, America serves its comedies like burgers: quick and tasty, but less likely to win stars. Maybe a dash of refinement in American comedies could spice up this culinary competition between continents! Well, too lazy to dive into the math, but yes, it’s a Mann-Whitney U test that confirms Europeans get nominated more often. All that for this!</p>
     </div>
-    <div class="col-3">
+    <div class="col-4">
       <iframe id="graph-frame" class="w-100 rounded" src="/assets/htmlplot/nomination_mean_by_continent.html" style="border: 2px solid black; height: 450px; transition: all 0.5s ease;"></iframe>
     </div>
     <div class="col-auto align-self-center">
@@ -115,7 +121,7 @@ layout: default
 <!-- 2. Import burger javascript code -->
 <script src="{{ '/assets/js/burgers.js' | relative_url }}"></script>
 
-<div class="container-fluid">
+<div class="container-fluid mt-5 mb-2">
   <div class="row justify-content-center text-center" >
     <div class="col-8 border border-dark-subtle rounded" style="background-color:rgb(218, 112, 174);">
       <span class="display-1 copper">Opening act</span>
@@ -131,12 +137,6 @@ To make it happen, we developed a magical dictionary 🪄📖 (sadly, it doesn�
 
 For example, any film that dares to drop words like "romantic" or "romance" gets whisked straight into "Comedy_Romance." 💘😂 Meanwhile, those whispering terms like "animated" or "anime" are promptly filed under "Comedy_Animation." 🎨🤪 In short, we’ve turned a big ol’ mess into a well-organized laugh factory. And guess what? We’re having a blast doing it! 🎉🤣
 
-
-## Part 2 : Presentation
-
-In our database, we noticed that the "Genres" column contained many descriptions that were not particularly relevant to our subject, such as "World Cinema," "Short Film," or "Indie." These categories did not provide meaningful information about the type of comedy, making the analysis more confusing. As enthusiasts of humorous films, we decided to restructure this classification to create our own subcategories, allowing for a deeper exploration of the different types of comedies available.
-
-To achieve this, we developed a dictionary that groups specific keywords associated with various comedy subgenres. These keywords enable us to automatically reorganize and identify films into categories such as "Comedy_Romance," "Comedy_Action," "Comedy_Animation," and many others. For instance, films containing words like "romantic" or "romance" are categorized under "Comedy_Romance," while those with terms like "animated" or "anime" are classified under "Comedy_Animation."
 
 <!-- 1. Load the html template -->
 {% include movies_genres.html %}
@@ -455,3 +455,42 @@ Hidden in plain sight, there’s a **secret button** on the Wordcloud interface.
   </div>
 </div>
 
+
+
+<div class="container-fluid mt-5 mb-2">
+  <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(98, 176, 170)">
+    <div class="row justify-content-center">
+      <div class="col">
+        <span class="display-1 copper">Ticket Booth - Adults and Kids for the Circus</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-1 mb-2 justify-content-center">
+    <div class="col-5 align-self-end">
+      <img src="/assets/img/Guichet.jpeg" alt="Guichet" class="img-fluid rounded shadow">
+    </div>
+    <div class="col-7">
+      <div class="image-container-tikets">
+        <iframe src="/assets/htmlplot/mean_imdb_rating.html" class="plot-frame"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+Step right up, ladies and gentlemen, to the great comedy showdown of the continents! 🎪 On my left, the United States, a land of comedies filled with visual humor, absurd situations, and accessible jokes that appeal to wide audiences. 🐶🐱 On my right, Europe, home to more adult comedies, Rated 16+, where humor often comes with satire, historical reflections, or deep social critiques. 🎭✨
+But here’s the twist: we might have expected American films to dominate the Rated 13+ category... yet that’s not the case! Both continents seem to share a focus on broad, accessible humor aimed at families or younger audiences. The real difference emerges in the Rated 16+ category.
+In this space, Europe clearly stands out. European comedies dive into darker, more subtle, or intellectual themes, often requiring more life experience or reflection to fully appreciate.
+But let’s not forget, this is just a trend! 🧂 IMDb ratings can be subjective, influenced by different types of viewers, and should be taken with a grain of salt. Still, one thing is evident: European comedies tend to be more appreciated overall.
+So, which ticket will you choose? The universal, accessible humor of the United States or Europe’s more refined and thought-provoking style? Either way, laughs are guaranteed... but the data suggests Europe often wins the audience’s favor. ❤️
+And just below, you’ll find a plot breaking down the different sub-genres of comedy to confirm these observations, with data to back it up! 📊🎥"
+<div class="container-fluid mt-3 mb-2">
+  <div class="row justify-content-center" style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+    <div class="col-6">
+      <iframe src="/assets/htmlplot/interactive_heatmap_europe.html" class="w-100" style="height: 500px;"></iframe>
+    </div>
+    <div class="col-6">
+      <iframe src="/assets/htmlplot/interactive_heatmap_america.html" class="w-100" style="height: 500px;"></iframe>
+    </div>
+  </div>
+</div>
