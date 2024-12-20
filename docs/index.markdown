@@ -16,21 +16,10 @@ layout: default
 
 
 
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-8 text-justify">
-      <h2>Abstract</h2>
-    </div>
-  </div>
-  <div class="row mb-5 justify-content-center">
-    <div class="col-8 text-justify">
-    This project takes a dive into the comedic rivalry between American and European films, uncovering the cultural quirks that make each side laugh. Using data from the CMU Movie Summary Corpus and OMDB, we analyze recurring themes, linguistic styles, and narrative structures to decode the essence of humor on both sides of the Atlantic. Do Americans favor slapstick and sarcasm, while Europeans lean toward dry wit and intellectual wordplay? Are certain jokes universal, or do some fall flat across cultural divides? We also explore representation dynamics—examining how gender and ethnicity shape the humor landscape—and investigate box office trends to see if Hollywood's blockbuster comedies outshine Europe's subtler charm. Through text analysis, visualizations, and linguistic modeling, this project aims to answer whether humor truly transcends borders or remains firmly rooted in cultural context. Laugh, learn, and decide which side of the Atlantic rules the comedy game!
-    </div>
-  </div>
 
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185)">
     <div class="col-md-12">
-      <span class="display-1 copper">The circus squad</span>
+      <span class="display-1 abang">The circus squad</span>
     </div>
   </div>
   <div class="row justify-content-center">  
@@ -40,11 +29,14 @@ layout: default
   </div>
 </div>
 
+<span style="font-family: 'Times New Roman', cursive;font-size: 1.2em;">This project tackles global humor like a foodie facing an all-you-can-eat dessert buffet: on one side, American comedy—generous with gags and explosions; on the other, European laughter—sometimes as refined as a delicate pastry, sometimes as bold as a strong espresso. By exploring the CMU Movie Summary Corpus and OMDB data, we’ll dive into storylines, the variety of actors, box-office success, and rich critiques. Our mission? To understand what makes audiences laugh out loud from one continent to another. By telling this story, we hope to highlight the rich diversity of humor around the world and show how laughter can be universal, yet shaped by specific cultural factors. 🤹‍♀🍰 </span>
+<br><br>
+
 
 <div class="container-fluid">
   <div class="row justify-content-center text-center">
     <div class="col-12 text-center border border-dark-subtle rounded" style="background-color:#ffe6f2">
-      <span class="display-4 copper">Take it with a grain of sugar</span>
+      <span class="display-4 abang">Take it with a grain of sugar</span>
     </div>
   </div>
   <div class="row justify-content-center mt-2 mb-2">
@@ -68,7 +60,7 @@ layout: default
 <div class="container-fluid mt-5 mb-2">
   <div class="row justify-content-center text-center" >
     <div class="col-8 border border-dark-subtle rounded" style="background-color:rgb(218, 112, 174);">
-      <span class="display-1 copper">Opening act</span>
+      <span class="display-1 abang">Opening act</span>
     </div>
   </div>
 </div>
@@ -96,7 +88,7 @@ layout: default
 <div class="container-fluid">
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185)">
     <div class="col-md-12">
-      <span class="display-1 copper">A Carousel of Tests</span>
+      <span class="display-1 abang">A Carousel of Tests</span>
     </div>
   </div>
   <div class="row">
@@ -380,7 +372,7 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
 <!-- Burger -->
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(223, 162, 78)">
     <div class="col">
-      <span class="display-3 copper">American Burgers vs. European Gourmet</span>
+      <span class="display-3 abang">American Burgers vs. European Gourmet</span>
     </div>
   </div>
   <!-- <div class="row mb-4 justify-content-center">
@@ -401,13 +393,14 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
         <img src="assets/img/Europeen burger.avif" alt="Europeen burger.avif" class="img-fluid rounded shadow" id="burger2" style="width: 45%;">
       </div>
       <p class="border border-secondary fs-6 mt-1 p-2 rounded">
-        Comparing American to European humor is like contrasting a burger that looks perfect in an ad with a subtly crafted gourmet dish. American jokes hit you with all the flash of a well-marketed blockbuster, designed to grab your attention immediately. Meanwhile, European humor is more like a delicately seasoned meal that reveals its depth over time. Perhaps one day, we’ll blend these styles to cook up the ultimate comedic dish! But let's not forget, the burger is just as delicious.
+        Comparing American to European humor is like contrasting a burger  that looks perfect in an ad with a subtly crafted gourmet dish . American jokes hit you with all the flash of a well-marketed blockbuster, designed to grab your attention immediately. Meanwhile, European humor is more like a delicately seasoned meal  that reveals its depth over time. Perhaps one day, we’ll blend these styles to cook up the ultimate comedic dish! But let's not forget, the burger is just as delicious 🔥.
+
       </p>
     </div>
   </div>
   <div class="row justify-content-center">
     <div id="text-container" class="col-5 border border-warning rounded" style="border 2px solid orange; background-color: rgba(255, 165, 0, 0.5); transition: all 0.5s ease;">
-      <p class="p-2">Looking at the average nominations for comedy films by continent, we find that Europe leads with the finesse of a gourmet dish, accumulating nominations like a chef garners Michelin stars. On the other hand, America, with its fast-food style cinema, snags fewer nods. Perhaps the European secret lies in their subtle, critical recipe, effective in charming juries. Meanwhile, America serves its comedies like burgers: quick and tasty, but less likely to win stars. Maybe a dash of refinement in American comedies could spice up this culinary competition between continents! Well, too lazy to dive into the math, but yes, it’s a Mann-Whitney U test that confirms Europeans get nominated more often. All that for this!</p>
+      <p class="p-2">Looking at the average nominations for comedy films by continent, we find that Europe leads with the finesse of a gourmet dish 🍽, accumulating nominations like a chef garners Michelin stars ⭐. On the other hand, America, with its fast-food style cinema 🍔, snags fewer nods. Perhaps the European secret lies in their subtle, critical recipe 🧑‍🍳, effective in charming juries 🏆. Meanwhile, America serves its comedies like burgers: quick and tasty 🍟, but less likely to win stars ✨. Maybe a dash of refinement in American comedies could spice up this culinary competition between continents! 🌍 Europeans get nominated more often. All that for this! 🎥</p>
     </div>
     <div class="col-6">
       <img id="graph-frame" class="w-100 rounded" src="assets/img/nomination_plot.png" style="border: 2px solid black; height: 450px; transition: all 0.5s ease;">
@@ -428,7 +421,7 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
 <div class="container-fluid mt-5 mb-2">
   <div class="row justify-content-center text-center">
     <div class="col-12 border border-dark-subtle rounded" style="background-color:rgb(202, 177, 191);">
-      <span class="display-1 copper" style="color: white;">Ethnic diversity</span>
+      <span class="display-1 abang" style="color: white;">Ethnic diversity</span>
     </div>
   </div>
 </div>
@@ -490,10 +483,10 @@ p(x) représente la proportion de chaque hyperclasse dans l'ensemble X.
 The diversity score captures the randomness, or entropy, of the cast’s ethnic composition. A high score? A cast as colorful as a ringmaster’s coat. A low score? A show as predictable as a sad clown act.
 
 <div class="row justify-content-center">
-    <div class="col-6 text-center copper">
+    <div class="col-6 text-center abang">
       America
     </div>
-    <div class="col-6 text-center copper">
+    <div class="col-6 text-center abang">
       Europe
     </div>
   </div>
@@ -538,7 +531,7 @@ What’s striking here is the tighter distribution. Europeans seem to play it sa
 <div class="container-fluid mt-5 mb-2">
   <div class="row justify-content-center text-center">
     <div class="col-12 border border-dark-subtle rounded" style="background-color:rgb(120, 207, 186);">
-      <span class="display-1 copper" style="color: white;">Semantic analysis</span>
+      <span class="display-1 abang" style="color: white;">Semantic analysis</span>
     </div>
   </div>
 </div>
@@ -702,7 +695,7 @@ Wordcloud isn’t just a tool; it’s your backstage pass to the comedy world’
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(98, 176, 170)">
     <div class="row justify-content-center">
       <div class="col">
-        <span class="display-4 copper">Ticket Booth - Adults and Kids for the Circus</span>
+        <span class="display-4 abang">Ticket Booth - Adults and Kids for the Circus</span>
       </div>
     </div>
   </div>
