@@ -488,10 +488,19 @@ Now, under the casting tent, we assemble the troupe! Imagine lining up lions, ac
 
 Hold your breath, folks—it’s time for the grand finale! On a high wire of mathematics, we calculate the diversity score, a value between **0 and 1 that tells us how mixed the cast is:
 
-H(X) = - ∑ p(x) × log₈(p(x)), pour x ∈ X.
-
-Ici :
-p(x) représente la proportion de chaque hyperclasse dans l'ensemble X.
+<div>
+      <p>
+            \( H(X) = - \sum_{x \in X} p(x) \cdot \log_{8}(p(x)) \)
+        </p>
+        <p>
+            where:
+        </p>
+        <div>
+            <ul>
+                <li>\( p(x) \) represents the proportion of each hyperclass in the set \( X \).</li>
+            </ul>
+        </div>
+    </div>
 
 - Diversity = 0: A one-lion act—predictable and dull.
 - Diversity = 1: A dazzling menagerie of performers—balanced and mesmerizing!
