@@ -141,10 +141,10 @@ layout: default
       <table style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
           <tr style="background-color: rgb(180, 74, 58); color: white;">
-            <th style="border: 1px solid #ddd; padding: 8px;">Role in the Circus</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">Rating Source</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">Type of Rating</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">Description</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">Role in the Circus</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">Rating Source</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">Type of Rating</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">Description</th>
           </tr>
         </thead>
         <tbody>
@@ -204,10 +204,10 @@ layout: default
       <table style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
           <tr style="background-color: rgb(180, 74, 58); color: white;">
-            <th style="border: 1px solid #ddd; padding: 8px;">Rating Source</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">KS Statistic</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">P-Value</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">Interpretation</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">Rating Source</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">KS Statistic</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">P-Value</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">Interpretation</th>
           </tr>
         </thead>
         <tbody>
@@ -242,29 +242,54 @@ layout: default
 
 ## Analysis of Ratings: Do Critics Rate European Films More Severely Than Users? And the Same for American Films?
 
-This analysis compares IMDb ratings (from users) with Rotten Tomatoes and Metacritic ratings (from critics) to determine if critics rate European and American films more severely than users.
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <h3>Analysis of the Table in Circus Style 🎪</h3>
+      <p style="text-align: justify;">Ladies and gentlemen, step right up to witness a thrilling performance in the world of ratings! 🎭✨</p>
+      <p style="text-align: justify;">On our grand stage, we present the battle of opinions between <strong>critics</strong> and <strong>users</strong>, spanning two continents: <strong>Europe</strong> and <strong>America</strong>. The spotlight is on whether critics are harsher judges than their user counterparts. Let's dive into the show!</p>
+    </div>
+    <div class="col-6">
+      <table style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr style="background-color: rgb(180, 74, 58); color: white;">
+            <th style="border: 1px solid #ddd; padding: 8px;">Continent</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Test Statistic</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">P-Value</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">European Films</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Mann-Whitney U</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">9.99e-1</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">No significant difference between critics' and users' ratings; critics and users rate European films similarly.</td>
+          </tr>
+          <tr style="background-color: #f2f2f2;">
+            <td style="border: 1px solid #ddd; padding: 8px;">American Films</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Mann-Whitney U</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">6.65e-192</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Significant difference; critics rate American films more severely than users.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
-### Methodology
-- **Separate by Continent of Production**: The analysis is conducted separately for European and American films.
-- **Combined Critic Ratings**: For each continent, Rotten Tomatoes and Metacritic ratings are combined into a single "Critics" group for analysis.
-- **Statistical Tests**:
-  - **Independent T-Test**: Used if both IMDb (user) and combined critics' ratings are normally distributed for each continent.
-  - **Mann-Whitney U Test**: Used if the data is not normally distributed for each continent.
-  
-### Hypotheses
+#### Act 1: **European Films** 🎬🇪🇺
+In the European corner, we see harmony in the ring. The **Mann-Whitney U test** shows no significant difference between critics and users. The p-value, a respectable **9.99e-1**, whispers, "All is well!" 🕊️ Critics and users seem to share a common appreciation for European films, leaving no drama behind the scenes. It’s a peaceful performance where everyone applauds in unison! 👏
 
-- **Null Hypothesis (H0)**: There is no difference between the ratings given by critics and users for films from each continent.
-- **Alternative Hypothesis (H1)**: Critics rate films more severely than users for each continent, meaning critic ratings are lower than user ratings.
+#### Act 2: **American Films** 🎬🇺🇸
+Now, for the dramatic twist! The American films take center stage with a fiery p-value of **6.65e-192**, screaming, "Conflict ahead!" 🔥 Critics are revealed to be the stricter judges, casting their votes with a harsher tone compared to the generous ratings of users. This significant difference sparks an intense debate, as critics lower the curtain on American films more harshly than users. 🎟️
+
+#### **The Grand Finale** 🌟
+Our spectacular show reveals contrasting stories. While Europe enjoys a harmonious duet between critics and users, America witnesses a tug-of-war on the tightrope of ratings. Could it be cultural differences, distinct cinematic tastes, or simply a clash of perspectives? 🎭 Only the audience can decide as the circus continues its journey of exploration.
+
+Stay tuned for more dazzling data insights, and don’t forget to grab your popcorn for the next act! 🍿✨
 
 
-### Summary of Mann-Whitney U Test Results: Do Critics Rate Films More Severely Than Users?
-
-This table summarizes the results of the Mann-Whitney U Test comparing user and critic ratings for European and American films.
-
-| Continent        | Test Statistic  | P-Value                   | Interpretation                                                                                           |
-|------------------|-----------------|---------------------------|----------------------------------------------------------------------------------------------------------|
-| **European Films** | Mann-Whitney U | 9.99e-1       | No significant difference between critics' and users' ratings; critics and users rate European films similarly. |
-| **American Films** | Mann-Whitney U | 6.65e-192                 | Significant difference; critics rate American films more severely than users.                             |
 
 
 ## Are European comedies judged better than American comedies
