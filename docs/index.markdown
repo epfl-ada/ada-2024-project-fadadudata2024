@@ -12,7 +12,29 @@ layout: default
 <div class="big-image-wrapper">
   <img src="{{ '/assets/img/circus_lion.png' | relative_url }}" alt="Alternative text" class="big-image shadow shadow-lg">
 </div>
-<div class="big-image-spacer"></div>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185)">
     <div class="col-md-12">
       <span class="display-1 abang">The circus squad</span>
@@ -163,6 +185,8 @@ layout: default
 
 <br><br>
 
+## Click on the cards to reveal the secret graphs 🃏
+
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-6">
@@ -233,7 +257,7 @@ layout: default
 
 <br><br>
 
-### Mann whitney U
+### Mann-Whitney U
 <div class="row">
 <div class="col-6">
       <p style="text-align: justify;">All three rating sources show statistically significant differences between comedies produced in Europe and America, as evidenced by the very low p-values (all below 0.05). These findings suggest that the continent of production has a notable influence on how movies are rated across different platforms.</p>
@@ -335,12 +359,14 @@ Stay tuned for more dazzling data insights, and don’t forget to grab your popc
 <div class="container-fluid">
   <div class="row">
     <div class="col-4">
-      <p style="text-align: justify;">This analysis compares the distributions of ratings for comedies produced in Europe and America using the Mann-Whitney U test. This non-parametric test is chosen because it does not assume normality, making it suitable for datasets with deviations from normal distribution or large sample sizes.</p>
+      <p style="text-align: justify;">Step into the ring where critics and users cast their votes, and the ratings reveal a fascinating tale of cinematic perception across continents. European films steal the show with higher average ratings across all sources—IMDb, Rotten Tomatoes, and Metacritic. The bars for Europe stand taller, their confidence intervals tightly grouped, signaling consistent appreciation. Whether it's users on IMDb or critics from Rotten Tomatoes and Metacritic, the verdict is clear: European films resonate more with audiences and critics alike. A standing ovation for Europe! 👏</p>
+      <p style="text-align: justify;">American films, on the other hand, face a tougher crowd. While their IMDb ratings are close to those of European films, the Rotten Tomatoes and Metacritic ratings tell a different story. Critics seem to hold American films to a stricter standard, with their ratings notably lower. The confidence intervals here suggest some variability, but the overall message remains consistent—critics are harsher on American productions. A dramatic twist! 🎟️</p>
     </div>
     <div class="col-8">
       <div class="container-fluid">
         <div class="row justify-content-center bokeh-plot">
-          <iframe src="assets/htmlplot/average_ratings_by_continent_collapsed.html"></iframe>
+          <iframe src="assets/htmlplot/average_ratings_by_continent_collapsed2.html">
+          </iframe>
         </div>
       </div>
     </div>
@@ -350,17 +376,12 @@ Stay tuned for more dazzling data insights, and don’t forget to grab your popc
 
 
 
+
+
 ## More specific analysis
 
-Après des analyses plus générales sur les comédies, nous avons décidé de se concentrer plus en détails sur certains sous genres de comédies pour voir en profondeur ce qui fait qu'une comédie est plus aimé qu'une autre. Pour voir cela, nous nous sommes concentrés sur l'analyse de mots et de topics pour voir si il y a une différence de sujets traités en Europe en Amérique.
 
-Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres le plus aimé en Europe, en Amérique et en Both. Nous avons également sélectionner ceux qui ont la plus petite différence de note entre eux et la plus grande.
 
-<div class="container-fluid">
-  <div class="row justify-content-center bokeh-plot">
-    <iframe src="assets/htmlplot/Heatmap_imdbRating.html"></iframe>
-  </div>
-</div>
 
 
 <div class="container-fluid">
@@ -661,6 +682,14 @@ The second most represented topics diverges sharply between the two regions:
 <br><br>
 
 ### Now, presenting a star of the comedy data scene… give it up for the one, the only… WORDCLOUD! 🎭
+
+After performing a broad visualisation on themes occurring in comedies, we dive deeper into the spotlight of specific comedy sub-genres to uncover what makes one comedy more of a showstopper than another. For this act, we shift our focus to comedy genres that show interesting dynamics between the 2 continents. Step right up to our colorful word clouds! They highlight the top 3 crowd-pleasing comedy subgenres in Europe, America, and those loved across both regions. They also spotlight the subgenres with the smallest and largest rating gaps—a real balancing act of comedy preferences!
+
+<div class="container-fluid">
+  <div class="row justify-content-center bokeh-plot">
+    <iframe src="assets/htmlplot/Heatmap_imdbRating.html"></iframe>
+  </div>
+</div>
 
 We did our analysis, but you can make it too! This interactive tool is here to help us dive into the humor-filled rivalry between American and European comedies by analyzing the words that make each side laugh. Packed with a ton of features, Wordcloud is your go-to act for cracking the linguistic code of comedy. Let’s break down its impressive setlist:
 
