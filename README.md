@@ -34,7 +34,7 @@ Our project's data story is available here. [INSERT LINK]
 ## Research Questions
 
 ### 1. Commercial and Critical Success
-- What factors—such as themes, casting, runtime, and distribution—drive the success of comedies in these regions?
+- Does a movie's success vary based on its age rating (e.g., 13+, 16+) and the number of awards it wins?
 - Is there a correlation between commercial success (box office) and critical or audience recognition (ratings), and does this vary by continent or audience type?
 - Are European comedies rated more favorably than American ones, and do they receive similar evaluations from critics and audiences across different subgenres?
 
