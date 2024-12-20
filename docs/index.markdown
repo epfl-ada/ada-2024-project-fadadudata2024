@@ -13,23 +13,21 @@ layout: default
   <img src="{{ '/assets/img/circus_lion.png' | relative_url }}" alt="Alternative text" class="big-image shadow shadow-lg">
 </div>
 <div class="big-image-spacer"></div>
-<!-- 
-<div class="container-fluid mb-5">
+
+
+
+<div class="container-fluid">
   <div class="row justify-content-center">
-   <img src="/assets/img/circus_lion.png">
+    <div class="col-8 text-justify">
+      <h2>Abstract</h2>
+    </div>
   </div>
-</div> -->
-
-<!-- 
-<div class="container-fluid">
-  <div class="row justify-content-center bokeh-plot">
-   <iframe src="/assets/htmlplot/heatmap.html"></iframe>
+  <div class="row mb-5 justify-content-center">
+    <div class="col-8 text-justify">
+    This project takes a dive into the comedic rivalry between American and European films, uncovering the cultural quirks that make each side laugh. Using data from the CMU Movie Summary Corpus and OMDB, we analyze recurring themes, linguistic styles, and narrative structures to decode the essence of humor on both sides of the Atlantic. Do Americans favor slapstick and sarcasm, while Europeans lean toward dry wit and intellectual wordplay? Are certain jokes universal, or do some fall flat across cultural divides? We also explore representation dynamics—examining how gender and ethnicity shape the humor landscape—and investigate box office trends to see if Hollywood's blockbuster comedies outshine Europe's subtler charm. Through text analysis, visualizations, and linguistic modeling, this project aims to answer whether humor truly transcends borders or remains firmly rooted in cultural context. Laugh, learn, and decide which side of the Atlantic rules the comedy game!
+    </div>
   </div>
-</div> -->
 
-<!-- team member  -->
-
-<div class="container-fluid">
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185)">
     <div class="col-md-12">
       <span class="display-1 copper">The circus squad</span>
@@ -50,7 +48,7 @@ layout: default
 
 <div class="container-fluid">
   <div class="row justify-content-center text-center">
-    <div class="col-9 text-center border border-dark-subtle rounded" style="background-color:#ffe6f2">
+    <div class="col-12 text-center border border-dark-subtle rounded" style="background-color:#ffe6f2">
       <span class="display-4 copper">Take it with a grain of sugar</span>
     </div>
   </div>
@@ -61,7 +59,7 @@ layout: default
           <img src="assets/img/Barbe2.png" alt="Cotton Candy Hover" class="second-image">
         </div>
     </div>
-    <div class="col-4">
+    <div class="col-6 text-justify">
           <p class="mt-2">
             The <strong>CMU Movie Summary Corpus</strong>, our trusty stick 🍭, holds the essential ingredients for our cinematic cotton candy: plot summaries, genres, countries, and languages of movies. To make it even tastier, we sprinkled it with sweet data from the <strong>OMDB API</strong> 🍬, adding flavors like <strong>ratings</strong> (IMDb, Rotten Tomatoes, Metascore), <strong>posters</strong>, <strong>age classifications (Rated)</strong>, and <strong>awards</strong>. Some of these layers even needed a little "reshaping" to avoid getting too sticky!
           </p>
@@ -71,8 +69,6 @@ layout: default
     </div>
   </div>
 </div>
-
-## Part 2 : Presentation
 
 <div class="container-fluid mt-5 mb-2">
   <div class="row justify-content-center text-center" >
@@ -102,9 +98,12 @@ layout: default
 </div>
 
 
-## Part 3 : Test's Carousel
-
 <div class="container-fluid">
+  <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185)">
+    <div class="col-md-12">
+      <span class="display-1 copper">A carousel of Tests</span>
+    </div>
+  </div>
   <div class="row">
     <div class="col-7">
       <div class="row justify-content-center">
@@ -172,6 +171,30 @@ layout: default
     </div>
   </div>
 </div>
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="ratings-plot-ctn">
+        <img src="/assets/img/imdb_plot.png" alt="IMDB Ratings" class="plots-ratings">
+        <img src="/assets/img/Carte.jpeg" alt="Carte 1" class="card-plots">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="ratings-plot-ctn">
+        <img src="/assets/img/rottentom_plot.png" alt="Rotten Tomatoes Ratings" class="plots-ratings">
+        <img src="/assets/img/Carte.jpeg" alt="Carte 2" class="card-plots">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="ratings-plot-ctn">
+        <img src="/assets/img/metacritic_plot.png" alt="Metacritic Ratings" class="plots-ratings">
+        <img src="/assets/img/Carte.jpeg" alt="Carte 3" class="card-plots">
+      </div>
+    </div>
+  </div>
+</div>
+
 
 ### Results for Each Rating Source
 
@@ -319,7 +342,7 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
 <!-- Burger -->
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(223, 162, 78)">
     <div class="col">
-      <span class="display-1 copper">American Burgers vs. European Gourmet</span>
+      <span class="display-3 copper">American Burgers vs. European Gourmet</span>
     </div>
   </div>
   <!-- <div class="row mb-4 justify-content-center">
@@ -345,13 +368,13 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
     </div>
   </div>
   <div class="row justify-content-center">
-    <div id="text-container" class="col-4 m-1 border border-warning rounded" style="border 2px solid orange; background-color: rgba(255, 165, 0, 0.5); transition: all 0.5s ease;">
+    <div id="text-container" class="col-5 border border-warning rounded" style="border 2px solid orange; background-color: rgba(255, 165, 0, 0.5); transition: all 0.5s ease;">
       <p class="p-2">Looking at the average nominations for comedy films by continent, we find that Europe leads with the finesse of a gourmet dish, accumulating nominations like a chef garners Michelin stars. On the other hand, America, with its fast-food style cinema, snags fewer nods. Perhaps the European secret lies in their subtle, critical recipe, effective in charming juries. Meanwhile, America serves its comedies like burgers: quick and tasty, but less likely to win stars. Maybe a dash of refinement in American comedies could spice up this culinary competition between continents! Well, too lazy to dive into the math, but yes, it’s a Mann-Whitney U test that confirms Europeans get nominated more often. All that for this!</p>
     </div>
-    <div class="col-3">
-      <iframe id="graph-frame" class="w-100 rounded" src="/assets/htmlplot/nomination_mean_by_continent.html" style="border: 2px solid black; height: 450px; transition: all 0.5s ease;"></iframe>
+    <div class="col-6">
+      <img id="graph-frame" class="w-100 rounded" src="/assets/img/nomination_plot.png" style="border: 2px solid black; height: 450px; transition: all 0.5s ease;">
     </div>
-    <div class="col-auto align-self-center">
+    <div class="col-1 align-self-center">
       <p style="text-align: center; font-family: 'Copperplate', sans-serif; font-size: 1rem;" class="highlight">Button</p>
       <div class="arrow text-center">⬇️</div>
       <div style="text-align: center;">
@@ -468,7 +491,7 @@ Hidden in plain sight, there’s a **secret button** on the Wordcloud interface.
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(98, 176, 170)">
     <div class="row justify-content-center">
       <div class="col">
-        <span class="display-1 copper">Ticket Booth - Adults and Kids for the Circus</span>
+        <span class="display-4 copper">Ticket Booth - Adults and Kids for the Circus</span>
       </div>
     </div>
   </div>
@@ -492,12 +515,12 @@ But let’s not forget, this is just a trend! 🧂 IMDb ratings can be subjectiv
 So, which ticket will you choose? The universal, accessible humor of the United States or Europe’s more refined and thought-provoking style? Either way, laughs are guaranteed... but the data suggests Europe often wins the audience’s favor. ❤️
 And just below, you’ll find a plot breaking down the different sub-genres of comedy to confirm these observations, with data to back it up! 📊🎥"
 <div class="container-fluid mt-3 mb-2">
-  <div class="row justify-content-center" style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+  <div class="row g-0 justify-content-center" style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
     <div class="col-6">
-      <iframe src="/assets/htmlplot/interactive_heatmap_europe.html" class="w-100" style="height: 500px;"></iframe>
+      <iframe src="/assets/htmlplot/interactive_heatmap_europe.html" style="width: 550px; height: 500px;"></iframe>
     </div>
     <div class="col-6">
-      <iframe src="/assets/htmlplot/interactive_heatmap_america.html" class="w-100" style="height: 500px;"></iframe>
+      <iframe src="/assets/htmlplot/interactive_heatmap_america.html" style="width: 550px; height: 500px;"></iframe>
     </div>
   </div>
 </div>

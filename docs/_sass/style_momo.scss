@@ -59,3 +59,37 @@
     border-color: #6c5ce7; /* Bordure assortie */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
 }
+
+
+.ratings-plot-ctn {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .ratings-plot-ctn img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .ratings-plot-ctn .plots-ratings {
+    z-index: 1;
+  }
+
+  .ratings-plot-ctn .card-plots {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .ratings-plot-ctn:hover .card-plots {
+    opacity: 0;
+  }
