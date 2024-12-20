@@ -1,7 +1,34 @@
-# The Cold War of Laughter: Western Humor vs. Eastern Wit 😂🌍🧊
+# Humor Across Continents: Europe vs. America 😂🌎
 
 ## Abstract
 This project takes a dive into the comedic rivalry between American and European films, uncovering the cultural quirks that make each side laugh. Using data from the CMU Movie Summary Corpus and OMDB, we analyze recurring themes, linguistic styles, and narrative structures to decode the essence of humor on both sides of the Atlantic. Do Americans favor slapstick and sarcasm, while Europeans lean toward dry wit and intellectual wordplay? Are certain jokes universal, or do some fall flat across cultural divides? We also explore representation dynamics—examining how gender and ethnicity shape the humor landscape—and investigate box office trends to see if Hollywood's blockbuster comedies outshine Europe's subtler charm. Through text analysis, visualizations, and linguistic modeling, this project aims to answer whether humor truly transcends borders or remains firmly rooted in cultural context. Laugh, learn, and decide which side of the Atlantic rules the comedy game!
+
+## Datastory
+Our project's data story is available here. [INSERT LINK]
+
+## Repository Architecture
+
+- **data**:  
+  Contains multiple CSV files created and utilized using datasets provided by the CMU Movie Summary Corpus and OMDB.
+
+- **docs**:  
+  Includes all codes and files used to develop the data story.
+
+- **src**:  
+  - **data**: Example dataset retrieved from the OMDB API.  
+  - **resource**: Masks for word clouds and images utilized in the notebook.  
+  - **script**: Example implementation of the Stanford NLP pipeline.  
+  - **utils**: Python module containing utility functions.  
+
+- **`preprocessing.ipynb`**: 
+  A notebook detailing the data preprocessing steps used to compile and prepare the data.
+
+- **`full_analysis.ipynb`**:  
+  A comprehensive notebook documenting all analyses performed, including results that were not incorporated into the final data story.
+
+- **`results.ipynb`**:  
+  A refined notebook containing results specifically used in the data story. This is a reduced version of `full_analysis.ipynb`.
+
 
 
 ## Research Questions
@@ -17,9 +44,8 @@ This project takes a dive into the comedic rivalry between American and European
 - In what ways do American and European comedies align in their themes, and where do they diverge?
 
 ### 3. Gender and Ethnic Representation
-- What are the gender and ethnic compositions in American and European comedies?
-- How has the representation of these groups evolved over time, and what cultural insights can be drawn from these changes?
-- How does gender representation correlate with movie recognition, such as box office performance, rankings, ratings, and awards?
+- How does ethnic diversity correlate with movie ratings?
+- Can we develop a "diversity score" to quantify the level of diversity in a film's cast?
 
 ## Supplementary Dataset
 
@@ -48,14 +74,15 @@ This project takes a dive into the comedic rivalry between American and European
     - **Tokenization & stopwords removal** : a common method when manipulating text data is to extract tokens and remove words that are not useful for our analysis.
     - **N-gram generation** : n-grams are a way of parsing sentences by group of n words. For example, we can look at the 2-grams of the form “<verb> <any other word>” to extract recurrent topics in the scenarios.
     - **Frequency analysis** : using the wordclouds visualization, we will extract the dominant topics and features of comedy movies across continents
+    - **Topic modelling** : using TF-IDF factorization and Singular Value Decomposition (SVD) to identify key themes in European and American plot summaries.
 
- - For gender analysis, the following choices were made about :
-    - **Representation Metrics**: Quantifying gender and ethnic diversity in lead roles and examining trends over time.
-    - **Success Evaluation**: Measuring success in terms of revenue, critical reception, runtime, and audience rating.
+ - For the ethnic representation analysis, the following choices were made about :
+    - **Diversity Score**: The diversity score is calculated by using entropy and the proportion of each represented ethnicity in the cast of actors. 
 
 ### 3. Present the results
 
-Finally, we aim at showing our findings as a webpage datastory, following the guidelines of the course.
+Finally, our findings are presented as an interactive data story on the following webpage [INSERT LINK]
+
 
 ## Proposed timeline and Organization within the team
 
@@ -63,9 +90,6 @@ The following figure presents the provisionned timeline :
 
 ![Timeline](src/ressource/timeline.jpeg)
 
-## Questions for TA's
-
-Given our preliminary exploration of Latent Dirichlet Allocation (LDA) for uncovering thematic structures, do you think it is worthwhile to invest more time refining the LDA process (e.g., optimizing preprocessing, tuning parameters, or increasing topic granularity)? Or would you recommend focusing on alternative methods to achieve deeper insights into narrative trends?
 
 ## References
 
@@ -75,4 +99,4 @@ Given our preliminary exploration of Latent Dirichlet Allocation (LDA) for uncov
 
 ## Acknowledgements
 
-ChatGPT has been used to rephrase and translate to english some parts of this document as well as some comments in the code.
+ChatGPT has been used to rephrase and translate to english some parts of this document as well as some comments in the code (thank you ChatGPT).
