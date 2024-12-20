@@ -100,7 +100,7 @@ layout: default
 <div class="container-fluid">
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185)">
     <div class="col-md-12">
-      <span class="display-1 copper">A carousel of Tests</span>
+      <span class="display-1 copper">A Carousel of Tests</span>
     </div>
   </div>
   <div class="row">
@@ -124,6 +124,13 @@ layout: default
     </div>
   </div>
 </div>
+
+
+<br><br><br><br>
+
+
+
+
 
 
 ## The rating of the comedies : critics vs users
@@ -171,6 +178,8 @@ layout: default
   </div>
 </div>
 
+<br><br>
+
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-6">
@@ -194,6 +203,7 @@ layout: default
   </div>
 </div>
 
+<br><br>
 
 ### Results for Each Rating Source
 
@@ -238,24 +248,59 @@ layout: default
   </div>
 </div>
 
+<br><br>
 
-## Analysis of Ratings: Do Critics Rate European Films More Severely Than Users? And the Same for American Films?
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-6">
-      <h3>Analysis of the Table in Circus Style 🎪</h3>
-      <p style="text-align: justify;">Ladies and gentlemen, step right up to witness a thrilling performance in the world of ratings! 🎭✨</p>
-      <p style="text-align: justify;">On our grand stage, we present the battle of opinions between <strong>critics</strong> and <strong>users</strong>, spanning two continents: <strong>Europe</strong> and <strong>America</strong>. The spotlight is on whether critics are harsher judges than their user counterparts. Let's dive into the show!</p>
+### Mann whitney U
+<div class="row">
+<div class="col-6">
+      <p style="text-align: justify;">All three rating sources show statistically significant differences between comedies produced in Europe and America, as evidenced by the very low p-values (all below 0.05). These findings suggest that the continent of production has a notable influence on how movies are rated across different platforms.</p>
+      <p style="text-align: justify;">The Rotten Tomatoes ratings exhibit the most pronounced differences, followed by Metacritic and IMDb. These variations could reflect cultural differences in audience perceptions, critical standards, or other region-specific factors influencing movie ratings.</p>
     </div>
     <div class="col-6 overflow-x-auto">
       <table style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
           <tr style="background-color: rgb(180, 74, 58); color: white;">
-            <th style="border: 1px solid #ddd; padding: 8px;">Continent</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">Test Statistic</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">P-Value</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">Interpretation</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">Rating Source</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">U-Statistic</th>
+            <th style="border: 1px solid #ddd; padding: 8px;color: white;">P-Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Imdb Rating</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">1.06e7</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">3.81e-21</td>
+          </tr>
+          <tr style="background-color: #f2f2f2;">
+            <td style="border: 1px solid #ddd; padding: 8px;">Rotten Tomatoes Rating</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">1.64e6</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">1.68e-39</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Metacritic Rating</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">6.25e5</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">6.17e-24</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+<br><br>
+
+## Analysis of Ratings: Do Critics Rate European Films More Severely Than Users? And the Same for American Films?
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Table on the left -->
+    <div class="col-6 overflow-x-auto">
+      <table style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr style="background-color: rgb(180, 74, 58); color: white;">
+            <th style="border: 1px solid #ddd; padding: 8px; color: white;">Continent</th>
+            <th style="border: 1px solid #ddd; padding: 8px; color: white;">Test Statistic</th>
+            <th style="border: 1px solid #ddd; padding: 8px; color: white;">P-Value</th>
+            <th style="border: 1px solid #ddd; padding: 8px; color: white;">Interpretation</th>
           </tr>
         </thead>
         <tbody>
@@ -274,14 +319,25 @@ layout: default
         </tbody>
       </table>
     </div>
+    <!-- Text on the right -->
+    <div class="col-6">
+      <p style="text-align: justify;">Ladies and gentlemen, step right up to witness a thrilling performance in the world of ratings! 🎭✨</p>
+      <p style="text-align: justify;">On our grand stage, we present the battle of opinions between <strong>critics</strong> and <strong>users</strong>, spanning two continents: <strong>Europe</strong> and <strong>America</strong>. The spotlight is on whether critics are harsher judges than their user counterparts. Let's dive into the show!</p>
+      <p style="text-align: justify;"> As we delve deeper into the world of ratings, one key revelation stands out: the distributions of ratings are not normal. This critical insight steers us toward the Mann-Whitney U Test, our trusted judge for non-parametric data. 🎩✨ </p>
+      <p style="text-align: justify;"> 
+      Unlike tests that rely on assumptions of normality, the Mann-Whitney U Test is perfectly suited for the unique patterns in our data. It evaluates whether there is a significant difference between two independent groups—in this case, critics and users, for both European and American films.</p>
+    </div>
   </div>
 </div>
 
-#### Act 1: **European Films** 🎬🇪🇺
-In the European corner, we see harmony in the ring. The **Mann-Whitney U test** shows no significant difference between critics and users. The p-value, a respectable **9.99e-1**, whispers, "All is well!" 🕊️ Critics and users seem to share a common appreciation for European films, leaving no drama behind the scenes. It’s a peaceful performance where everyone applauds in unison! 👏
 
-#### Act 2: **American Films** 🎬🇺🇸
-Now, for the dramatic twist! The American films take center stage with a fiery p-value of **6.65e-192**, screaming, "Conflict ahead!" 🔥 Critics are revealed to be the stricter judges, casting their votes with a harsher tone compared to the generous ratings of users. This significant difference sparks an intense debate, as critics lower the curtain on American films more harshly than users. 🎟️
+
+
+#### **Act 1: European Films** 🎬🇪🇺
+In the European corner, we see harmony in the ring. The **Mann-Whitney U test** shows no significant difference between critics and users. The p-value, a respectable **9.99e-1**, whispers, "All is well!" Critics and users seem to share a common appreciation for European films, leaving no drama behind the scenes. It’s a peaceful performance where everyone applauds in unison! 👏
+
+#### **Act 2: American Films** 🎬🇺🇸
+Now, for the dramatic twist! The American films take center stage with a fiery p-value of **6.65e-192**, screaming, "Conflict ahead!" Critics are revealed to be the stricter judges, casting their votes with a harsher tone compared to the generous ratings of users. This significant difference sparks an intense debate, as critics lower the curtain on American films more harshly than users. 🎟️
 
 #### **The Grand Finale** 🌟
 Our spectacular show reveals contrasting stories. While Europe enjoys a harmonious duet between critics and users, America witnesses a tug-of-war on the tightrope of ratings. Could it be cultural differences, distinct cinematic tastes, or simply a clash of perspectives? 🎭 Only the audience can decide as the circus continues its journey of exploration.
@@ -296,7 +352,6 @@ Stay tuned for more dazzling data insights, and don’t forget to grab your popc
 <div class="container-fluid">
   <div class="row">
     <div class="col-4">
-      <h3>Mann-Whitney U Test Analysis of Ratings by Continent of Production</h3>
       <p style="text-align: justify;">This analysis compares the distributions of ratings for comedies produced in Europe and America using the Mann-Whitney U test. This non-parametric test is chosen because it does not assume normality, making it suitable for datasets with deviations from normal distribution or large sample sizes.</p>
     </div>
     <div class="col-8">
@@ -307,48 +362,11 @@ Stay tuned for more dazzling data insights, and don’t forget to grab your popc
       </div>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-6 overflow-x-auto">
-      <h4>Results</h4>
-      <table style="width: 100%; border-collapse: collapse; text-align: left;">
-        <thead>
-          <tr style="background-color: rgb(180, 74, 58); color: white;">
-            <th style="border: 1px solid #ddd; padding: 8px;">Rating Source</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">U-Statistic</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">P-Value</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">Interpretation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="border: 1px solid #ddd; padding: 8px;">**imdbRating**</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">10,555,812.5</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">3.81e-21</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">Statistically significant difference in IMDb ratings between European and American-produced comedies, indicating differing rating distributions.</td>
-          </tr>
-          <tr style="background-color: #f2f2f2;">
-            <td style="border: 1px solid #ddd; padding: 8px;">**Rotten_Tomatoes_Rating**</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">1,634,734.0</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">1.68e-39</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">The most significant difference observed, showing pronounced variation in Rotten Tomatoes ratings between the two continents.</td>
-          </tr>
-          <tr>
-            <td style="border: 1px solid #ddd; padding: 8px;">**Metacritic_Rating**</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">624,487.5</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">6.17e-24</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">Clear statistical difference in Metacritic ratings, further supporting the hypothesis of differing rating patterns.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-6">
-      <h4>Summary</h4>
-      <p style="text-align: justify;">All three rating sources show statistically significant differences between comedies produced in Europe and America, as evidenced by the very low p-values (all below 0.05). These findings suggest that the continent of production has a notable influence on how movies are rated across different platforms.</p>
-      <p style="text-align: justify;">The Rotten Tomatoes ratings exhibit the most pronounced differences, followed by Metacritic and IMDb. These variations could reflect cultural differences in audience perceptions, critical standards, or other region-specific factors influencing movie ratings.</p>
-    </div>
-  </div>
 </div>
+
+
+
+
 ## More specific analysis
 
 Après des analyses plus générales sur les comédies, nous avons décidé de se concentrer plus en détails sur certains sous genres de comédies pour voir en profondeur ce qui fait qu'une comédie est plus aimé qu'une autre. Pour voir cela, nous nous sommes concentrés sur l'analyse de mots et de topics pour voir si il y a une différence de sujets traités en Europe en Amérique.
@@ -411,13 +429,71 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
 <script src="{{ '/assets/js/burgers.js' | relative_url }}"></script>
 
 <div class="container-fluid mt-5">
-<!-- Burger -->
-  <div class="row mb-3 justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(223, 162, 78)">
-    <div class="col">
-      <span class="display-3 copper">Ethnicity part</span>
+<div class="container-fluid mt-5 mb-2">
+  <div class="row justify-content-center text-center">
+    <div class="col-12 border border-dark-subtle rounded" style="background-color:rgb(202, 177, 191);">
+      <span class="display-1 copper" style="color: white;">Ethnic diversity</span>
     </div>
   </div>
-  <div class="row justify-content-center">
+</div>
+</div>
+<div class="container-fluid mt-5 mb-2">
+  <div class="row justify-content-center text-center">
+    <div class="col-12">
+      <img src="assets/img/Animaux.jpg" alt="Animaux" class="img-fluid rounded shadow">
+    </div>
+  </div>
+</div>
+
+Ladies and gentlemen, boys and girls, get ready because in this next act we tackle the dazzling, high-flying question: Does ethnic diversity make for a better movie? Let’s take a peek under the Big Top and reveal tonight’s program:
+
+- Taming the Wild Freebase IDs into Recognizable Ethnicities
+- Juggling 353 Ethnicities into 8 Manageable Hyperclasses
+- Assembling the Cast for All Movies in Our Dataset
+- Calculating the Diversity Score with Death-Defying Precision
+
+## Taming the Wild Freebase IDs into Recognizable Ethnicities 🐅
+
+Our first act features a mapping of IDs to Ethnicity names, the data lion tamer extraordinaire! It wrangled those cryptic `freebase_id`s into recognizable ethnicities. No more staring at an undecipherable wall of IDs, now we’ve got proper names like “Irish” or “Tamil,” making it much easier to work with. 
+
+With this transformation, Actor_Ethnicity has gone from being the clown car of ambiguity to a streamlined parade of clarity. Cue the applause! 👏
+
+## Juggling 353 Ethnicities into 8 Manageable Hyperclasses 🤹‍♀
+
+Now behold the grand juggling act! Imagine trying to juggle 353 flaming torches-chaos, right? That’s what it feels like handling all the different ethnicities in our dataset. To tame this wild pachyderm of data, we sorted them into 8 mighty hyperclasses:
+
+- African Descent or African
+- European Descent and European
+- Jewish
+- Asian Descent or Asian
+- Middle Eastern Descent or Middle Eastern
+- Latin Descent or Latin
+- Indigenous
+- Other
+
+With this, the crowd can now follow the show without getting lost in a sea of details. Instead of an unwieldy stampede, we’ve got a neat parade of 8 categories marching in perfect harmony!
+
+
+## Assembling the Cast for All Movies in Our Dataset 🦁🐒
+
+Now, under the casting tent, we assemble the troupe! Imagine lining up lions, acrobats, and clowns for every movie’s performance. Our job is to tally up the ethnic composition of each cast, giving us a clear picture of the diversity. Every performer has their role, like every actor has their ethnicity.
+
+
+## Calculating the Diversity Score with Death-Defying Precision 🎢🦜
+
+Hold your breath, folks—it’s time for the grand finale! On a high wire of mathematics, we calculate the diversity score, a value between **0 and 1 that tells us how mixed the cast is:
+
+H(X) = - ∑ p(x) × log₈(p(x)), pour x ∈ X.
+
+Ici :
+p(x) représente la proportion de chaque hyperclasse dans l'ensemble X.
+
+- Diversity = 0: A one-lion act—predictable and dull.
+- Diversity = 1: A dazzling menagerie of performers—balanced and mesmerizing!
+
+The diversity score captures the randomness, or entropy, of the cast’s ethnic composition. A high score? A cast as colorful as a ringmaster’s coat. A low score? A show as predictable as a sad clown act.
+
+<div class="row justify-content-center">
     <div class="col-6 text-center copper">
       America
     </div>
@@ -435,15 +511,46 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
   </div>
   <div class="row justify-content-center">
     <div class="col-10">
-      Tim ton text ici à remplir
+    </div>
+  </div>
+</div>
+
+So, step right up and let’s crunch the numbers to see if diversity really is the ringmaster of a movie’s success! 🎭✨
+
+Let’s interpret these magnificent plots, where data performs on the tightrope of IMDb ratings and Ethnicity Scores!
+
+### America: The Lion's Den 🦁
+In the first plot, the Ethnicity Score shows us the distribution of diversity in American films. The deep red contour at the center is like a lion circling the ring. It represents where most of the data resides. Most American films seem to hover around Ethnicity Score ~0.4 and an IMDb rating of ~6.
+
+Above it all, the dashed red line—the Mean Line balances at 0.39, representing the average Ethnicity Score across all American films. 
+
+The lighter contours show the rest of the jungle, where fewer films dare to wander. High diversity (Ethnicity Score close to 1) is a rare sight, like spotting an albino tiger in the wild!
+
+
+### Europe: The Elephant Parade 🐘
+In the second plot, we enter the European ring. Here, the Ethnicity Score marches like an elephant in a parade, solid, dependable, and mostly grounded around Ethnicity Score ~0.33 and IMDb rating ~6.
+
+The cool blue contours indicated that European films are slightly less diverse on average. The mean dashed blue line takes a stroll at 0.33, the average Ethnic Diversity Score.
+
+What’s striking here is the tighter distribution. Europeans seem to play it safe, keeping diversity steady, much like a disciplined elephant troupe.
+
+
+### The Key Comparison 🎭
+- America’s cast diversity (mean 0.39) is slightly higher than Europe’s (mean 0.33), suggesting more colorful casting choices in American Comedies. However, we observe that diverity is not necessarily tighed to a better ratings. Indeed, there is no visible shift in the IMDb ratings as the diversity of a movie's cast increases, in Americ and in Europe. 
+- The Ethnicity Score spread in America’s plot shows a more divers representation of society thought Comedies. This most probably stems from the Americas being a land of welcome over the years and fostering a multicurtural society. Indeed, "every film is the result of the society that produced it" (Jean-Luc Godard)
+
+<div class="container-fluid mt-5 mb-2">
+  <div class="row justify-content-center text-center">
+    <div class="col-12 border border-dark-subtle rounded" style="background-color:rgb(120, 207, 186);">
+      <span class="display-1 copper" style="color: white;">Semantic analysis</span>
     </div>
   </div>
 </div>
 
 
-## Semantic analysis
-
 Now let’s try to analyze the semantic aspect of our comedies. Let’s first examine the most frequently occurring nouns in movie plots from each continent. The wordclouds below offer a visual representation of these prominent terms, giving us an idea of what are the most used words in plots for each continent.
+
+
 
 <div class="container-fluid mt-2 mb-2">
   <div class="row justify-content-center">
@@ -457,13 +564,10 @@ Now let’s try to analyze the semantic aspect of our comedies. Let’s first ex
 </div>
 
 
-Shared Themes Across Continents
-Both wordclouds reveal a universal focus on family, love, and life. This shows that these themes are timeless and they resonate with audiences worldwide. Despite regional differences, the foundation of cinema in both Europe and America seems to be built on human relationships.
-
-These wordclouds set the stage for a deeper analysis now. Even though these 2 themes are the same across continents, do they represent the same type of humor?
-Using singular value decomposition (SVD), a dimension reduction technique, we can break down the underlying topics in movie plots to uncover what truly defines the narratives in each continent and how they diverge or align thematically.
-Looking at the following figure, we can see the two main topics we found for each continent:
-
+## Shared Themes Across Continents
+Both wordclouds highlight a universal focus on family, love, and life—timeless themes that resonate with audiences around the globe. Despite regional differences, the heart of cinema in both Europe and America seems to rest on human connections and relationships.
+But these wordclouds are just the beginning. While the themes may appear similar, do they deliver the same kind of humor? 🤔 To dig deeper, we used singular value decomposition (SVD), a dimensionality reduction technique, to analyze movie plots and uncover the underlying topics. This approach helps us see what truly defines narratives in each continent and where they align—or diverge—on a thematic level.
+Take a look at the figure below to explore the two main topics we identified for each continent:
 
 
 <div class="container-fluid mt-2 mb-2">
@@ -473,71 +577,127 @@ Looking at the following figure, we can see the two main topics we found for eac
     </div>
   </div>
 </div>
-
+<br><br>
 ### Topic 1: Relationships & Family
+<div class="row justify-content-center flex-row-reverse">
+  <div class="col-md-6 text-container d-flex align-items-center">
+<div>
+    <p>
+        Relationships and family are the universal glue holding comedy stories together in both 
+        American and European films. Words like <strong>life, love, family, friend,</strong> 
+        and <strong>man</strong> stood out in our wordclouds, showing these themes never go out of style. 
+        Whether it’s romantic misadventures, family dramas, or those awkward coming-of-age moments, 
+        both continents clearly value stories that connect on a personal level. Turns out, we all enjoy 
+        a good laugh (or cry) about life’s little quirks. <span>❤</span>
+    </p>
+    <p>
+        <strong>Topic 1</strong> clearly transcends cultural boundaries, showing how both regions use films 
+        to explore universal emotions and relationships. But let’s take a closer look—do these shared themes 
+        really capture the same ideas in the same way on both sides of the Atlantic? <span>🤔</span>
+    </p>
+</div>
+  </div>
+  <div class="col-md-6 image-container">
+    <img src="/assets/img/jingle.jpg" alt="Tom and Jerry" class="img-fluid" style="width: 50%;">
+  </div>
 
-This theme seems to be a shared priority across both American and European films, reflecting the universality of human experiences. As we saw with the wordclouds, terms like *life, **love, **family, **friend, and **man* dominate, pointing to narratives that emphasize human connections, personal struggles, and the importance of familial bonds. 
+</div>
 
-This topic shows that both continents value storytelling that resonates emotionally, whether through romantic comedies, family dramas, or coming-of-age tales.
-
-So *Topic 1 transcends cultural boundaries* and highlights how both regions use movies to address universal emotions and relationships. 
-
-Now let’s try to go deeper. *Do these shared themes truly represent the same topics in the same way across both continents?*
-
+<br><br>
 ### Topic 2: Cartoon (America) vs. War & Conflict (Europe)
 
 The second most represented topics diverges sharply between the two regions:
 
-#### American Films:
-Focus heavily on animated slapstick comedies, with characters like *Tom and Jerry*, capturing humor through physical and exaggerated action.  
-Keywords such as *tom, **jerry, **dog, **cat, and **chase* emphasize light-hearted and family-friendly cartoons that appeals to a global audience.  
-This might reflect America’s preference for escapism and universally accessible humor.  
-*Example film: *Tom and Jerry: The Movie (1992)
+<div class="row justify-content-center flex-row-reverse" >
+  <div class="col-md-6 image-container">
+    <img src="assets/img/Tom.jpg" alt="Tom and Jerry" class="img-fluid" style="width: 60%;">
+  </div>
+  <div class="col-md-6 text-container d-flex align-items-center">
+<div>
+    <strong>American Films</strong>
+    <p>
+        Animated slapstick comedies take center stage here, with classics like 
+        <em>Tom and Jerry</em> leading the charge. These cartoons rely on 
+        physical, exaggerated action to deliver humor—think wild chases, flying 
+        anvils, and characters bouncing back from impossible falls like it’s no big deal. 
+        <span>🐱🐭💥</span>
+    </p>
+    <p>
+        Keywords like <strong>tom, jerry, dog, cat,</strong> and 
+        <strong>chase</strong> highlight the light-hearted, family-friendly appeal 
+        of these animations, making them a global favorite. This trend might reflect 
+        America’s knack for creating humor that offers pure escapism—simple, 
+        universally relatable, and guaranteed to make you laugh without a single word needed.
+    </p>
+    <p><strong>Example film:</strong> <em>Tom and Jerry: The Movie</em> (1992)</p>
+</div>
+  </div>
+</div>
 
-#### European Films:
-Emphasize historical narratives and intellectual satire, often set in the context of war and conflict.  
-Keywords like *war, **soldier, **nazi, and **village* highlight humor derived from historical and cultural reflections, showing Europe’s tendency to intertwine comedy with societal critique.  
-The darker and more cerebral tone of this humor reflects Europe’s unique storytelling style, grounded in its history.  
-*Example film: *Train of Life (1998)
+
+<div class="row justify-content-center flex-row-reverse" style="flex-direction: row-reverse;">
+  <div class="col-md-6 text-container d-flex align-items-center">
+<div>
+    <strong>European Films</strong>
+    <p>
+        European comedies often lean into historical narratives and intellectual satire, 
+        blending humor with thought-provoking themes. Set against the backdrop of war 
+        and conflict, these stories use comedy as a lens to explore deeper societal reflections. 
+        Keywords like <strong>war, soldier, nazi,</strong> and <strong>village</strong> 
+        point to a style of humor rooted in history and cultural critique.
+    </p>
+    <p>
+        This approach tends to have a darker, more cerebral tone, reflecting Europe’s 
+        storytelling tradition—one that isn’t afraid to mix laughter with introspection, 
+        showing how humor can emerge even in the face of life’s complexities. 
+        <span>🎭✨</span>
+    </p>
+    <p><strong>Example film:</strong> <em>Train of Life</em> (1998)</p>
+</div>
+  </div>
+  <div class="col-md-6 image-container">
+    <img src="assets/img/train.jpg" alt="Tom and Jerry" class="img-fluid" style="width: 50%;">
+  </div>
+
+</div>
+
+<br><br>
 
 ### Comparison
 
-American films often portray themes through light-hearted comedies, uplifting stories, or hero-centric narratives. In contrast, European films tend to explore the same themes with nuanced, introspective perspectives, often incorporating social or historical commentary.
+•	American Films: Often tackle these themes with light-hearted comedies, feel-good stories, or hero-driven narratives that inspire and entertain. 🎬✨
+•	European Films: Take a more nuanced, introspective approach, weaving in social or historical commentary for added depth and reflection. 🎭📜
+
+<br>
 
 ### Conclusion
 
-While America leans toward escapism and visual comedy, Europe’s humor often explores the deeper, more serious aspects of life, blending satire with history. This divergence in comedic styles can, in part, be attributed to Europe’s deep historical scars, particularly the profound impact of World War II. The aftermath of the war left a lasting imprint on European storytelling, where humor often serves as a coping mechanism to reflect on and critique the societal and political consequences of conflict.
+•	America leans toward escapism and visual comedy, delivering humor that entertains with light-hearted antics and universally accessible storytelling—because who doesn’t love a good pie in the face? 🎥🍿
+•	Europe’s humor, on the other hand, often dives into life’s heavier moments, blending satire with historical and social commentary. Shaped by deep historical scars, especially the aftermath of World War II, European storytelling turns humor into a coping tool—because sometimes, you’ve just got to laugh to keep from crying. 🎭💔
 
-These differences underline the broader cultural role of cinema: for Europe, a mirror to history and social critique; for America, a stage for universal entertainment and relief.
-
+<br><br>
 
 ### Now, presenting a star of the comedy data scene… give it up for the one, the only… WORDCLOUD! 🎭
 
 We did our analysis, but you can make it too! This interactive tool is here to help us dive into the humor-filled rivalry between American and European comedies by analyzing the words that make each side laugh. Packed with a ton of features, Wordcloud is your go-to act for cracking the linguistic code of comedy. Let’s break down its impressive setlist:
 
-1. **Regional Filters**  
-   *“Are you into the loud, slapstick humor of Hollywood or the subtle, dry wit of Europe? No worries—this tool lets you toggle between regions faster than a comedian switching accents mid-joke!”*
+1. *Regional Filters*  
+   “Are you into the loud, slapstick humor of Hollywood or the subtle, dry wit of Europe? No worries—this tool lets you toggle between regions faster than a comedian switching accents mid-joke!”
 
-2. **Subsets**  
-   *“Whether you want a deep dive into the 5 specific subsets we created or to look at the whole genre, you’re in control. Pick your niche, and let the tool do the rest!”*
+2. *Subsets*  
+   “Whether you want a deep dive into the 5 specific subsets we created or to look at the whole genre, you’re in control. Pick your niche, and let the tool do the rest!”
 
-3. **Part-of-Speech Magic**  
-   *“From dynamic verbs to clever nouns and everything in between, Wordcloud unveils the grammatical building blocks of comedy. Curious about which verbs dominate American punchlines or which nouns give European humor its sophistication? It’s all just a click away!”*
+3. *Part-of-Speech Magic*  
+   “From dynamic verbs to clever nouns and everything in between, Wordcloud unveils the grammatical building blocks of comedy. Curious about which verbs dominate American punchlines or which nouns give European humor its sophistication? It’s all just a click away!”
 
-4. **N-grams**  
-   *“Love the power of words working together? Whether it’s single-word jokes or multi-word punchlines, the n-grams feature highlights the patterns that make comedy memorable. One-liners or elaborate setups—this tool has it covered!”*
-
----
-
-Wordcloud isn’t just a tool; it’s your backstage pass to the comedy world’s linguistic secrets. Ready to uncover what makes American and European humor tick? Let Wordcloud take the stage and show you the words that bring the laughs!
+4. *N-grams*  
+   “Love the power of words working together? Whether it’s single-word jokes or multi-word punchlines, the n-grams feature highlights the patterns that make comedy memorable. One-liners or elaborate setups—this tool has it covered!”
 
 ---
 
-#### 🤫 Pssst… There’s a Secret Button! 🕵️‍♀️
+Wordcloud isn’t just a tool; it’s your backstage pass to the comedy world’s linguistic secrets. Ready to uncover what makes American and European humor tick? Let Wordcloud take the stage and show you the words that bring the laughs!
 
-Hidden in plain sight, there’s a **secret button** on the Wordcloud interface. What does it do? Click it to discover! 😉
-
-(après il faudrait faire un peu mieux le bouton et faire un easter egg marrant mais je vous avoue je galère mdr)
+---
 
 <script src="{{ '/assets/js/wordclouds.js' | relative_url }}"></script>
 {% include wordclouds.html %}

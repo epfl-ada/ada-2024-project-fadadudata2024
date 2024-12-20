@@ -7,12 +7,12 @@
 
 
 @font-face {
-    font-family: "CopperplateCC-Bold";
-    src: url({{ '/assets/fonts/CopperplateCC-Bold.ttf' | relative_url }}) format('truetype');
+    font-family: "Abang";
+    src: url({{ '/assets/fonts/Abang.otf' | relative_url }}) format('truetype');
 }
 
-.copper {
-    font-family: 'CopperplateCC-Bold', sans-serif;
+.abang {
+    font-family: 'Abang', sans-serif;
 }
 
 @keyframes shake {
