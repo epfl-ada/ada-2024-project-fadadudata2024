@@ -1,10 +1,14 @@
 # Humor Across Continents: Europe vs. America 😂🌎
 
 ## Abstract
-This project takes a dive into the comedic rivalry between American and European films, uncovering the cultural quirks that make each side laugh. Using data from the CMU Movie Summary Corpus and OMDB, we analyze recurring themes, linguistic styles, and narrative structures to decode the essence of humor on both sides of the Atlantic. Do Americans favor slapstick and sarcasm, while Europeans lean toward dry wit and intellectual wordplay? Are certain jokes universal, or do some fall flat across cultural divides? We also explore representation dynamics—examining how gender and ethnicity shape the humor landscape—and investigate box office trends to see if Hollywood's blockbuster comedies outshine Europe's subtler charm. Through text analysis, visualizations, and linguistic modeling, this project aims to answer whether humor truly transcends borders or remains firmly rooted in cultural context. Laugh, learn, and decide which side of the Atlantic rules the comedy game!
+This project tackles global humor like a foodie facing an all-you-can-eat dessert buffet: on one side, American comedy—generous with gags and explosions; on the other, European laughter—sometimes as refined as a delicate pastry, sometimes as bold as a strong espresso. By exploring the CMU Movie Summary Corpus and OMDB data, we’ll dive into storylines, the variety of actors, box-office success, and rich critiques. Our mission? To understand what makes audiences laugh out loud from one continent to another. By telling this story, we hope to highlight the rich diversity of humor around the world and show how laughter can be universal, yet shaped by specific cultural factors. 🤹‍♀🍰
 
 ## Datastory
 Our project's data story is available at the following link: [Data Story](https://epfl-ada.github.io/ada-2024-project-fadadudata2024/)
+
+## Required Python Packages
+
+This project requires the Python packages in `pip_requirements.txt` to run properly.
 
 ## Repository Architecture
 
@@ -56,7 +60,7 @@ Our project's data story is available at the following link: [Data Story](https:
    - **Data Integration**: Merging datasets based on common identifiers to facilitate thematic analysis, character representation analysis, and success metrics.
 
 ### 2. Analysis Process
- - Patterns were identified across themes, gender and ethnicity representation, ratings, and commercial success. To highlight these different data structures, various statistical tests were conducted, including:
+ - Patterns were identified across themes and ethnicity representation, ratings, and commercial success. To highlight these different data structures, various statistical tests were conducted, including:
    - **T-test**: Comparing the means of two groups to detect significant differences; often accompanied by confidence intervals (CIs) to estimate the mean difference.
    - **Kolmogorov-Smirnov (KS)**: Checking if a distribution follows a normal distribution.
    - **Mann-Whitney U**: Comparing ranks between two groups for non-normal distributions.
@@ -79,7 +83,7 @@ Our project's data story is available at the following link: [Data Story](https:
 Finally, our findings are presented as an interactive data story on the following webpage: [Data Story](https://epfl-ada.github.io/ada-2024-project-fadadudata2024/)
 
 
-## Proposed timeline and Organization within the team
+## Timeline and Organization within the team
 
 The following figure presents the provisionned timeline :
 
