@@ -233,55 +233,6 @@ This analysis compares IMDb ratings (from users) with Rotten Tomatoes and Metacr
 - **Null Hypothesis (H0)**: There is no difference between the ratings given by critics and users for films from each continent.
 - **Alternative Hypothesis (H1)**: Critics rate films more severely than users for each continent, meaning critic ratings are lower than user ratings.
 
-### Statistical Tests in Detail
-
-#### Independent T-Test
-
-The **Independent T-Test** compares the means of two independent groups (in this case, user ratings vs. critic ratings) to determine if there is a statistically significant difference between them.
-
-- **Formula**:
-  $
-  t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
-  $
-  Where:
-  - $\bar{X}_1$ and $\bar{X}_2$ are the sample means for the two groups (users and critics).
-  - $s_1^2$ and $s_2^2$ are the variances of the two groups.
-  - $n_1$ and $n_2$ are the sample sizes of the two groups.
-
-- **Assumptions**:
-  - The data for each group should be normally distributed.
-  - Variances of the two groups should be equal (if not, an adjusted version of the T-Test, known as Welch's T-Test, is used).
-
-- **Interpretation of Results**:
-  - If the p-value < 0.05, we reject the null hypothesis, suggesting a significant difference in mean ratings between critics and users.
-  - If the p-value ≥ 0.05, we fail to reject the null hypothesis, indicating no significant difference in mean ratings.
-
-#### Mann-Whitney U Test
-
-If the data is not normally distributed, the **Mann-Whitney U Test** is a non-parametric alternative that compares the distributions of the two independent groups.
-
-- **Formula**:
-  $
-  U = n_1 n_2 + \frac{n_1 (n_1 + 1)}{2} - R_1
-  $
-  Where:
-  - $U$ is the test statistic.
-  - $n_1$ and $n_2$ are the sample sizes of the two groups.
-  - $R_1$ is the sum of ranks for the first group (users).
-
-- **Interpretation of Results**:
-  - If the p-value < 0.05, we reject the null hypothesis, indicating a significant difference in the distributions of ratings between critics and users.
-  - If the p-value ≥ 0.05, we fail to reject the null hypothesis, suggesting no significant difference in distributions.
-
-### Interpretation of Results
-- **If p-value < 0.05**: Reject the null hypothesis, suggesting that critics rate films from that continent more severely than users.
-- **If p-value ≥ 0.05**: Fail to reject the null hypothesis, indicating no significant difference between user and critic ratings for films from that continent.
-
-### Summary
-
-- **Independent T-Test** is used if ratings for each group (user and critic) are normally distributed.
-- **Mann-Whitney U Test** is used as an alternative if data is not normally distributed.
-
 
 ### Summary of Mann-Whitney U Test Results: Do Critics Rate Films More Severely Than Users?
 
@@ -293,34 +244,64 @@ This table summarizes the results of the Mann-Whitney U Test comparing user and 
 | **American Films** | Mann-Whitney U | 6.65e-192                 | Significant difference; critics rate American films more severely than users.                             |
 
 
-# Are European comedies juged better than american comedies
-
-
-
-### Mann-Whitney U Test Analysis of Ratings by Continent of Production
-
-This analysis compares the distributions of ratings for comedies produced in Europe and America using the Mann-Whitney U test. This non-parametric test is chosen because it does not assume normality, making it suitable for datasets with deviations from normal distribution or large sample sizes.
+## Are European comedies judged better than American comedies
 
 <div class="container-fluid">
-  <div class="row justify-content-center bokeh-plot">
-   <iframe src="/assets/htmlplot/average_ratings_by_continent_collapsed.html"></iframe>
+  <div class="row">
+    <div class="col-4">
+      <h3>Mann-Whitney U Test Analysis of Ratings by Continent of Production</h3>
+      <p style="text-align: justify;">This analysis compares the distributions of ratings for comedies produced in Europe and America using the Mann-Whitney U test. This non-parametric test is chosen because it does not assume normality, making it suitable for datasets with deviations from normal distribution or large sample sizes.</p>
+    </div>
+    <div class="col-8">
+      <div class="container-fluid">
+        <div class="row justify-content-center bokeh-plot">
+          <iframe src="/assets/htmlplot/average_ratings_by_continent_collapsed.html"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <h4>Results</h4>
+      <table style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr style="background-color: rgb(180, 74, 58); color: white;">
+            <th style="border: 1px solid #ddd; padding: 8px;">Rating Source</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">U-Statistic</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">P-Value</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">**imdbRating**</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">10,555,812.5</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">3.81e-21</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Statistically significant difference in IMDb ratings between European and American-produced comedies, indicating differing rating distributions.</td>
+          </tr>
+          <tr style="background-color: #f2f2f2;">
+            <td style="border: 1px solid #ddd; padding: 8px;">**Rotten_Tomatoes_Rating**</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">1,634,734.0</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">1.68e-39</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">The most significant difference observed, showing pronounced variation in Rotten Tomatoes ratings between the two continents.</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">**Metacritic_Rating**</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">624,487.5</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">6.17e-24</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Clear statistical difference in Metacritic ratings, further supporting the hypothesis of differing rating patterns.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-6">
+      <h4>Summary</h4>
+      <p style="text-align: justify;">All three rating sources show statistically significant differences between comedies produced in Europe and America, as evidenced by the very low p-values (all below 0.05). These findings suggest that the continent of production has a notable influence on how movies are rated across different platforms.</p>
+      <p style="text-align: justify;">The Rotten Tomatoes ratings exhibit the most pronounced differences, followed by Metacritic and IMDb. These variations could reflect cultural differences in audience perceptions, critical standards, or other region-specific factors influencing movie ratings.</p>
+    </div>
   </div>
 </div>
-
-#### Results
-
-| Rating Source                  | U-Statistic      | P-Value               | Interpretation                                                                                      |
-|--------------------------------|------------------|-----------------------|-----------------------------------------------------------------------------------------------------|
-| **imdbRating**                 | 10,555,812.5     | 3.81e-21              | Statistically significant difference in IMDb ratings between European and American-produced comedies, indicating differing rating distributions. |
-| **Rotten_Tomatoes_Rating**     | 1,634,734.0      | 1.68e-39              | The most significant difference observed, showing pronounced variation in Rotten Tomatoes ratings between the two continents. |
-| **Metacritic_Rating**          | 624,487.5        | 6.17e-24              | Clear statistical difference in Metacritic ratings, further supporting the hypothesis of differing rating patterns. |
-
-#### Summary
-
-All three rating sources show statistically significant differences between comedies produced in Europe and America, as evidenced by the very low p-values (all below 0.05). These findings suggest that the continent of production has a notable influence on how movies are rated across different platforms.
-
-The Rotten Tomatoes ratings exhibit the most pronounced differences, followed by Metacritic and IMDb. These variations could reflect cultural differences in audience perceptions, critical standards, or other region-specific factors influencing movie ratings.
-
 ## More specific analysis
 
 Après des analyses plus générales sur les comédies, nous avons décidé de se concentrer plus en détails sur certains sous genres de comédies pour voir en profondeur ce qui fait qu'une comédie est plus aimé qu'une autre. Pour voir cela, nous nous sommes concentrés sur l'analyse de mots et de topics pour voir si il y a une différence de sujets traités en Europe en Amérique.
