@@ -751,3 +751,8 @@ And just below, you’ll find a plot breaking down the different sub-genres of c
     </div>
   </div>
 </div>
+
+
+<div class="fig-image-frapper">
+  <img src="{{ '/assets/img/end.jpg' | relative_url }}" alt="The End" class="fig-image">
+</div>
