@@ -677,7 +677,8 @@ The second most represented topics diverges sharply between the two regions:
 
 ### Comparison
 
-•	American Films: Often tackle these themes with light-hearted comedies, feel-good stories, or hero-driven narratives that inspire and entertain. 🎬✨
+•	American Films: Often tackle these themes with light-hearted comedies, feel-good stories, or hero-driven narratives that inspire and entertain.🎬✨
+<br>
 •	European Films: Take a more nuanced, introspective approach, weaving in social or historical commentary for added depth and reflection. 🎭📜
 
 <br>
@@ -685,6 +686,7 @@ The second most represented topics diverges sharply between the two regions:
 ### Conclusion
 
 •	America leans toward escapism and visual comedy, delivering humor that entertains with light-hearted antics and universally accessible storytelling—because who doesn’t love a good pie in the face? 🎥🍿
+<br>
 •	Europe’s humor, on the other hand, often dives into life’s heavier moments, blending satire with historical and social commentary. Shaped by deep historical scars, especially the aftermath of World War II, European storytelling turns humor into a coping tool—because sometimes, you’ve just got to laugh to keep from crying. 🎭💔
 
 <br><br>
@@ -815,6 +817,7 @@ But let’s not forget, this is just a trend! 🧂 IMDb ratings can be subjectiv
 So, which ticket will you choose? The universal, accessible humor of the United States or Europe’s more refined and thought-provoking style? Either way, laughs are guaranteed... but the data suggests Europe often wins the audience’s favor. ❤️
 And just below, you’ll find a plot breaking down the different sub-genres of comedy to confirm these observations, with data to back it up! 📊🎥"
 
+<br><br>
 
 <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185); margin-top: 20px;">
   <div class="col-md-12">
