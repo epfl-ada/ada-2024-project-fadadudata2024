@@ -72,49 +72,15 @@ layout: default
   </div>
 </div>
 
-
-<div class="container-fluid">
-<!-- Burger -->
-  <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(223, 162, 78)">
-    <div class="col">
-      <span class="display-1 copper">American Burgers vs. European Gourmet</span>
-    </div>
-  </div>
-  <!-- <div class="row mb-4 justify-content-center">
-    <div class="col-8">
-      <img src="{{ '/assets/img/stand_burger.png' | relative_url }}" alt="Stand Burger" style="height: 500px;">
-    </div>
-  </div> -->
-
-  <!-- Box office -->
-  <div class="row justify-content-center">
-    <div class="col-7">
-      <iframe src="{{ '/assets/htmlplot/box_office_revenue_distribution.html' | relative_url }}" style="height: 557px;" class="border border-secondary mt-1 p-2 rounded w-100"></iframe>
-    </div>
-    <div class="col-5 justify-content-center align-items-center mt-1">
-      <div class="d-flex justify-content-center align-items-center">
-        <img src="/assets/img/Americain burger1.jpeg" alt="Americain burger1.jpeg" class="img-fluid rounded shadow" id="burger1" style="width: 45%;">
-        <h2 style="margin: 0 10px;">OR</h2>
-        <img src="/assets/img/Europeen burger.avif" alt="Europeen burger.avif" class="img-fluid rounded shadow" id="burger2" style="width: 45%;">
-      </div>
-      <p class="border border-secondary fs-5 mt-1 p-2 rounded">
-        Comparing American to European humor is like contrasting a burger that looks perfect in an ad with a subtly crafted gourmet dish. American jokes hit you with all the flash of a well-marketed blockbuster, designed to grab your attention immediately. Meanwhile, European humor is more like a delicately seasoned meal that reveals its depth over time. Perhaps one day, we’ll blend these styles to cook up the ultimate comedic dish! But let's not forget, the burger is just as delicious.
-      </p>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div id="text-container" class="col-6 m-1 border border-warning rounded fs-5" style="border 2px solid orange; background-color: rgba(255, 165, 0, 0.5); transition: all 0.5s ease;">
-      <p class="p-2">Looking at the average nominations for comedy films by continent, we find that Europe leads with the finesse of a gourmet dish, accumulating nominations like a chef garners Michelin stars. On the other hand, America, with its fast-food style cinema, snags fewer nods. Perhaps the European secret lies in their subtle, critical recipe, effective in charming juries. Meanwhile, America serves its comedies like burgers: quick and tasty, but less likely to win stars. Maybe a dash of refinement in American comedies could spice up this culinary competition between continents! Well, too lazy to dive into the math, but yes, it’s a Mann-Whitney U test that confirms Europeans get nominated more often. All that for this!</p>
-    </div>
-    <div class="col-4">
-      <iframe id="graph-frame" class="w-100 rounded" src="/assets/htmlplot/nomination_mean_by_continent.html" style="border: 2px solid black; height: 450px; transition: all 0.5s ease;"></iframe>
-    </div>
-    <div class="col-auto align-self-center">
-      <p style="text-align: center; font-family: 'Copperplate', sans-serif; font-size: 1rem;" class="highlight">Button</p>
-      <div class="arrow text-center">⬇️</div>
-      <div style="text-align: center;">
-        <button id="burger-button" class="highlight">🍔</button>
 ## Part 2 : Presentation
+
+<div class="container-fluid mt-5 mb-2">
+  <div class="row justify-content-center text-center" >
+    <div class="col-8 border border-dark-subtle rounded" style="background-color:rgb(218, 112, 174);">
+      <span class="display-1 copper">Opening act</span>
+    </div>
+  </div>
+</div>
 
 <div class="container-fluid">
   <div class="row">
@@ -134,32 +100,6 @@ layout: default
     </div>
   </div>
 </div>
-
-
-<!-- 2. Import burger javascript code -->
-<script src="{{ '/assets/js/burgers.js' | relative_url }}"></script>
-
-<div class="container-fluid mt-5 mb-2">
-  <div class="row justify-content-center text-center" >
-    <div class="col-8 border border-dark-subtle rounded" style="background-color:rgb(218, 112, 174);">
-      <span class="display-1 copper">Opening act</span>
-    </div>
-  </div>
-</div>
-
-In our database, the "Genres" column was like a chaotic junk drawer full of random labels such as "World Cinema," "Short Film," or "Indie." 🗂️ These were about as useful as a punchline without a joke – confusing and totally unhelpful for analyzing comedy! 🤔
-
-So, as true comedy enthusiasts 🎭😂, we rolled up our sleeves (and flexed our funny bones) to bring some order to the madness. Instead of trying to decode this mess, we decided to create our own subcategories to dive deeper into the delightful world of different types of comedy. 🕵️‍♂️🎬
-
-To make it happen, we developed a magical dictionary 🪄📖 (sadly, it doesn’t talk… yet) that groups specific keywords linked to various comedy subgenres. With this genius tool, we can now automatically sort films into categories like "Comedy_Romance," "Comedy_Action," "Comedy_Animation," and many more. 🎉✨
-
-For example, any film that dares to drop words like "romantic" or "romance" gets whisked straight into "Comedy_Romance." 💘😂 Meanwhile, those whispering terms like "animated" or "anime" are promptly filed under "Comedy_Animation." 🎨🤪 In short, we’ve turned a big ol’ mess into a well-organized laugh factory. And guess what? We’re having a blast doing it! 🎉🤣
-
-
-<!-- 1. Load the html template -->
-{% include movies_genres.html %}
-<!-- 2. Load the associated javascript -->
-<script src="{{ '/assets/js/movies_genres.js' | relative_url }}"></script>
 
 
 ## Part 3 : Test's Caroussel
@@ -184,12 +124,6 @@ For example, any film that dares to drop words like "romantic" or "romance" gets
       <p style="text-align: justify;">They help us validate hypotheses, identify significant relationships between variables, and compare groups or distributions. By using these tools, we can determine whether the patterns observed in the data are due to chance or reflect real differences. They are, therefore, key to making informed decisions and interpreting results with rigor.</p>
   </div>
 </div>
-</div>
-
-
-
-
-
 
 ## The rating of the comedies : critics vs users
 
@@ -469,14 +403,6 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
 </div>
 <!-- 2. Import burger javascript code -->
 <script src="{{ '/assets/js/burgers.js' | relative_url }}"></script>
-
-<div class="container-fluid">
-  <div class="row justify-content-center text-center" >
-    <div class="col-8 border border-dark-subtle rounded" style="background-color:rgb(218, 112, 174);">
-      <span class="display-1 copper">Opening act</span>
-    </div>
-  </div>
-</div>
 
 ## Semantic analysis
 
