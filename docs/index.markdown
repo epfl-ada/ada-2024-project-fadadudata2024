@@ -35,7 +35,6 @@ layout: default
   </div>
   <div class="row justify-content-center">  
     <div class="banner-circus-image" style="position: relative; text-align: center; color: white; width: 1100px">
-      <!-- <img src="/assets/img/circus_banner.png" alt="Bandrole" style="width: 1100px; height: auto; border-radius: 0px;"> -->
       <div style="position: absolute; bottom: 17%; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; left: 103px;">
         <div style="display: flex; flex-direction: row;">
           {% include team_members.html %}
@@ -249,7 +248,7 @@ layout: default
       <p style="text-align: justify;">Ladies and gentlemen, step right up to witness a thrilling performance in the world of ratings! 🎭✨</p>
       <p style="text-align: justify;">On our grand stage, we present the battle of opinions between <strong>critics</strong> and <strong>users</strong>, spanning two continents: <strong>Europe</strong> and <strong>America</strong>. The spotlight is on whether critics are harsher judges than their user counterparts. Let's dive into the show!</p>
     </div>
-    <div class="col-6">
+    <div class="col-6 overflow-x-auto">
       <table style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
           <tr style="background-color: rgb(180, 74, 58); color: white;">
