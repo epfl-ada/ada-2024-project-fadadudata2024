@@ -13,10 +13,6 @@ layout: default
   <img src="{{ '/assets/img/circus_lion.png' | relative_url }}" alt="Alternative text" class="big-image shadow shadow-lg">
 </div>
 <div class="big-image-spacer"></div>
-
-
-
-
   <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185)">
     <div class="col-md-12">
       <span class="display-1 abang">The circus squad</span>
@@ -27,7 +23,6 @@ layout: default
           {% include team_members.html %}
     <!-- </div> -->
   </div>
-</div>
 
 <span style="font-family: 'Times New Roman', cursive;font-size: 1.2em;">This project tackles global humor like a foodie facing an all-you-can-eat dessert buffet: on one side, American comedy—generous with gags and explosions; on the other, European laughter—sometimes as refined as a delicate pastry, sometimes as bold as a strong espresso. By exploring the CMU Movie Summary Corpus and OMDB data, we’ll dive into storylines, the variety of actors, box-office success, and rich critiques. Our mission? To understand what makes audiences laugh out loud from one continent to another. By telling this story, we hope to highlight the rich diversity of humor around the world and show how laughter can be universal, yet shaped by specific cultural factors. 🤹‍♀🍰 </span>
 <br><br>
@@ -502,7 +497,6 @@ The diversity score captures the randomness, or entropy, of the cast’s ethnic 
     <div class="col-10">
     </div>
   </div>
-</div>
 
 So, step right up and let’s crunch the numbers to see if diversity really is the ringmaster of a movie’s success! 🎭✨
 
@@ -587,7 +581,7 @@ Take a look at the figure below to explore the two main topics we identified for
 </div>
   </div>
   <div class="col-md-6 image-container">
-    <img src="/assets/img/jingle.jpg" alt="Tom and Jerry" class="img-fluid" style="width: 50%;">
+    <img src="assets/img/jingle.jpg" alt="Tom and Jerry" class="img-fluid" style="width: 50%;">
   </div>
 
 </div>
