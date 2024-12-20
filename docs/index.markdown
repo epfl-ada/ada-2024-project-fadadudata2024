@@ -486,7 +486,7 @@ Now, under the casting tent, we assemble the troupe! Imagine lining up lions, ac
 
 ## Calculating the Diversity Score with Death-Defying Precision 🎢🦜
 
-Hold your breath, folks—it’s time for the grand finale! On a high wire of mathematics, we calculate the diversity score, a value between **0 and 1 that tells us how mixed the cast is:
+Hold your breath, folks—it’s time for the grand finale! On a high wire of mathematics, we calculate the diversity score, a value between 0 and 1 that tells us how mixed the cast is:
 
 <div>
       <p>
