@@ -137,7 +137,7 @@ layout: default
     <p style="text-align: justify;">- <strong>The Critics' Panel</strong>: Ratings from Rotten Tomatoes (Tomatometer) aggregate opinions from professional critics. These bring a more technical and structured analysis of humorous content.</p>
     <p style="text-align: justify;">- <strong>The Evaluation Experts</strong>: Aggregated scores from Metacritic provide another professional perspective, combining various critical viewpoints to form a balanced and synthesized evaluation.</p>
     </div>
-    <div class="col-6">
+    <div class="col-6 overflow-x-auto">
       <table style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
           <tr style="background-color: rgb(180, 74, 58); color: white;">
@@ -200,7 +200,7 @@ layout: default
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-6">
+    <div class="col-6 overflow-x-auto">
       <table style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
           <tr style="background-color: rgb(180, 74, 58); color: white;">
@@ -285,7 +285,7 @@ This table summarizes the results of the Mann-Whitney U Test comparing user and 
   </div>
 
   <div class="row">
-    <div class="col-6">
+    <div class="col-6 overflow-x-auto">
       <h4>Results</h4>
       <table style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
