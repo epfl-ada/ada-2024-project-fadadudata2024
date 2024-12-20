@@ -46,7 +46,7 @@ layout: default
     <!-- </div> -->
   </div>
 
-<span style="font-family: 'Times New Roman', cursive;font-size: 1.2em;">This project tackles global humor like a foodie facing an all-you-can-eat dessert buffet: on one side, American comedy—generous with gags and explosions; on the other, European laughter—sometimes as refined as a delicate pastry, sometimes as bold as a strong espresso. By exploring the CMU Movie Summary Corpus and OMDB data, we’ll dive into storylines, the variety of actors, box-office success, and rich critiques. Our mission? To understand what makes audiences laugh out loud from one continent to another. By telling this story, we hope to highlight the rich diversity of humor around the world and show how laughter can be universal, yet shaped by specific cultural factors. 🤹‍♀🍰 </span>
+This project tackles global humor like a foodie facing an all-you-can-eat dessert buffet: on one side, American comedy—generous with gags and explosions; on the other, European laughter—sometimes as refined as a delicate pastry, sometimes as bold as a strong espresso. By exploring the CMU Movie Summary Corpus and OMDB data, we’ll dive into storylines, the variety of actors, box-office success, and rich critiques. Our mission? To understand what makes audiences laugh out loud from one continent to another. By telling this story, we hope to highlight the rich diversity of humor around the world and show how laughter can be universal, yet shaped by specific cultural factors. 🤹‍♀🍰 
 <br><br>
 
 
@@ -86,9 +86,9 @@ layout: default
   <div class="row">
     <div class="col-5">
       <p style="text-align: justify;">In our database, the "Genres" column was like a chaotic junk drawer full of random labels such as "World Cinema," "Short Film," or "Indie." 🗂️ These were about as useful as a punchline without a joke – confusing and totally unhelpful for analyzing comedy! 🤔</p>
-      <p style="text-align: justify;">So, as true comedy enthusiasts 🎭😂, we rolled up our sleeves (and flexed our funny bones) to bring some order to the madness. Instead of trying to decode this mess, we decided to create our own subcategories to dive deeper into the delightful world of different types of comedy. 🕵️‍♂️🎬</p>
-      <p style="text-align: justify;">To make it happen, we developed a magical dictionary 🪄📖 (sadly, it doesn’t talk… yet) that groups specific keywords linked to various comedy subgenres. With this genius tool, we can now automatically sort films into categories like "Comedy_Romance," "Comedy_Action," "Comedy_Animation," and many more. 🎉✨</p>
-      <p style="text-align: justify;">For example, any film that dares to drop words like "romantic" or "romance" gets whisked straight into "Comedy_Romance." 💘😂 Meanwhile, those whispering terms like "animated" or "anime" are promptly filed under "Comedy_Animation." 🎨🤪 In short, we’ve turned a big ol’ mess into a well-organized laugh factory. And guess what? We’re having a blast doing it! 🎉🤣</p>
+      <p style="text-align: justify;">So, as true comedy enthusiasts, we rolled up our sleeves (and flexed our funny bones) to bring some order to the madness. Instead of trying to decode this mess, we decided to create our own subcategories to dive deeper into the delightful world of different types of comedy.🎬</p>
+      <p style="text-align: justify;">To make it happen, we developed a magical dictionary 🪄📖 (sadly, it doesn’t talk… yet) that groups specific keywords linked to various comedy subgenres. With this genius tool, we can now automatically sort films into categories like "Comedy_Romance," "Comedy_Action," "Comedy_Animation," and many more. </p>
+      <p style="text-align: justify;">For example, any film that dares to drop words like "romantic" or "romance" gets whisked straight into "Comedy_Romance." 💘 Meanwhile, those whispering terms like "animated" or "anime" are promptly filed under "Comedy_Animation." 🤪 In short, we’ve turned a big ol’ mess into a well-organized laugh factory. And guess what? We’re having a blast doing it! 🎉</p>
     </div>
     <div class="col-7">
       <div class="row justify-content-center">
@@ -123,7 +123,8 @@ layout: default
       </div>
     </div>
     <div class="col-5 align-content-center">
-      <p style="text-align: justify;">Welcome to the test carousel, an interactive space designed to guide you through the core statistical tools used to analyze and understand datasets. This carousel is not just a collection of definitions but a roadmap for tackling complex data questions systematically and effectively.</p>
+      <p style="text-align: justify;">Welcome to the test carousel, an interactive space designed to guide you through the core statistical tools used to analyze and understand datasets. Here, we don't use emoji, because Maths are serious stuff 🤐.
+      This carousel is not just a collection of definitions but a roadmap for tackling complex data questions systematically and effectively.</p>
       <p style="text-align: justify;">The carousel introduces statistical concepts tailored for different aspects of analysis. The KS Test helps determine whether a dataset follows a specific distribution, such as the normal distribution. The Independent T-Test compares the means of two independent groups to assess whether the differences are statistically significant or due to random variation. For data that doesn’t meet the assumption of normality, the Mann-Whitney U Test offers a non-parametric alternative by comparing distributions between two independent groups. Lastly, Confidence Intervals go beyond hypothesis testing, providing an estimated range where the true population parameter is likely to fall, helping quantify the reliability and precision of your estimates.</p>
       <p style="text-align: justify;">Each section of the carousel follows a consistent structure, making it easier to understand and apply the concepts. It provides an explanation, defines the hypotheses, lists the assumptions, guides interpretation of the results, and includes the mathematical formula for deeper exploration.</p>
     </div>
@@ -409,14 +410,14 @@ Stay tuned for more dazzling data insights, and don’t forget to grab your popc
         <img src="assets/img/Europeen burger.avif" alt="Europeen burger.avif" class="img-fluid rounded shadow" id="burger2" style="width: 45%;">
       </div>
       <p class="border border-secondary fs-6 mt-1 p-2 rounded">
-        Comparing American to European humor is like contrasting a burger  that looks perfect in an ad with a subtly crafted gourmet dish . American jokes hit you with all the flash of a well-marketed blockbuster, designed to grab your attention immediately. Meanwhile, European humor is more like a delicately seasoned meal  that reveals its depth over time. Perhaps one day, we’ll blend these styles to cook up the ultimate comedic dish! But let's not forget, the burger is just as delicious 🔥.
+        Comparing American to European humor is like contrasting a burger that looks perfect in an ad with a subtly crafted gourmet dish. American jokes hit you with all the flash of a well-marketed blockbuster, designed to grab your attention immediately. Meanwhile, European humor reveals its depth over time. Perhaps one day, we’ll blend these styles to cook up the ultimate comedic dish! But let's not forget, someone might take a burger, where someone else would take a fancy dish ! But let's not forget, the burger is just as delicious 🔥.
 
       </p>
     </div>
   </div>
   <div class="row justify-content-center">
     <div id="text-container" class="col-5 border border-warning rounded" style="border 2px solid orange; background-color: rgba(255, 165, 0, 0.5); transition: all 0.5s ease;">
-      <p class="p-2">Looking at the average nominations for comedy films by continent, we find that Europe leads with the finesse of a gourmet dish 🍽, accumulating nominations like a chef garners Michelin stars ⭐. On the other hand, America, with its fast-food style cinema 🍔, snags fewer nods. Perhaps the European secret lies in their subtle, critical recipe 🧑‍🍳, effective in charming juries 🏆. Meanwhile, America serves its comedies like burgers: quick and tasty 🍟, but less likely to win stars ✨. Maybe a dash of refinement in American comedies could spice up this culinary competition between continents! 🌍 Europeans get nominated more often. All that for this! 🎥</p>
+      <p class="p-2">Looking at the average nominations for comedy films by continent, we find that Europe leads with finesse, accumulating nominations like a chef garners Michelin stars. 🍽 Perhaps the European secret lies in their subtle, critical recipe, effective in charming juries. 🎥 On the other hand, America, with its fast-food style cinema 🍔—quick and tasty—convinces fewer critics.  Maybe a dash of refinement in American comedies could spice up this cross-Atlantic comedy competition! 🍿 🎥</p>
     </div>
     <div class="col-6">
       <img id="graph-frame" class="w-100 rounded" src="assets/img/nomination_plot.png" style="border: 2px solid black; height: 450px; transition: all 0.5s ease;">
@@ -450,7 +451,7 @@ Stay tuned for more dazzling data insights, and don’t forget to grab your popc
   </div>
 </div>
 
-Ladies and gentlemen, boys and girls, get ready because in this next act we tackle the dazzling, high-flying question: Does ethnic diversity make for a better movie? Let’s take a peek under the Big Top and reveal tonight’s program:
+Ladies and gentlemen, boys and girls, get ready because in this next act we tackle the dazzling, high-flying question: How does Ethnic diversity influence the rating of a Comedy? Let’s take a peek under the Big Top and reveal tonight’s program:
 
 - Taming the Wild Freebase IDs into Recognizable Ethnicities
 - Juggling 353 Ethnicities into 8 Manageable Hyperclasses
@@ -459,7 +460,7 @@ Ladies and gentlemen, boys and girls, get ready because in this next act we tack
 
 ## Taming the Wild Freebase IDs into Recognizable Ethnicities 🐅
 
-Our first act features a mapping of IDs to Ethnicity names, the data lion tamer extraordinaire! It wrangled those cryptic `freebase_id`s into recognizable ethnicities. No more staring at an undecipherable wall of IDs, now we’ve got proper names like “Irish” or “Tamil,” making it much easier to work with. 
+Our first act features a mapping of IDs to Ethnicity names, the data lion tamer extraordinaire! It wrangled those cryptic `freebase_id`'s into recognizable ethnicities. No more staring at an undecipherable wall of IDs, now we’ve got proper names like “Irish” or “Tamil,” making it much easier to work with. 
 
 With this transformation, Actor_Ethnicity has gone from being the clown car of ambiguity to a streamlined parade of clarity. Cue the applause! 👏
 
@@ -519,8 +520,6 @@ The diversity score captures the randomness, or entropy, of the cast’s ethnic 
     </div>
   </div>
 
-So, step right up and let’s crunch the numbers to see if diversity really is the ringmaster of a movie’s success! 🎭✨
-
 Let’s interpret these magnificent plots, where data performs on the tightrope of IMDb ratings and Ethnicity Scores!
 
 ### America: The Lion's Den 🦁
@@ -540,8 +539,9 @@ What’s striking here is the tighter distribution. Europeans seem to play it sa
 
 
 ### The Key Comparison 🎭
-- America’s cast diversity (mean 0.39) is slightly higher than Europe’s (mean 0.33), suggesting more colorful casting choices in American Comedies. However, we observe that diverity is not necessarily tighed to a better ratings. Indeed, there is no visible shift in the IMDb ratings as the diversity of a movie's cast increases, in Americ and in Europe. 
-- The Ethnicity Score spread in America’s plot shows a more divers representation of society thought Comedies. This most probably stems from the Americas being a land of welcome over the years and fostering a multicurtural society. Indeed, "every film is the result of the society that produced it" (Jean-Luc Godard)
+- America’s cast diversity (mean 0.39) is slightly higher than Europe’s (mean 0.33), suggesting more colorful casting choices in American Comedies. However, we observe that diversity is not necessarily tied to a better rating. Indeed, there is no visible shift in the IMDb ratings as the diversity of a movie’s cast increases, in America and in Europe.
+
+- The Ethnicity Score spread in America’s plot shows a more diverse representation of society through Comedies. This most probably stems from the Americas being a land of welcome over the years and fostering a multicultural society. 
 
 <div class="container-fluid mt-5 mb-2">
   <div class="row justify-content-center text-center">
@@ -681,15 +681,75 @@ The second most represented topics diverges sharply between the two regions:
 
 <br><br>
 
-### Now, presenting a star of the comedy data scene… give it up for the one, the only… WORDCLOUD! 🎭
 
-After performing a broad visualisation on themes occurring in comedies, we dive deeper into the spotlight of specific comedy sub-genres to uncover what makes one comedy more of a showstopper than another. For this act, we shift our focus to comedy genres that show interesting dynamics between the 2 continents. Step right up to our colorful word clouds! They highlight the top 3 crowd-pleasing comedy subgenres in Europe, America, and those loved across both regions. They also spotlight the subgenres with the smallest and largest rating gaps—a real balancing act of comedy preferences!
+<div id="comedy-subgenres">
+    <h2>Exploring Comedy Subgenres Across Continents</h2>
+    <p>After setting the stage with a broad visualization of themes in comedies, we step into the spotlight to explore specific comedy subgenres, uncovering what makes one a true showstopper over another. For this act, our focus shifts to the comedy genres that showcase fascinating dynamics between the two continents.</p>
+    
+    <h3>Heatmap Analysis of Comedy Ratings</h3>
+    <p>The following heatmap showcases the mean comedy ratings per continent and comedy subgenre. Using these values, we’ve created subsets of comedy subgenres as follows:</p>
+    
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <td>
+                <h3>Biggest America</h3>
+                <ul>
+                    <li>Comedy_Animation</li>
+                    <li>Comedy_War</li>
+                    <li>Comedy_Screwball</li>
+                </ul>
+            </td>
+            <td>
+                <h3>Biggest Europe</h3>
+                <ul>
+                    <li>Comedy_War</li>
+                    <li>Comedy_Political</li>
+                    <li>Comedy_Superhero</li>
+                </ul>
+            </td>
+            <td>
+                <h3>Biggest Both</h3>
+                <ul>
+                    <li>Comedy_War</li>
+                    <li>Comedy_Political</li>
+                    <li>Comedy_Superhero</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Biggest Gap (rating difference absolute value)</h3>
+                <ul>
+                    <li>Comedy_Superhero</li>
+                    <li>Comedy_Teen</li>
+                    <li>Comedy_Political</li>
+                </ul>
+            </td>
+            <td>
+                <h3>Smallest Gap (EU ≈ AM)</h3>
+                <ul>
+                    <li>Comedy_Holiday</li>
+                    <li>Comedy_Other</li>
+                    <li>Comedy_Western</li>
+                </ul>
+            </td>
+            <td>
+                <!-- Empty cell to balance the table -->
+            </td>
+        </tr>
+    </table>
+    
+    <p>Now that the comedy genres have been divided into interesting subsets, we can use them, along with our word clouds, to gain deeper insights… 🎭✨</p>
+</div>
 
 <div class="container-fluid">
   <div class="row justify-content-center bokeh-plot">
     <iframe src="assets/htmlplot/Heatmap_imdbRating.html"></iframe>
   </div>
 </div>
+
+
+### Now, presenting a star of the comedy data scene… give it up for the one, the only… WORDCLOUD! 🎭
 
 We did our analysis, but you can make it too! This interactive tool is here to help us dive into the humor-filled rivalry between American and European comedies by analyzing the words that make each side laugh. Packed with a ton of features, Wordcloud is your go-to act for cracking the linguistic code of comedy. Let’s break down its impressive setlist:
 
