@@ -34,13 +34,9 @@ layout: default
     </div>
   </div>
   <div class="row justify-content-center">  
-    <div class="banner-circus-image" style="position: relative; text-align: center; color: white; width: 1100px">
-      <div style="position: absolute; bottom: 17%; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; left: 103px;">
-        <div style="display: flex; flex-direction: row;">
+    <!-- <div class="banner-circus-image" style="position: relative; text-align: center; color: white; width: 1100px"> -->
           {% include team_members.html %}
-        </div>
-      </div>
-    </div>
+    <!-- </div> -->
   </div>
 </div>
 
