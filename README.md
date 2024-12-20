@@ -8,11 +8,9 @@ Our project's data story is available here. [INSERT LINK]
 
 ## Repository Architecture
 
-- **data**:  
-  Contains multiple CSV files created and utilized using datasets provided by the CMU Movie Summary Corpus and OMDB.
+- **data**: Contains multiple CSV files created and utilized using datasets provided by the CMU Movie Summary Corpus and OMDB.
 
-- **docs**:  
-  Includes all codes and files used to develop the data story.
+- **docs**: Includes all codes and files used to develop the data story.
 
 - **src**:  
   - **data**: Example dataset retrieved from the OMDB API.  
@@ -20,14 +18,11 @@ Our project's data story is available here. [INSERT LINK]
   - **script**: Example implementation of the Stanford NLP pipeline.  
   - **utils**: Python module containing utility functions.  
 
-- **`preprocessing.ipynb`**: 
-  A notebook detailing the data preprocessing steps used to compile and prepare the data.
+- **`preprocessing.ipynb`**: A notebook detailing the data preprocessing steps used to compile and prepare the data.
 
-- **`full_analysis.ipynb`**:  
-  A comprehensive notebook documenting all analyses performed, including results that were not incorporated into the final data story.
+- **`full_analysis.ipynb`**: A comprehensive notebook documenting all analyses performed, including results that were not incorporated into the final data story.
 
-- **`results.ipynb`**:  
-  A refined notebook containing results specifically used in the data story. This is a reduced version of `full_analysis.ipynb`.
+- **`results.ipynb`**: A refined notebook containing results specifically used in the data story. This is a reduced version of `full_analysis.ipynb`.
 
 
 
