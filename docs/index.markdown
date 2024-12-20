@@ -160,14 +160,6 @@ layout: default
 </div>
 
 
-  <h3>Summary</h3>
-  <ul>
-    <li><strong>Critics’ Ratings:</strong> Rotten_Tomatoes_Rating (Tomatometer) and Metacritic_Rating.</li>
-    <li><strong>Public Ratings:</strong> imdbRating.</li>
-  </ul>
-</div>
-
-
 ### Source of Ratings: Critics vs. Public
 
 This table shows whether each rating source displays ratings from critics or the public.
