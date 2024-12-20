@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: "CopperplateCC-Bold";
-    src: url('../fonts/CopperplateCC-Bold.ttf') format('truetype');
+    src: url({{ '/assets/fonts/CopperplateCC-Bold.ttf' | relative_url }}) format('truetype');
 }
 
 .copper {
@@ -152,7 +152,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 120%;
-    background: url('/assets/img/Titre.png') no-repeat center center / cover;
+    background: url({{ '/assets/img/Titre.png' | relative_url }}) no-repeat center center / cover;
     z-index: 12;
     /* Increased z-index */
 }
@@ -276,7 +276,7 @@ img.bombeGif {
     text-align: center;
     color: white;
     width: 1100px;
-    background-image: url("assets/img/circus_banner.png");
+    background-image: url({{ "/assets/img/circus_banner.png" | relative_url }});
     background-size: 100% auto;
     background-repeat: no-repeat;
     height: 350px;

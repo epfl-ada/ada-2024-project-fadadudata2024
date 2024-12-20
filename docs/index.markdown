@@ -175,20 +175,20 @@ layout: default
   <div class="row justify-content-center">
     <div class="col-6">
       <div class="ratings-plot-ctn">
-        <img src="/assets/img/imdb_plot.png" alt="IMDB Ratings" class="plots-ratings">
-        <img src="/assets/img/Carte.jpeg" alt="Carte 1" class="card-plots">
+        <img src="assets/img/imdb_plot.png" alt="IMDB Ratings" class="plots-ratings">
+        <img src="assets/img/Carte.jpeg" alt="Carte 1" class="card-plots">
       </div>
     </div>
     <div class="col-6">
       <div class="ratings-plot-ctn">
-        <img src="/assets/img/rottentom_plot.png" alt="Rotten Tomatoes Ratings" class="plots-ratings">
-        <img src="/assets/img/Carte.jpeg" alt="Carte 2" class="card-plots">
+        <img src="assets/img/rottentom_plot.png" alt="Rotten Tomatoes Ratings" class="plots-ratings">
+        <img src="assets/img/Carte.jpeg" alt="Carte 2" class="card-plots">
       </div>
     </div>
     <div class="col-6">
       <div class="ratings-plot-ctn">
-        <img src="/assets/img/metacritic_plot.png" alt="Metacritic Ratings" class="plots-ratings">
-        <img src="/assets/img/Carte.jpeg" alt="Carte 3" class="card-plots">
+        <img src="assets/img/metacritic_plot.png" alt="Metacritic Ratings" class="plots-ratings">
+        <img src="assets/img/Carte.jpeg" alt="Carte 3" class="card-plots">
       </div>
     </div>
   </div>
@@ -302,7 +302,7 @@ Stay tuned for more dazzling data insights, and don’t forget to grab your popc
     <div class="col-8">
       <div class="container-fluid">
         <div class="row justify-content-center bokeh-plot">
-          <iframe src="/assets/htmlplot/average_ratings_by_continent_collapsed.html"></iframe>
+          <iframe src="assets/htmlplot/average_ratings_by_continent_collapsed.html"></iframe>
         </div>
       </div>
     </div>
@@ -357,7 +357,7 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
 
 <div class="container-fluid">
   <div class="row justify-content-center bokeh-plot">
-    <iframe src="/assets/htmlplot/Heatmap_imdbRating.html"></iframe>
+    <iframe src="assets/htmlplot/Heatmap_imdbRating.html"></iframe>
   </div>
 </div>
 
@@ -382,9 +382,9 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
     </div>
     <div class="col-5 justify-content-center align-items-center mt-1">
       <div class="d-flex justify-content-center align-items-center">
-        <img src="/assets/img/Americain burger1.jpeg" alt="Americain burger1.jpeg" class="img-fluid rounded shadow" id="burger1" style="width: 45%;">
+        <img src="assets/img/Americain burger1.jpeg" alt="Americain burger1.jpeg" class="img-fluid rounded shadow" id="burger1" style="width: 45%;">
         <h2 style="margin: 0 10px;">OR</h2>
-        <img src="/assets/img/Europeen burger.avif" alt="Europeen burger.avif" class="img-fluid rounded shadow" id="burger2" style="width: 45%;">
+        <img src="assets/img/Europeen burger.avif" alt="Europeen burger.avif" class="img-fluid rounded shadow" id="burger2" style="width: 45%;">
       </div>
       <p class="border border-secondary fs-6 mt-1 p-2 rounded">
         Comparing American to European humor is like contrasting a burger that looks perfect in an ad with a subtly crafted gourmet dish. American jokes hit you with all the flash of a well-marketed blockbuster, designed to grab your attention immediately. Meanwhile, European humor is more like a delicately seasoned meal that reveals its depth over time. Perhaps one day, we’ll blend these styles to cook up the ultimate comedic dish! But let's not forget, the burger is just as delicious.
@@ -396,7 +396,7 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
       <p class="p-2">Looking at the average nominations for comedy films by continent, we find that Europe leads with the finesse of a gourmet dish, accumulating nominations like a chef garners Michelin stars. On the other hand, America, with its fast-food style cinema, snags fewer nods. Perhaps the European secret lies in their subtle, critical recipe, effective in charming juries. Meanwhile, America serves its comedies like burgers: quick and tasty, but less likely to win stars. Maybe a dash of refinement in American comedies could spice up this culinary competition between continents! Well, too lazy to dive into the math, but yes, it’s a Mann-Whitney U test that confirms Europeans get nominated more often. All that for this!</p>
     </div>
     <div class="col-6">
-      <img id="graph-frame" class="w-100 rounded" src="/assets/img/nomination_plot.png" style="border: 2px solid black; height: 450px; transition: all 0.5s ease;">
+      <img id="graph-frame" class="w-100 rounded" src="assets/img/nomination_plot.png" style="border: 2px solid black; height: 450px; transition: all 0.5s ease;">
     </div>
     <div class="col-1 align-self-center">
       <p style="text-align: center; font-family: 'Copperplate', sans-serif; font-size: 1rem;" class="highlight">Button</p>
@@ -427,10 +427,10 @@ Ici, on a une heatmap de ces genres qu'on a sélectionné : le top 3 sous genres
   </div>
   <div class="row justify-content-center">
     <div class="col-6">
-      <img src="/assets/img/tim_plot1.png" alt="Tim plot 1" class="img-fluid" style="height: 500px;">
+      <img src="assets/img/tim_plot1.png" alt="Tim plot 1" class="img-fluid" style="height: 500px;">
     </div>
     <div class="col-6">
-      <img src="/assets/img/tim_plot2.png" alt="Tim plot 1" class="img-fluid" style="height: 500px;">
+      <img src="assets/img/tim_plot2.png" alt="Tim plot 1" class="img-fluid" style="height: 500px;">
     </div>
   </div>
   <div class="row justify-content-center">
@@ -553,11 +553,11 @@ Hidden in plain sight, there’s a **secret button** on the Wordcloud interface.
 
   <div class="row mt-1 mb-2 justify-content-center">
     <div class="col-5 align-self-end">
-      <img src="/assets/img/Guichet.jpeg" alt="Guichet" class="img-fluid rounded shadow">
+      <img src="assets/img/Guichet.jpeg" alt="Guichet" class="img-fluid rounded shadow">
     </div>
     <div class="col-7">
       <div class="image-container-tikets">
-        <iframe src="/assets/htmlplot/mean_imdb_rating.html" class="plot-frame"></iframe>
+        <iframe src="assets/htmlplot/mean_imdb_rating.html" class="plot-frame"></iframe>
       </div>
     </div>
   </div>
@@ -572,10 +572,10 @@ And just below, you’ll find a plot breaking down the different sub-genres of c
 <div class="container-fluid mt-3 mb-2">
   <div class="row g-0 justify-content-center" style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
     <div class="col-6">
-      <iframe src="/assets/htmlplot/interactive_heatmap_europe.html" style="width: 550px; height: 500px;"></iframe>
+      <iframe src="assets/htmlplot/interactive_heatmap_europe.html" style="width: 550px; height: 500px;"></iframe>
     </div>
     <div class="col-6">
-      <iframe src="/assets/htmlplot/interactive_heatmap_america.html" style="width: 550px; height: 500px;"></iframe>
+      <iframe src="assets/htmlplot/interactive_heatmap_america.html" style="width: 550px; height: 500px;"></iframe>
     </div>
   </div>
 </div>
