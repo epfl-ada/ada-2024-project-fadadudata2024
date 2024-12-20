@@ -806,7 +806,7 @@ But let’s not forget, this is just a trend! 🧂 IMDb ratings can be subjectiv
 So, which ticket will you choose? The universal, accessible humor of the United States or Europe’s more refined and thought-provoking style? Either way, laughs are guaranteed... but the data suggests Europe often wins the audience’s favor. ❤️
 And just below, you’ll find a plot breaking down the different sub-genres of comedy to confirm these observations, with data to back it up! 📊🎥"
 
-</div>
+
 <div class="row justify-content-center text-center border border-dark-subtle rounded" style="background-color:rgb(193, 178, 185); margin-top: 20px;">
   <div class="col-md-12">
     <span class="display-1 abang">Conclusion</span>
