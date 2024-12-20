@@ -161,7 +161,7 @@ canvas {
     display: none;
     /* background: white; */
     /* position: absolute; top: 0; left: 0; width: 100%; height: 100%; */
-    overflow: auto;
+    // overflow-y: auto;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -196,7 +196,7 @@ img.bombeGif {
 }
 
 .wrapper {
-    width: 65vw;
+    width: 75vw;
     padding-top: 350px;
 }
 
