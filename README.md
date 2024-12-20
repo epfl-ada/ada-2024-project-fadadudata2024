@@ -6,6 +6,8 @@ This project tackles global humor like a foodie facing an all-you-can-eat desser
 ## Datastory
 Our project's data story is available at the following link: [Data Story](https://epfl-ada.github.io/ada-2024-project-fadadudata2024/)
 
+Please note that it was optimized for viewing on Firefox or Safari.
+
 ## Required Python Packages
 
 This project requires the Python packages in `pip_requirements.txt` to run properly.
