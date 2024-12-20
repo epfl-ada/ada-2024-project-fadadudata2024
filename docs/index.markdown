@@ -171,6 +171,7 @@ layout: default
     </div>
   </div>
 </div>
+
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-6">
@@ -193,6 +194,7 @@ layout: default
     </div>
   </div>
 </div>
+
 
 ### Results for Each Rating Source
 
