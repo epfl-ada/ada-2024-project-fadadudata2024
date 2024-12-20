@@ -4,15 +4,13 @@
 This project takes a dive into the comedic rivalry between American and European films, uncovering the cultural quirks that make each side laugh. Using data from the CMU Movie Summary Corpus and OMDB, we analyze recurring themes, linguistic styles, and narrative structures to decode the essence of humor on both sides of the Atlantic. Do Americans favor slapstick and sarcasm, while Europeans lean toward dry wit and intellectual wordplay? Are certain jokes universal, or do some fall flat across cultural divides? We also explore representation dynamics—examining how gender and ethnicity shape the humor landscape—and investigate box office trends to see if Hollywood's blockbuster comedies outshine Europe's subtler charm. Through text analysis, visualizations, and linguistic modeling, this project aims to answer whether humor truly transcends borders or remains firmly rooted in cultural context. Laugh, learn, and decide which side of the Atlantic rules the comedy game!
 
 ## Datastory
-Our project's data story is available here. [INSERT LINK]
+Our project's data story is available at the following link: [Data Story](https://epfl-ada.github.io/ada-2024-project-fadadudata2024/)
 
 ## Repository Architecture
 
-- **data**:  
-  Contains multiple CSV files created and utilized using datasets provided by the CMU Movie Summary Corpus and OMDB.
+- **data**: Contains multiple CSV files created and utilized using datasets provided by the CMU Movie Summary Corpus and OMDB.
 
-- **docs**:  
-  Includes all codes and files used to develop the data story.
+- **docs**: Includes all codes and files used to develop the data story.
 
 - **src**:  
   - **data**: Example dataset retrieved from the OMDB API.  
@@ -20,21 +18,18 @@ Our project's data story is available here. [INSERT LINK]
   - **script**: Example implementation of the Stanford NLP pipeline.  
   - **utils**: Python module containing utility functions.  
 
-- **`preprocessing.ipynb`**: 
-  A notebook detailing the data preprocessing steps used to compile and prepare the data.
+- **`preprocessing.ipynb`**: A notebook detailing the data preprocessing steps used to compile and prepare the data.
 
-- **`full_analysis.ipynb`**:  
-  A comprehensive notebook documenting all analyses performed, including results that were not incorporated into the final data story.
+- **`full_analysis.ipynb`**: A comprehensive notebook documenting all analyses performed, including results that were not incorporated into the final data story.
 
-- **`results.ipynb`**:  
-  A refined notebook containing results specifically used in the data story. This is a reduced version of `full_analysis.ipynb`.
+- **`results.ipynb`**: A refined notebook containing results specifically used in the data story. This is a reduced version of `full_analysis.ipynb`.
 
 
 
 ## Research Questions
 
 ### 1. Commercial and Critical Success
-- What factors—such as themes, casting, runtime, and distribution—drive the success of comedies in these regions?
+- Does a movie's success vary based on its age rating (e.g., 13+, 16+) and the number of awards it wins?
 - Is there a correlation between commercial success (box office) and critical or audience recognition (ratings), and does this vary by continent or audience type?
 - Are European comedies rated more favorably than American ones, and do they receive similar evaluations from critics and audiences across different subgenres?
 
@@ -81,7 +76,7 @@ Our project's data story is available here. [INSERT LINK]
 
 ### 3. Present the results
 
-Finally, our findings are presented as an interactive data story on the following webpage [INSERT LINK]
+Finally, our findings are presented as an interactive data story on the following webpage: [Data Story](https://epfl-ada.github.io/ada-2024-project-fadadudata2024/)
 
 
 ## Proposed timeline and Organization within the team
