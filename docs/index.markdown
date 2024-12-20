@@ -106,7 +106,7 @@ layout: default
   <div class="row">
     <div class="col-7">
       <div class="row justify-content-center">
-        <img src="/assets/img/Haut carousel.png" alt="Haut carousel" style="width: 420px; height: auto;">
+        <img src="assets/img/Haut carousel.png" alt="Haut carousel" style="width: 420px; height: auto;">
       </div>
       <div class="row justify-content-center">
         <div class="col-7">
@@ -114,7 +114,7 @@ layout: default
         </div>
       </div>
       <div class="row justify-content-center">
-        <img src="/assets/img/Bas carousel.png" alt="Haut carousel" style="width: 420px; height: auto;">
+        <img src="assets/img/Bas carousel.png" alt="Haut carousel" style="width: 420px; height: auto;">
       </div>
     </div>
     <div class="col-5 align-content-center">
